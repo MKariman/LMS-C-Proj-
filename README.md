@@ -1,2 +1,2 @@
-# LMS-C-Proj-
+# LMS (C# Project)
 سامانه آموزشی
