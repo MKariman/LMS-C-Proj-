@@ -28,23 +28,27 @@ namespace sign_in
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+            
 
-            if (usernametxt.Text == "ali" && passwordtxt.Password == "1234" && RBmanager.IsChecked == true)
-            {
-                MessageBox.Show("شما با موفقیت وارد شدید", "Sign in", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                manager_page mp1 = new manager_page();
 
-                this.Close();
-                mp1.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("ERROR !", "Sign in", MessageBoxButton.OK, MessageBoxImage.Error);
-                usernametxt.Text = "";
-                passwordtxt.Password = "";
 
-            }
+            //if (usernametxt.Text == "ali" && passwordtxt.Password == "1234" && RBmanager.IsChecked == true)
+            //{
+            //    MessageBox.Show("شما با موفقیت وارد شدید", "Sign in", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            //    manager_page mp1 = new manager_page();
+
+            //    this.Close();
+            //    mp1.ShowDialog();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("ERROR !", "Sign in", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    usernametxt.Text = "";
+            //    passwordtxt.Password = "";
+
+            //}
 
 
         }

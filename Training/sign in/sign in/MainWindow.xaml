@@ -8,10 +8,10 @@
         Title="Sign in" Height="500" Width="370" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FF0E0D3D" Offset="1"/>
-            <GradientStop Color="#FF0E0D3D"/>
-            <GradientStop Color="#FF737BB8" Offset="0.199"/>
-            <GradientStop Color="#FF737BB8" Offset="0.801"/>
+            <GradientStop Color="#FFB9EAEA" Offset="1"/>
+            <GradientStop Color="#FFB9EAEA"/>
+            <GradientStop Color="White" Offset="0.199"/>
+            <GradientStop Color="White" Offset="0.801"/>
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
@@ -19,8 +19,8 @@
         <TextBox x:Name="usernametxt"  Height="20" Width="125"  BorderBrush="{x:Null}" Margin="135,109,83.333,289" ToolTip="نام کاربری" >
             <TextBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF060B32" Offset="1"/>
-                    <GradientStop Color="#FF737BB8" Offset="0.9"/>
+                    <GradientStop Color="#FFC0ECEC" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.9"/>
                 </LinearGradientBrush>
             </TextBox.Background>
         </TextBox>
@@ -28,8 +28,8 @@
         <PasswordBox x:Name="passwordtxt"   Height="20" Width="125"  BorderBrush="{x:Null}" Margin="135,178,83.333,222.667" ToolTip="رمز عبور" AllowDrop="True" >
             <PasswordBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF060B32" Offset="1"/>
-                    <GradientStop Color="#FF737BB8" Offset="0.9"/>
+                    <GradientStop Color="#FFC0ECEC" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.9"/>
                 </LinearGradientBrush>
             </PasswordBox.Background>
         </PasswordBox>
