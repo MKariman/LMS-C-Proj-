@@ -167,6 +167,10 @@
     <Compile Include="Migrations\20190522135312_InitialCreate.designer.cs">
       <DependentUpon>20190522135312_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190522174224_new.cs" />
+    <Compile Include="Migrations\20190522174224_new.designer.cs">
+      <DependentUpon>20190522174224_new.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DB_ProjModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
