@@ -17,12 +17,12 @@
                   
 
                     <Custom:RibbonGroup FontSize="12" FontFamily="B Roya">
-                        <Custom:RibbonButton Width="174" Height="81" Label="مشخصات دانشجو" LargeImageSource="/WPF(LMS);component/FrontEnd/img/education-png-6.png"    >
+                        <Custom:RibbonButton Width="174" Height="81" Label="مشخصات دانشجو" LargeImageSource="/WPF(LMS);component/FrontEnd/img/education-png-6.png" Click="info_student_Click"    >
                         </Custom:RibbonButton>
                     </Custom:RibbonGroup>
 
                     <Custom:RibbonGroup FontSize="12" FontFamily="B Roya">
-                        <Custom:RibbonButton Width="174" Height="81" Label="کارنامه" LargeImageSource="/WPF(LMS);component/FrontEnd/img/report-card-5-985964.png" FontWeight="Bold"  />
+                        <Custom:RibbonButton Width="174" Height="81" Label="کارنامه" LargeImageSource="/WPF(LMS);component/FrontEnd/img/report-card-5-985964.png" FontWeight="Bold" Click="report_Click"  />
 
                     </Custom:RibbonGroup>
                 </Custom:RibbonTab>
@@ -34,12 +34,12 @@
                 
 
                     <Custom:RibbonGroup FontSize="12" FontFamily="B Roya" FontWeight="Bold"  >
-                        <Custom:RibbonButton Width="174" Height="81" Label="برنامه ترم" LargeImageSource="/WPF(LMS);component/FrontEnd/img/img_77586.png"  >
+                        <Custom:RibbonButton Width="174" Height="81" Label="برنامه ترم" LargeImageSource="/WPF(LMS);component/FrontEnd/img/img_77586.png" Click="table_term_Click"  >
                         </Custom:RibbonButton>
                     </Custom:RibbonGroup>
 
                     <Custom:RibbonGroup FontSize="12" FontFamily="B Roya" FontWeight="Bold"  >
-                        <Custom:RibbonButton Width="174" Height="81" Label="چارت درسی" LargeImageSource="/WPF(LMS);component/FrontEnd/img/organization_line-512.png"  >
+                        <Custom:RibbonButton Width="174" Height="81" Label="چارت درسی" LargeImageSource="/WPF(LMS);component/FrontEnd/img/organization_line-512.png" Click="chart_Click"  >
                         </Custom:RibbonButton>
                     </Custom:RibbonGroup>
                 </Custom:RibbonTab>
@@ -51,12 +51,12 @@
 
                 <Custom:RibbonTab Header="                  واحدها                   ">
                     <Custom:RibbonGroup FontSize="12" FontFamily="B Roya" FontWeight="Bold"  >
-                        <Custom:RibbonButton Width="174" Height="81" Label="انتخاب واحد " LargeImageSource="/WPF(LMS);component/FrontEnd/img/select-512.png"  >
+                        <Custom:RibbonButton Width="174" Height="81" Label="انتخاب واحد " LargeImageSource="/WPF(LMS);component/FrontEnd/img/select-512.png" Click="select_unit_Click"  >
                         </Custom:RibbonButton>
                     </Custom:RibbonGroup>
 
                     <Custom:RibbonGroup FontSize="12" FontFamily="B Roya" FontWeight="Bold"  >
-                        <Custom:RibbonButton Width="174" Height="81" Label="حذف و اضافه  " LargeImageSource="/WPF(LMS);component/FrontEnd/img/add-remove-512.png"  >
+                        <Custom:RibbonButton Width="174" Height="81" Label="حذف و اضافه  " LargeImageSource="/WPF(LMS);component/FrontEnd/img/add-remove-512.png" Click="add_remove_Click"  >
                         </Custom:RibbonButton>
                     </Custom:RibbonGroup>
 
@@ -68,7 +68,7 @@
 
 
             </Custom:Ribbon>
-            <StackPanel Name="manager_stack" Height="315" Width="800"/>
+            <StackPanel Name="student_stack" Height="315" Width="800"/>
 
         </StackPanel>
 

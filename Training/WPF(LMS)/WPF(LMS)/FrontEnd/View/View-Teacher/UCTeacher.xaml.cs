@@ -20,9 +20,39 @@ namespace WPF_LMS_.FrontEnd.View.View_Teacher
     /// </summary>
     public partial class UCTeacher : UserControl
     {
+        UCinfoteacher ucinfoteacher = new UCinfoteacher();
+
         public UCTeacher()
         {
             InitializeComponent();
+        }
+
+        public void delet_prev()
+        {
+            teacher_stack.Children.Clear();
+        }
+
+        private void info_teacher_Click(object sender, RoutedEventArgs e)
+        {
+            delet_prev();
+            ucinfoteacher.MaxHeight = 313;
+            ucinfoteacher.MaxWidth = 800;
+            teacher_stack.Children.Add(ucinfoteacher);
+        }
+
+        private void table_classes_Click(object sender, RoutedEventArgs e)
+        {
+            delet_prev();
+        }
+
+        private void marks_list_student_Click(object sender, RoutedEventArgs e)
+        {
+            delet_prev();
+        }
+
+        private void change_mark_Click(object sender, RoutedEventArgs e)
+        {
+            delet_prev();
         }
     }
 }

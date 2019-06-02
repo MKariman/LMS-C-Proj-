@@ -40,12 +40,13 @@ namespace WPF_LMS_.FrontEnd.View
         private void Sign_Click(object sender, RoutedEventArgs e)
         {
             MainWindow win = (MainWindow)Window.GetWindow(this);
+            
 
             using (var Db = new DB_Proj())
             {
                 if (RBuser.IsChecked == true)
                 {
-                    var logs = Db.St_InfM.Where
+                     var logs = Db.St_InfM.Where
                         (i => i.UniCode == (Convert.ToInt16(usernametxt.Text)) && i.Password == (passwordtxt.Password)).FirstOrDefault();
 
                     if (logs != null)

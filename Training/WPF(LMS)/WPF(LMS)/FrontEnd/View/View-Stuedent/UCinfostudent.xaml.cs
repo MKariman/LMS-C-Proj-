@@ -13,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPF_LMS_.FrontEnd.View.View_Manager
+namespace WPF_LMS_.FrontEnd.View.View_Stuedent
 {
     /// <summary>
-    /// Interaction logic for UCinfomanager.xaml
+    /// Interaction logic for UCinfostudent.xaml
     /// </summary>
-    public partial class UCinfomanager : UserControl
+    public partial class UCinfostudent : UserControl
     {
-        UCSign uc = new UCSign();
-
-        public UCinfomanager()
+        public UCinfostudent()
         {
             InitializeComponent();
-
-       
         }
     }
 }

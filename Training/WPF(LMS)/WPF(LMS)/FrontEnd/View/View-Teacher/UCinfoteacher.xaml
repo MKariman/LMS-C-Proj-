@@ -1,9 +1,9 @@
-﻿<UserControl x:Class="WPF_LMS_.FrontEnd.View.View_Manager.UCinfomanager"
+﻿<UserControl x:Class="WPF_LMS_.FrontEnd.View.View_Teacher.UCinfoteacher"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:WPF_LMS_.FrontEnd.View.View_Manager"
+             xmlns:local="clr-namespace:WPF_LMS_.FrontEnd.View.View_Teacher"
              mc:Ignorable="d" 
              d:DesignHeight="313" d:DesignWidth="800">
     <Grid>
@@ -27,20 +27,24 @@
             <TextBlock Text=":    کد ملی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="692,45,50,0" Foreground="#FF020E25" />
             <TextBlock Text=":    تلفن تماس" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="350,-410,350,0" Foreground="#FF020E25" />
             <TextBlock Text=":   ایمیل" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="350,-280,350,0" Foreground="#FF020E25" />
-            <TextBlock Text=":    کد پرسنلی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="350,-155,350,0" Foreground="#FF020E25" />
-            <TextBlock Text=":    سمت" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="350,-20,350,0" Foreground="#FF020E25" />
-            <TextBlock Text=":    تحصیلات" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="50,-155,610,0" Foreground="#FF020E25" />
+            <TextBlock Text=":    کد هیئت علمی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="350,-155,350,0" Foreground="#FF020E25" />
+            <TextBlock Text=":    درس تخصصی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="350,-20,350,0" Foreground="#FF020E25" />
+            <TextBlock Text=":    درجه" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="50,-155,610,0" Foreground="#FF020E25" />
+            <TextBlock Text=":    تحصیلات" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="50,-20,610,0" Foreground="#FF020E25" />
+
 
 
             <TextBlock x:Name="name" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-410,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
             <TextBlock x:Name="familyname" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-280,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
             <TextBlock x:Name="birth" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-150,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
             <TextBlock x:Name="melli" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-20,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
-            <TextBlock x:Name="semat" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-20,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
+            <TextBlock x:Name="reshteh" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-20,438,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
             <TextBlock x:Name="phone" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-410,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
             <TextBlock x:Name="email" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-280,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
-            <TextBlock x:Name="code" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-150,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
-            <TextBlock x:Name="teach" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="10,-150,670,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
+            <TextBlock x:Name="code" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-150,438,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
+            <TextBlock x:Name="darajeh" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="10,-150,652,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
+            <TextBlock x:Name="teach" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="10,-20,666,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
+
 
 
             <StackPanel Height="100" Width="100" Margin="0,-240,550,650">

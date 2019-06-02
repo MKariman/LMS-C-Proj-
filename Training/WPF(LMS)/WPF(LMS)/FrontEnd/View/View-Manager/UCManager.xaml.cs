@@ -33,58 +33,58 @@ namespace WPF_LMS_.FrontEnd.View
 
         public void delet_prev()
         {
-            manager_stack.Children.Remove(ucinfomanager);
+            manager_stack.Children.Clear();
         }
 
         
 
-        private void info_manager(object sender, RoutedEventArgs e)
+        private void info_manager_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
             ucinfomanager.MaxHeight = 315;
-            ucinfomanager.MaxWidth = 800
+            ucinfomanager.MaxWidth = 800;
 ;            manager_stack.Children.Add(ucinfomanager);
         }
 
-        private void info_student(object sender, RoutedEventArgs e)
+        private void info_students_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
         }
 
-        private void list_major(object sender, RoutedEventArgs e)
+        private void list_major_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
         }
 
         ///////////////////////////////////////
 
-        private void see_marks(object sender, RoutedEventArgs e)
+        private void see_marks_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
         }
 
-        private void chamge_marks(object sender, RoutedEventArgs e)
+        private void change_marks_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
         }
 
-        private void list_marks_student(object sender, RoutedEventArgs e)
+        private void list_marks_student_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
 
         }
 
-        private void units(object sender, RoutedEventArgs e)
+        private void select_unit_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
         }
 
-        private void add_remove(object sender, RoutedEventArgs e)
+        private void add_remove_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
         }
 
-        private void add_user(object sender, RoutedEventArgs e)
+        private void add_user_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
         }

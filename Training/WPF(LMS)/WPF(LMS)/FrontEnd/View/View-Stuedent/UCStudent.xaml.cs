@@ -20,9 +20,50 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
     /// </summary>
     public partial class UCStudent : UserControl
     {
+        UCinfostudent ucinfostudent = new UCinfostudent();
+
         public UCStudent()
         {
             InitializeComponent();
+        }
+
+        public void delet_prev ()
+        {
+            student_stack.Children.Clear();
+        }
+
+        private void info_student_Click(object sender, RoutedEventArgs e)
+        {
+            delet_prev();
+            ucinfostudent.MaxHeight = 315;
+            ucinfostudent.MaxWidth = 800;
+            student_stack.Children.Add(ucinfostudent);
+        }
+
+
+        private void report_Click(object sender, RoutedEventArgs e)
+        {
+            delet_prev();
+        }
+
+        private void table_term_Click(object sender, RoutedEventArgs e)
+        {
+            delet_prev();
+        }
+
+        private void chart_Click(object sender, RoutedEventArgs e)
+        {
+            delet_prev();
+        }
+
+        private void select_unit_Click(object sender, RoutedEventArgs e)
+        {
+            delet_prev();
+        }
+
+        private void add_remove_Click(object sender, RoutedEventArgs e)
+        {
+            delet_prev();
         }
     }
 }
