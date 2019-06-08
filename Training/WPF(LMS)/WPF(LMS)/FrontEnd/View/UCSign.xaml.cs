@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF_LMS_;
 using WPF_LMS_.BackEnd;
+using System.Threading;
 
 
 namespace WPF_LMS_.FrontEnd.View
@@ -24,6 +25,7 @@ namespace WPF_LMS_.FrontEnd.View
     /// </summary>
     public partial class UCSign : UserControl
     {
+
        
 
         public UCSign()
@@ -47,7 +49,7 @@ namespace WPF_LMS_.FrontEnd.View
                 if (RBuser.IsChecked == true)
                 {
                      var logs = Db.St_InfM.Where
-                        (i => i.UniCode == (Convert.ToInt16(usernametxt.Text)) && i.Password == (passwordtxt.Password)).FirstOrDefault();
+                        (i => i.UniCode == (Convert.ToInt32(usernametxt.Text)) && i.Password == (passwordtxt.Password)).FirstOrDefault();
 
                     if (logs != null)
                     {
@@ -61,7 +63,7 @@ namespace WPF_LMS_.FrontEnd.View
                     else
                     {
                         var logt = Db.Tch_InfM.Where
-                       (i => i.OrgCode == (Convert.ToInt16(usernametxt.Text)) && i.Password == (passwordtxt.Password)).FirstOrDefault();
+                       (i => i.OrgCode == (Convert.ToInt32(usernametxt.Text)) && i.Password == (passwordtxt.Password)).FirstOrDefault();
 
                         if (logt != null)
                         {
@@ -92,7 +94,7 @@ namespace WPF_LMS_.FrontEnd.View
                     }
                     else
                     {
-                        MessageBox.Show("ERROR !", "Sign in", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show("نام کاربری یا رمز عبور اشتباه است", "خطا", MessageBoxButton.OK, MessageBoxImage.Error);
                         usernametxt.Text = "";
                         passwordtxt.Password = "";
                     }
@@ -101,8 +103,10 @@ namespace WPF_LMS_.FrontEnd.View
             }
         }
 
-        private void user_click(object sender, RoutedEventArgs e)
+
+        public void Creat_Users()
         {
+
             using (var Db = new DB_Proj())
             {
                 List<string> Users = new List<string>()
@@ -128,8 +132,25 @@ namespace WPF_LMS_.FrontEnd.View
                     MeliCode = 00225,
                     Phone = 77950
                 });
+
+                Db.Tch_InfM.Add(new Tch_Models
+                {
+                    Name = "Mahdi",
+                    LastName = "Kariman",
+                    OrgCode = 92216,
+                    Password = "mahdi123",
+                    Age = 19,
+                    BirthDate = 1378,
+                    MeliCode = 00225,
+                    Phone = 77950
+                });
+
                 Db.SaveChanges();
             }
+
+
+
+            MessageBox.Show("Created Users", "Data base", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
 
@@ -137,6 +158,17 @@ namespace WPF_LMS_.FrontEnd.View
 
 
 
+
+
+        private void user_click(object sender, RoutedEventArgs e)
+        {
+            Thread thread = new Thread(Creat_Users);
+            thread.Start();
+        }
+
+
+
+       
 
 
         //private void Sign_Click(object sender, RoutedEventArgs e)

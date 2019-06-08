@@ -88,5 +88,13 @@ namespace WPF_LMS_.FrontEnd.View
         {
             delet_prev();
         }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow win_prev= (MainWindow)Window.GetWindow(this);
+            MainWindow win_nex = new MainWindow();
+            win_prev.Close();
+            win_nex.ShowDialog();
+        }
     }
 }

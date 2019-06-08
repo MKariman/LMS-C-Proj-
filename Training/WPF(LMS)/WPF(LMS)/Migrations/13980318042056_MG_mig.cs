@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WPF_LMS_.Migrations
 {
-    public partial class oneM : Migration
+    public partial class MG_mig : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

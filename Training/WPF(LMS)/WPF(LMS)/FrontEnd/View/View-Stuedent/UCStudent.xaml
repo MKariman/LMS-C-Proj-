@@ -10,6 +10,13 @@
     <Grid>
         <StackPanel>
             <Custom:Ribbon HorizontalAlignment="Left" FlowDirection="RightToLeft" VerticalAlignment="Top" Margin="0,0,0,0" Width="800" Background="#FFDFE9F5" >
+                
+                 <Custom:Ribbon.QuickAccessToolBar>
+                    <Custom:RibbonQuickAccessToolBar Height="Auto" Margin="0,4,0,-1"  >
+                        <Custom:RibbonButton  Margin="0,-4,0,1" Width="22" Click="Exit_Click" SmallImageSource="/WPF(LMS);component/FrontEnd/img/018_317_door_exit_logout-512.png"/>
+                        <TextBlock Margin="0,-3,-698,2.333" x:Name="name" Width="690"/>
+                    </Custom:RibbonQuickAccessToolBar>
+                </Custom:Ribbon.QuickAccessToolBar>
 
                
                 

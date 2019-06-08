@@ -150,25 +150,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="FrontEnd\View\UCSign.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
     <Page Include="FrontEnd\View\View-Manager\UCinfomanager.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
     <Page Include="FrontEnd\View\View-Manager\UCManager.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
-    <Page Include="FrontEnd\View\UCSign.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="FrontEnd\View\View-Stuedent\UCinfostudent.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="FrontEnd\View\View-Stuedent\UCStudent.xaml">
       <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="FrontEnd\View\View-Teacher\UCinfoteacher.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="FrontEnd\View\View-Teacher\UCTeacher.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -182,17 +190,23 @@
     <Compile Include="BackEnd\Mg_Models.cs" />
     <Compile Include="BackEnd\St_Models.cs" />
     <Compile Include="BackEnd\Tch_Models.cs" />
+    <Compile Include="FrontEnd\View\UCSign.xaml.cs">
+      <DependentUpon>UCSign.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\View\View-Manager\UCinfomanager.xaml.cs">
       <DependentUpon>UCinfomanager.xaml</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\View\View-Manager\UCManager.xaml.cs">
       <DependentUpon>UCManager.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\View\UCSign.xaml.cs">
-      <DependentUpon>UCSign.xaml</DependentUpon>
+    <Compile Include="FrontEnd\View\View-Stuedent\UCinfostudent.xaml.cs">
+      <DependentUpon>UCinfostudent.xaml</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\View\View-Stuedent\UCStudent.xaml.cs">
       <DependentUpon>UCStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\View\View-Teacher\UCinfoteacher.xaml.cs">
+      <DependentUpon>UCinfoteacher.xaml</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\View\View-Teacher\UCTeacher.xaml.cs">
       <DependentUpon>UCTeacher.xaml</DependentUpon>
@@ -203,9 +217,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\20190528153551_oneM.cs" />
-    <Compile Include="Migrations\20190528153551_oneM.designer.cs">
-      <DependentUpon>20190528153551_oneM.cs</DependentUpon>
+    <Compile Include="Migrations\13980318042056_MG_mig.cs" />
+    <Compile Include="Migrations\13980318042056_MG_mig.designer.cs">
+      <DependentUpon>13980318042056_MG_mig.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DB_ProjModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -234,40 +248,45 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Resource Include="FrontEnd\img\1 %281%29.jpg" />
+    <Resource Include="FrontEnd\img\abstract-geometric-hexagonal-medical-or-science-background-conce-vector.jpg" />
+    <Resource Include="FrontEnd\img\creative-backgrounds-png.png" />
+    <Resource Include="FrontEnd\img\g.jpg" />
+    <Resource Include="FrontEnd\img\hexagon-background-png-1.png" />
+    <Resource Include="FrontEnd\img\istockphoto-963365576-1024x1024.jpg" />
+    <Resource Include="FrontEnd\img\onda.png" />
+    <Resource Include="FrontEnd\img\soft-blue-white-3d-hexagons-texture-background_41814-310.jpg" />
+    <Resource Include="FrontEnd\img\_1017-14763.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ClassDig\IMG_20190520_192530_404.jpg" />
     <Resource Include="FrontEnd\img\22_BO_open_book-512.png" />
     <Resource Include="FrontEnd\img\901616f38b.png" />
+    <Resource Include="FrontEnd\img\add-remove-512.png" />
     <Resource Include="FrontEnd\img\BK-stack.jpg" />
     <Resource Include="FrontEnd\img\Bk_ribbon.jpg" />
     <Resource Include="FrontEnd\img\designe.jpg" />
     <Resource Include="FrontEnd\img\education-png-6.png" />
     <Resource Include="FrontEnd\img\history-edit-512.png" />
     <Resource Include="FrontEnd\img\IMG_476182.png" />
+    <Resource Include="FrontEnd\img\img_77586.png" />
     <Resource Include="FrontEnd\img\manager.png" />
     <Resource Include="FrontEnd\img\Manager_win.png" />
+    <Resource Include="FrontEnd\img\organization_line-512.png" />
+    <Resource Include="FrontEnd\img\report-card-5-985964.png" />
     <Resource Include="FrontEnd\img\samad-icon6.png" />
+    <Resource Include="FrontEnd\img\select-512.png" />
     <Resource Include="FrontEnd\img\teacher-icon.png" />
     <Resource Include="FrontEnd\img\test-icon-png-14.jpg" />
     <Resource Include="FrontEnd\img\user.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="FrontEnd\img\add-remove-512.png" />
+    <Folder Include="bin\Debug\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="FrontEnd\img\select-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="FrontEnd\img\img_77586.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="FrontEnd\img\report-card-5-985964.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="FrontEnd\img\organization_line-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="ClassDig\IMG_20190520_192530_404.jpg" />
+    <Resource Include="FrontEnd\img\018_317_door_exit_logout-512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

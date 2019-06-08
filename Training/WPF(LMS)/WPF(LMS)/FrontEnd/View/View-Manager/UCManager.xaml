@@ -11,6 +11,17 @@
         <StackPanel>
             <Custom:Ribbon HorizontalAlignment="Left" FlowDirection="RightToLeft" VerticalAlignment="Top" Margin="0,0,0,0" Width="800" Background="#FFDFE9F5" >
 
+                <Custom:Ribbon.QuickAccessToolBar>
+                    <Custom:RibbonQuickAccessToolBar Height="Auto" Margin="0,4,0,-1.333" Width="721"  >
+                        <Custom:RibbonButton  Margin="0,-4,0,1" Width="22" Click="Exit_Click" SmallImageSource="/WPF(LMS);component/FrontEnd/img/018_317_door_exit_logout-512.png"/>
+                        <TextBlock Margin="0,-3,-698,2.333" x:Name="name" Width="690"/>
+                    </Custom:RibbonQuickAccessToolBar>
+                    
+
+
+                </Custom:Ribbon.QuickAccessToolBar>
+                
+
                 <Custom:RibbonTab Header="                اطلاعات                 " FontSize="22">
                     <Custom:RibbonGroup FontSize="12" FontFamily="B Roya" FontWeight="Bold"  >
                         <Custom:RibbonButton Width="174" Height="81" Label="مشخصات مدیر " LargeImageSource="/WPF(LMS);component/FrontEnd/img/manager.png" Click="info_manager_Click" >
@@ -29,10 +40,10 @@
                 </Custom:RibbonTab>
 
 
-                
-              
-                
-                
+
+
+
+
                 <Custom:RibbonTab Header="                  نمرات                    "   >
                     <Custom:RibbonGroup FontSize="12" FontFamily="B Roya" FontWeight="Bold"  >
                         <Custom:RibbonButton Width="174" Height="81" Label="دیدن نمرات " LargeImageSource="/WPF(LMS);component/FrontEnd/img/test-icon-png-14.jpg" Click="see_marks_Click"  >
@@ -40,7 +51,7 @@
                     </Custom:RibbonGroup>
 
                     <Custom:RibbonGroup FontSize="12" FontFamily="B Roya" FontWeight="Bold"  >
-                            <Custom:RibbonButton Width="174" Height="81" Label="تغییر نمرات  " LargeImageSource="/WPF(LMS);component/FrontEnd/img/history-edit-512.png" Click="change_marks_Click" >
+                        <Custom:RibbonButton Width="174" Height="81" Label="تغییر نمرات  " LargeImageSource="/WPF(LMS);component/FrontEnd/img/history-edit-512.png" Click="change_marks_Click" >
                         </Custom:RibbonButton>
                     </Custom:RibbonGroup>
 
@@ -49,11 +60,11 @@
                         </Custom:RibbonButton>
                     </Custom:RibbonGroup>
                 </Custom:RibbonTab>
-                
-                
-                
-                
-               
+
+
+
+
+
 
                 <Custom:RibbonTab Header="                  واحدها                   ">
                     <Custom:RibbonGroup FontSize="12" FontFamily="B Roya" FontWeight="Bold"  >
@@ -71,7 +82,7 @@
                         </Custom:RibbonButton>
                     </Custom:RibbonGroup>
                 </Custom:RibbonTab>
-             
+
 
 
 
