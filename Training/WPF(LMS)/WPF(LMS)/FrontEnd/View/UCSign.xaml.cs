@@ -44,109 +44,109 @@ namespace WPF_LMS_.FrontEnd.View
             MainWindow win = (MainWindow)Window.GetWindow(this);
             
 
-            using (var Db = new DB_Proj())
-            {
-                if (RBuser.IsChecked == true)
-                {
-                     var logs = Db.St_InfM.Where
-                        (i => i.UniCode == (Convert.ToInt32(usernametxt.Text)) && i.Password == (passwordtxt.Password)).FirstOrDefault();
+            //using (var Db = new DB_Proj())
+            //{
+            //    if (RBuser.IsChecked == true)
+            //    {
+            //         var logs = Db.St_InfM.Where
+            //            (i => i.UniCode == (Convert.ToInt32(usernametxt.Text)) && i.Password == (passwordtxt.Password)).FirstOrDefault();
 
-                    if (logs != null)
-                    {
-                        MessageBox.Show("شما با موفقیت وارد شدید", "Sign in", MessageBoxButton.OK, MessageBoxImage.Information);
-                        win.main_stack.Children.Remove(win.ucsign);
-                        win.main_stack.Children.Add(win.ucstudent);
+            //        if (logs != null)
+            //        {
+            //            MessageBox.Show("شما با موفقیت وارد شدید", "Sign in", MessageBoxButton.OK, MessageBoxImage.Information);
+            //            win.main_stack.Children.Remove(win.ucsign);
+            //            win.main_stack.Children.Add(win.ucstudent);
 
-                    }
+            //        }
 
 
-                    else
-                    {
-                        var logt = Db.Tch_InfM.Where
-                       (i => i.OrgCode == (Convert.ToInt32(usernametxt.Text)) && i.Password == (passwordtxt.Password)).FirstOrDefault();
+            //        else
+            //        {
+            //            var logt = Db.Tch_InfM.Where
+            //           (i => i.OrgCode == (Convert.ToInt32(usernametxt.Text)) && i.Password == (passwordtxt.Password)).FirstOrDefault();
 
-                        if (logt != null)
-                        {
-                            MessageBox.Show("شما با موفقیت وارد شدید", "خوش آمدید", MessageBoxButton.OK, MessageBoxImage.Information);
-                            win.main_stack.Children.Remove(win.ucsign);
-                            win.main_stack.Children.Add(win.ucteacher);
+            //            if (logt != null)
+            //            {
+            //                MessageBox.Show("شما با موفقیت وارد شدید", "خوش آمدید", MessageBoxButton.OK, MessageBoxImage.Information);
+            //                win.main_stack.Children.Remove(win.ucsign);
+            //                win.main_stack.Children.Add(win.ucteacher);
 
-                        }
-                        else
-                        {
-                            MessageBox.Show("نام کاربری یا رمز عبور اشتباه است", "خطا", MessageBoxButton.OK, MessageBoxImage.Error);
-                            usernametxt.Text = "";
-                            passwordtxt.Password = "";
-                        }
-                    }
-                }
+            //            }
+            //            else
+            //            {
+            //                MessageBox.Show("نام کاربری یا رمز عبور اشتباه است", "خطا", MessageBoxButton.OK, MessageBoxImage.Error);
+            //                usernametxt.Text = "";
+            //                passwordtxt.Password = "";
+            //            }
+            //        }
+            //    }
 
-                else if (RBManager.IsChecked == true)
-                {
-                    var logm = Db.Mg_InfM.Where
-                                            (i => i.OrgCode == Convert.ToInt32(usernametxt.Text) && i.Password == passwordtxt.Password).FirstOrDefault();
-                    if (logm != null)
-                    {
-                        MessageBox.Show("شما با موفقیت وارد شدید", "Sign in", MessageBoxButton.OK, MessageBoxImage.Information);
-                        win.main_stack.Children.Remove(win.ucsign);
-                        win.main_stack.Children.Add(win.ucmanager);
+            //    else if (RBManager.IsChecked == true)
+            //    {
+            //        var logm = Db.Mg_InfM.Where
+            //                                (i => i.OrgCode == Convert.ToInt32(usernametxt.Text) && i.Password == passwordtxt.Password).FirstOrDefault();
+            //        if (logm != null)
+            //        {
+            //            MessageBox.Show("شما با موفقیت وارد شدید", "Sign in", MessageBoxButton.OK, MessageBoxImage.Information);
+            //            win.main_stack.Children.Remove(win.ucsign);
+            //            win.main_stack.Children.Add(win.ucmanager);
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("نام کاربری یا رمز عبور اشتباه است", "خطا", MessageBoxButton.OK, MessageBoxImage.Error);
-                        usernametxt.Text = "";
-                        passwordtxt.Password = "";
-                    }
-                }
-                Db.SaveChanges();
-            }
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("نام کاربری یا رمز عبور اشتباه است", "خطا", MessageBoxButton.OK, MessageBoxImage.Error);
+            //            usernametxt.Text = "";
+            //            passwordtxt.Password = "";
+            //        }
+            //    }
+            //    Db.SaveChanges();
+            //}
         }
 
 
         public void Creat_Users()
         {
 
-            using (var Db = new DB_Proj())
-            {
-                List<string> Users = new List<string>()
-                {"mohammad","mohsen","hossein","ahmad","soheil","babak","ramin","amin","rahim","amir","asqar",
-                "akbar","armin","iman","erfan","reza","nima","saeid","saber","masoud","karim","baqer","naeim","jalil",
-                "jalal","aziz","saman","navid","vahid","farid","hamid","hamed","sajad","mahmud","sattar"
-                };
-                for (int i = 0; i < Users.Count; i++)
-                {
-                    for (int j = 0; j < Users.Count; j++)
-                    {
-                        Db.St_InfM.Add(new St_Models { Name = Users[i], Password = (Users[i] + "123"), LastName = Users[j] + "i", UniLog = (62 + i), UniCode = ((62 + i) * 100 + i + j) });
-                    }
-                }
-                Db.Mg_InfM.Add(new Mg_Models
-                {
-                    Name = "Mahdi",
-                    LastName = "Kariman",
-                    OrgCode = 97216,
-                    Password = "mahdi123",
-                    Age = 19,
-                    BirthDate = 1378,
-                    MeliCode = 00225,
-                    Phone = 77950
-                });
+            //using (var Db = new DB_Proj())
+            //{
+            //    List<string> Users = new List<string>()
+            //    {"mohammad","mohsen","hossein","ahmad","soheil","babak","ramin","amin","rahim","amir","asqar",
+            //    "akbar","armin","iman","erfan","reza","nima","saeid","saber","masoud","karim","baqer","naeim","jalil",
+            //    "jalal","aziz","saman","navid","vahid","farid","hamid","hamed","sajad","mahmud","sattar"
+            //    };
+            //    for (int i = 0; i < Users.Count; i++)
+            //    {
+            //        for (int j = 0; j < Users.Count; j++)
+            //        {
+            //            Db.St_InfM.Add(new St_Models { Name = Users[i], Password = (Users[i] + "123"), LastName = Users[j] + "i", UniLog = (62 + i), UniCode = ((62 + i) * 100 + i + j) });
+            //        }
+            //    }
+            //    Db.Mg_InfM.Add(new Mg_Models
+            //    {
+            //        Name = "Mahdi",
+            //        LastName = "Kariman",
+            //        OrgCode = 97216,
+            //        Password = "mahdi123",
+            //        Age = 19,
+            //        BirthDate = 1378,
+            //        MeliCode = 00225,
+            //        Phone = 77950
+            //    });
 
-                Db.Tch_InfM.Add(new Tch_Models
-                {
-                    Name = "Mahdi",
-                    LastName = "Kariman",
-                    OrgCode = 92216,
-                    Password = "mahdi123",
-                    Age = 19,
-                    BirthDate = 1378,
-                    MeliCode = 00225,
-                    Phone = 77950
-                });
+            //    Db.Tch_InfM.Add(new Tch_Models
+            //    {
+            //        Name = "Mahdi",
+            //        LastName = "Kariman",
+            //        OrgCode = 92216,
+            //        Password = "mahdi123",
+            //        Age = 19,
+            //        BirthDate = 1378,
+            //        MeliCode = 00225,
+            //        Phone = 77950
+            //    });
 
-                Db.SaveChanges();
-            }
+            //    Db.SaveChanges();
+            //}
 
 
 
