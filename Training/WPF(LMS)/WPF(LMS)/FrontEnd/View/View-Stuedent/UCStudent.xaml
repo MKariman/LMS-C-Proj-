@@ -9,19 +9,26 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel>
-            <Custom:Ribbon HorizontalAlignment="Left" FlowDirection="RightToLeft" VerticalAlignment="Top" Margin="0,0,0,0" Width="800" Background="#FFDFE9F5" >
-                
-                 <Custom:Ribbon.QuickAccessToolBar>
-                    <Custom:RibbonQuickAccessToolBar Height="Auto" Margin="0,4,0,-1"  >
-                        <Custom:RibbonButton  Margin="0,-4,0,1" Width="22" Click="Exit_Click" SmallImageSource="/WPF(LMS);component/FrontEnd/img/018_317_door_exit_logout-512.png"/>
+            <Custom:Ribbon HorizontalAlignment="Left" FlowDirection="RightToLeft" VerticalAlignment="Top" Margin="0,0,-3,0" Width="803" Background="#FFDFE9F5" >
+
+                <Custom:Ribbon.QuickAccessToolBar>
+                    <Custom:RibbonQuickAccessToolBar Height="Auto" Margin="5,4,0,-1"  >
+                        <Custom:RibbonButton  Margin="-4,-4,0,1.333" Width="26" Click="Exit_Click" SmallImageSource="/WPF(LMS);component/FrontEnd/img/018_317_door_exit_logout-512.png"/>
                         <TextBlock Margin="0,-3,-698,2.333" x:Name="name" Width="690"/>
                     </Custom:RibbonQuickAccessToolBar>
                 </Custom:Ribbon.QuickAccessToolBar>
 
-               
-                
+
+                <Custom:Ribbon.ApplicationMenu>
+                    <Custom:RibbonApplicationMenu  Width="0">
+                    </Custom:RibbonApplicationMenu>
+                </Custom:Ribbon.ApplicationMenu>
+
+
+
+
                 <Custom:RibbonTab Header="                اطلاعات                 " FontSize="22">
-                  
+
 
                     <Custom:RibbonGroup FontSize="12" FontFamily="B Roya">
                         <Custom:RibbonButton Width="174" Height="81" Label="مشخصات دانشجو" LargeImageSource="/WPF(LMS);component/FrontEnd/img/education-png-6.png" Click="info_student_Click"    >
@@ -33,12 +40,12 @@
 
                     </Custom:RibbonGroup>
                 </Custom:RibbonTab>
-                
-                
+
+
 
 
                 <Custom:RibbonTab Header="                  برنامه  درس ها                    "   >
-                
+
 
                     <Custom:RibbonGroup FontSize="12" FontFamily="B Roya" FontWeight="Bold"  >
                         <Custom:RibbonButton Width="174" Height="81" Label="برنامه ترم" LargeImageSource="/WPF(LMS);component/FrontEnd/img/img_77586.png" Click="table_term_Click"  >
@@ -68,8 +75,8 @@
                     </Custom:RibbonGroup>
 
                 </Custom:RibbonTab>
-                
-                
+
+
 
 
 
