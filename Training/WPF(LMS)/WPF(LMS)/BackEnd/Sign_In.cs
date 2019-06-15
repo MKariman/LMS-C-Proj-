@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WPF_LMS_.FrontEnd.View.View_Manager;
 
 namespace WPF_LMS_.BackEnd
 {
-    public class Sign_In
+       public class Sign_In
     {
+  
+
         public Mg_Models Mgsign (int usern,string pass)
         {
             using (var Db = new DB_Proj())
@@ -54,7 +57,20 @@ namespace WPF_LMS_.BackEnd
                 {
                     for (int j = 0; j < Users.Count; j++)
                     {
-                        Db.St_InfM.Add(new St_Models { Name = Users[i], Password = (Users[i] + "123"), LastName = Users[j] + "i", UniLog = (62 + i), UniCode = ((62 + i) * 100 + i + j) });
+                        Db.St_InfM.Add(new St_Models
+                        {
+                            Name = Users[i],
+                            Password = (Users[i] + "123"),
+                            LastName = Users[j] + "i",
+                            UniLog = (62 + i),
+                            UniCode = ((62 + i) * 100 + i + j) ,
+                            Email ="@gmail.com" ,
+                            Birthdate = 1398 -(62 + i),
+                            Major = "?" ,
+                            Phone =021,
+                            MeliCode = 0022 ,
+                            Vahedha =0 
+                        });
                     }
                 }
 
@@ -68,7 +84,8 @@ namespace WPF_LMS_.BackEnd
                     Age = 19,
                     BirthDate = 1378,
                     MeliCode = 00225,
-                    Phone = 77950
+                    Phone = 77950,
+                    Email ="@gmail.com" 
                 });
 
               
@@ -77,12 +94,25 @@ namespace WPF_LMS_.BackEnd
                 {
                     for (int j = 0; j < 3; j++)
                     {
-                        Db.Tch_InfM.Add(new Tch_Models { Name = Users[i], Password = (Users[i] + "123"), LastName = Users[j] + "i",  OrgCode = ((62 + i) * 100 + i + j) });
+                        Db.Tch_InfM.Add(new Tch_Models
+                        {
+                            Name = Users[i],
+                            Password = (Users[i] + "123"),
+                            LastName = Users[j] + "i",
+                            OrgCode = ((62 + i) * 100 + i + j),
+                            BirthDate = 1398 - (62 + i) ,
+                            MeliCode =0022 ,
+                            Phone = 021 ,
+                            Email ="@gmail.com"
+                        });
                     }
                 }
 
                 Db.SaveChanges();
             }
         }
+
+
+        
     }
 }

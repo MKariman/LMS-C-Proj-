@@ -32,7 +32,7 @@
             <TextBlock Text=":    تحصیلات" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="50,-155,610,0" Foreground="#FF020E25" />
 
 
-            <TextBlock x:Name="name" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-410,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
+            <TextBlock x:Name="name" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-405,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
             <TextBlock x:Name="familyname" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-280,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
             <TextBlock x:Name="birth" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-150,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
             <TextBlock x:Name="melli" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-20,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>

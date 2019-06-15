@@ -20,7 +20,6 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
     /// </summary>
     public partial class UCinfomanager : UserControl
     {
-        UCSign uc = new UCSign();
 
         public UCinfomanager()
         {

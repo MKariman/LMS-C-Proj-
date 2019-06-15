@@ -222,6 +222,10 @@
     <Compile Include="Migrations\13980318042056_MG_mig.designer.cs">
       <DependentUpon>13980318042056_MG_mig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\13980325142009_USER.cs" />
+    <Compile Include="Migrations\13980325142009_USER.designer.cs">
+      <DependentUpon>13980325142009_USER.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DB_ProjModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
