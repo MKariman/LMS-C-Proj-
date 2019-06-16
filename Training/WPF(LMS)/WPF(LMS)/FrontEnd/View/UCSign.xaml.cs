@@ -48,16 +48,19 @@ namespace WPF_LMS_.FrontEnd.View
                         MessageBox.Show("شما با موفقیت وارد شدید", "Sign in", MessageBoxButton.OK, MessageBoxImage.Information);
                         win.main_stack.Children.Remove(win.ucsign);
                         win.main_stack.Children.Add(win.ucstudent);
+                        win.ucstudent.titr.Text = "  دانشجو  " + sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Name + " " + sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).LastName;
+
                     }
-                    if (sign_in.STsign(Convert.ToInt32(usernametxt.Text), passwordtxt.Password) == null)
+                    else
                     {
                         if (sign_in.Tchsign(Convert.ToInt32(usernametxt.Text), passwordtxt.Password) != null)
                         {
                             MessageBox.Show("شما با موفقیت وارد شدید", "Sign in", MessageBoxButton.OK, MessageBoxImage.Information);
                             win.main_stack.Children.Remove(win.ucsign);
                             win.main_stack.Children.Add(win.ucteacher);
+                            win.ucteacher.titr.Text = "  استاد  " + sign_in.Tchsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Name + " " + sign_in.Tchsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).LastName;
                         }
-                        if (sign_in.Tchsign(Convert.ToInt32(usernametxt.Text), passwordtxt.Password) == null)
+                        else
                         {
                             MessageBox.Show("نام کاربری یا رمز عبور اشتباه است", "خطا", MessageBoxButton.OK, MessageBoxImage.Error);
                             usernametxt.Text = "";
@@ -82,6 +85,7 @@ namespace WPF_LMS_.FrontEnd.View
                         MessageBox.Show("شما با موفقیت وارد شدید", "Sign in", MessageBoxButton.OK, MessageBoxImage.Information);
                         win.main_stack.Children.Remove(win.ucsign);
                         win.main_stack.Children.Add(win.ucmanager);
+                        win.ucmanager.titr.Text = "  مدیر  " + sign_in.Mgsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Name + " " + sign_in.Mgsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).LastName ;
                     }
                     else
                     {

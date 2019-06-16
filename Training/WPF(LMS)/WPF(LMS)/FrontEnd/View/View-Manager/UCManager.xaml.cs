@@ -30,9 +30,9 @@ namespace WPF_LMS_.FrontEnd.View
         public UCManager()
         {
             InitializeComponent();
-            
         }
 
+        
 
 
         public void delet_prev()

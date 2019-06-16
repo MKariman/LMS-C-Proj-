@@ -2,7 +2,7 @@
 
 namespace WPF_LMS_.Migrations
 {
-    public partial class USER : Migration
+    public partial class CreatUsers : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

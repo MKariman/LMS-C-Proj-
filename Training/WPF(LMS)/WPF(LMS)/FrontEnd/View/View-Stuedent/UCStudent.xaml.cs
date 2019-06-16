@@ -49,9 +49,6 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
             ucinfostudent.year.Text = Convert.ToString(sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).UniLog);
             ucinfostudent.unit.Text = Convert.ToString(sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Vahedha);
             ucinfostudent.reshteh.Text = sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Major;
-
-
-
         }
 
 

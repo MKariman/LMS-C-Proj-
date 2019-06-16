@@ -31,7 +31,6 @@ namespace WPF_LMS_.BackEnd
                 Db.SaveChanges();
                 return login;
             }
-
         }
         public Tch_Models Tchsign(int usern, string pass)
         {
@@ -42,7 +41,6 @@ namespace WPF_LMS_.BackEnd
                 Db.SaveChanges();
                 return login;
             }
-
         }
         public void AddUser()
         {
@@ -97,7 +95,7 @@ namespace WPF_LMS_.BackEnd
                         Db.Tch_InfM.Add(new Tch_Models
                         {
                             Name = Users[i],
-                            Password = (Users[i] + "123"),
+                            Password = (Users[i] + "1234"),
                             LastName = Users[j] + "i",
                             OrgCode = ((62 + i) * 100 + i + j),
                             BirthDate = 1398 - (62 + i) ,

@@ -9,8 +9,8 @@ using WPF_LMS_.BackEnd;
 namespace WPF_LMS_.Migrations
 {
     [DbContext(typeof(DB_Proj))]
-    [Migration("13980325142009_USER")]
-    partial class USER
+    [Migration("13980326075020_CreatUsers")]
+    partial class CreatUsers
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

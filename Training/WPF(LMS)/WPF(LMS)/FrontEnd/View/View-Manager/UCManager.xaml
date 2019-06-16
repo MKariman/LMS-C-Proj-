@@ -14,7 +14,7 @@
                 <Custom:Ribbon.QuickAccessToolBar>
                     <Custom:RibbonQuickAccessToolBar Height="Auto" Margin="5,4,0,-1.333" Width="721"  >
                         <Custom:RibbonButton  Margin="-4,-4,0,1" Width="22" Click="Exit_Click" SmallImageSource="/WPF(LMS);component/FrontEnd/img/018_317_door_exit_logout-512.png"/>
-                        <TextBlock Margin="0,-3,-698,2.333" x:Name="name" Width="690"/>
+                        <TextBlock Margin="0,-3,-698,2.333"  x:Name="titr" Width="690"/>
                     </Custom:RibbonQuickAccessToolBar>
 
 
