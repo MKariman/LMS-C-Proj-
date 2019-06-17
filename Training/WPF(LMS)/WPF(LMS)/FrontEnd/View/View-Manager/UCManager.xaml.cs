@@ -24,6 +24,7 @@ namespace WPF_LMS_.FrontEnd.View
     public partial class UCManager : UserControl
     {
         UCinfomanager ucinfomanager = new UCinfomanager();
+        UCinfo_Allstudent ucinfo_allstudent = new UCinfo_Allstudent(); 
         Sign_In sign_in = new Sign_In();
 
 
@@ -69,6 +70,10 @@ namespace WPF_LMS_.FrontEnd.View
         private void info_students_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
+
+            ucinfomanager.MaxHeight = 315;
+            ucinfomanager.MaxWidth = 800;
+            manager_stack.Children.Add(ucinfo_allstudent);
         }
 
         private void list_major_Click(object sender, RoutedEventArgs e)
@@ -76,7 +81,7 @@ namespace WPF_LMS_.FrontEnd.View
             delet_prev();
         }
 
-                private void see_marks_Click(object sender, RoutedEventArgs e)
+        private void see_marks_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
         }

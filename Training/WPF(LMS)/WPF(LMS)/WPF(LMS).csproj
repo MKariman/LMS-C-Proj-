@@ -158,6 +158,10 @@
       <SubType>Designer</SubType>
       <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
+    <Page Include="FrontEnd\View\View-Manager\UCinfo_Allstudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FrontEnd\View\View-Manager\UCManager.xaml">
       <SubType>Designer</SubType>
       <Generator>XamlIntelliSenseFileGenerator</Generator>
@@ -196,6 +200,9 @@
     </Compile>
     <Compile Include="FrontEnd\View\View-Manager\UCinfomanager.xaml.cs">
       <DependentUpon>UCinfomanager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\View\View-Manager\UCinfo_Allstudent.xaml.cs">
+      <DependentUpon>UCinfo_Allstudent.xaml</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\View\View-Manager\UCManager.xaml.cs">
       <DependentUpon>UCManager.xaml</DependentUpon>
