@@ -192,6 +192,7 @@
     </Compile>
     <Compile Include="BackEnd\DB_Proj.cs" />
     <Compile Include="BackEnd\Mg_Models.cs" />
+    <Compile Include="BackEnd\Search.cs" />
     <Compile Include="BackEnd\Sign_In.cs" />
     <Compile Include="BackEnd\St_Models.cs" />
     <Compile Include="BackEnd\Tch_Models.cs" />
