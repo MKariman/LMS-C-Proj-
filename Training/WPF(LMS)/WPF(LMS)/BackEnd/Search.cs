@@ -9,7 +9,7 @@ namespace WPF_LMS_.BackEnd
     public class Search
     {
 
-        public List<St_Models> STsearch(string UCS)
+        public List<St_Models> STFilter(string UCS)
         {
             using (var Db = new DB_Proj())
             {
