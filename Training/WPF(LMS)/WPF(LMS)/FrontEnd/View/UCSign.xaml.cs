@@ -109,14 +109,22 @@ namespace WPF_LMS_.FrontEnd.View
         {
             sign_in.AddUser();
             MessageBox.Show("Created Users", "Data base", MessageBoxButton.OK, MessageBoxImage.Information);
+            sign_in.MarkAdder();
+            MessageBox.Show("Created Marks", "Data base", MessageBoxButton.OK, MessageBoxImage.Information);
+            sign_in.LessonAdder();
+            MessageBox.Show("Created Lessons", "Data base", MessageBoxButton.OK, MessageBoxImage.Information);
+
         }
+
 
 
 
         private void user_click(object sender, RoutedEventArgs e)
         {
             Thread thread = new Thread(Creat_Users);
+            
             thread.Start();
+
         }
 
         

@@ -2,40 +2,23 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WPF_LMS_.BackEnd;
 
 namespace WPF_LMS_.Migrations
 {
     [DbContext(typeof(DB_Proj))]
-    partial class DB_ProjModelSnapshot : ModelSnapshot
+    [Migration("20190619105623_nea")]
+    partial class nea
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("WPF_LMS_.BackEnd.MajorsLessons", b =>
-                {
-                    b.Property<int>("MajorId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Lesson");
-
-                    b.Property<string>("Major");
-
-                    b.Property<string>("Type");
-
-                    b.Property<int>("Unit");
-
-                    b.HasKey("MajorId");
-
-                    b.ToTable("Lessons");
-                });
 
             modelBuilder.Entity("WPF_LMS_.BackEnd.Marks.AllMarks", b =>
                 {

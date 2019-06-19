@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WPF_LMS_.BackEnd.Marks;
 
 namespace WPF_LMS_.BackEnd
 {
@@ -21,5 +22,8 @@ namespace WPF_LMS_.BackEnd
         public int UniLog { get; set; }
         public int Vahedha { get; set; }
         public string Major { get; set; }
+        public List<AllMarks> AMarks { get; set; }
+
+
     }
 }

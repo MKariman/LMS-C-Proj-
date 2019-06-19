@@ -191,6 +191,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BackEnd\DB_Proj.cs" />
+    <Compile Include="BackEnd\MajorsLessons.cs" />
+    <Compile Include="BackEnd\Marks\AllMarks.cs" />
+    <Compile Include="BackEnd\Marks\BarqM.cs" />
+    <Compile Include="BackEnd\Marks\CompM.cs" />
+    <Compile Include="BackEnd\Marks\MechM.cs" />
+    <Compile Include="BackEnd\Marks\MemM.cs" />
+    <Compile Include="BackEnd\Marks\OmranM.cs" />
+    <Compile Include="BackEnd\Marks\ShimiM.cs" />
     <Compile Include="BackEnd\Mg_Models.cs" />
     <Compile Include="BackEnd\Search.cs" />
     <Compile Include="BackEnd\Sign_In.cs" />
@@ -233,6 +241,18 @@
     <Compile Include="Migrations\13980326075020_CreatUsers.cs" />
     <Compile Include="Migrations\13980326075020_CreatUsers.designer.cs">
       <DependentUpon>13980326075020_CreatUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190619103158_new.cs" />
+    <Compile Include="Migrations\20190619103158_new.designer.cs">
+      <DependentUpon>20190619103158_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190619105623_nea.cs" />
+    <Compile Include="Migrations\20190619105623_nea.designer.cs">
+      <DependentUpon>20190619105623_nea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190619133752_lesson.cs" />
+    <Compile Include="Migrations\20190619133752_lesson.designer.cs">
+      <DependentUpon>20190619133752_lesson.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DB_ProjModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
