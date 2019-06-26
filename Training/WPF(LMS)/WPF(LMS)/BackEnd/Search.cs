@@ -13,8 +13,22 @@ namespace WPF_LMS_.BackEnd
         {
             using (var Db = new DB_Proj())
             {
-                var login = (List<St_Models>)Db.St_InfM.Where(i => i.UniCode.ToString().StartsWith(UCS));
-                return login;
+                var login = Db.St_InfM.Where(i => i.UniCode.ToString().StartsWith(UCS));
+                List<St_Models> SList = new List<St_Models>();
+                foreach (var item in login)
+                {
+                    SList.Add(new St_Models
+                    {
+                        Name = item.Name,
+                        UniCode = item.UniCode,
+                        LastName = item.LastName,
+                        Password = item.Password,
+                        Major = item.Major
+
+                    });
+                }
+
+                return SList;
             }
         }
         public Mg_Models MgSearch(int usern)
