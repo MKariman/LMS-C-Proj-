@@ -60,11 +60,12 @@ namespace WPF_LMS_.BackEnd
             }
         }
 
-        public List<MajorsLessons> AuChart(string RMajor)
+        public IQueryable<MajorsLessons> AuChart(string RMajor)
         {
             using(DB_Proj db=new DB_Proj())
             {
-                var Chart = (List<MajorsLessons>)db.Lessons.Where(i => i.Major == RMajor);
+                var Chart = db.Lessons.Where(i => i.Major == RMajor);
+                
                 return Chart;
             }
             
