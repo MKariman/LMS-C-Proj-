@@ -113,9 +113,8 @@ namespace WPF_LMS_.FrontEnd.View
             MessageBox.Show("Created Marks", "Data base", MessageBoxButton.OK, MessageBoxImage.Information);
             sign_in.LessonAdder();
             MessageBox.Show("Created Lessons", "Data base", MessageBoxButton.OK, MessageBoxImage.Information);
-            var lis = search.STFilter("80");
-
-            MessageBox.Show(lis[1].UniCode.ToString(), "خطا", MessageBoxButton.OK, MessageBoxImage.Error);
+            
+            
         }
 
 
