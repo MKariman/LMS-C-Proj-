@@ -238,9 +238,9 @@
     <Compile Include="Migrations\13980318042056_MG_mig.designer.cs">
       <DependentUpon>13980318042056_MG_mig.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\13980326075020_CreatUsers.cs" />
-    <Compile Include="Migrations\13980326075020_CreatUsers.designer.cs">
-      <DependentUpon>13980326075020_CreatUsers.cs</DependentUpon>
+    <Compile Include="Migrations\13980406191100_CreatUsers.cs" />
+    <Compile Include="Migrations\13980406191100_CreatUsers.designer.cs">
+      <DependentUpon>13980406191100_CreatUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\20190619103158_new.cs" />
     <Compile Include="Migrations\20190619103158_new.designer.cs">

@@ -7,6 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="313" d:DesignWidth="800">
     <Grid>
+        <TextBlock Text=":    تعداد واحد گذرانده" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="50,-20,610,0" Foreground="#FF020E25" />
+
         <StackPanel Margin="0,0,0,0.333" RenderTransformOrigin="0.5,0.5">
             <StackPanel.Background>
                 <ImageBrush ImageSource="/WPF(LMS);component/FrontEnd/img/abstract-geometric-hexagonal-medical-or-science-background-conce-vector.jpg">

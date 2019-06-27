@@ -35,25 +35,26 @@ namespace WPF_LMS_.FrontEnd.View.View_Teacher
             teacher_stack.Children.Clear();
         }
 
-        public void set_info()
+        public void set_info(int username, string password)
         {
-            MainWindow win = (MainWindow)Window.GetWindow(this);
 
-            ucinfoteacher.name.Text = sign_in.Tchsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Name;
-            ucinfoteacher.familyname.Text = sign_in.Tchsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).LastName;
-            ucinfoteacher.melli.Text = Convert.ToString(sign_in.Tchsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).MeliCode);
-            ucinfoteacher.birth.Text = Convert.ToString(sign_in.Tchsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).BirthDate);
-            ucinfoteacher.phone.Text = Convert.ToString(sign_in.Tchsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Phone);
-            ucinfoteacher.email.Text = sign_in.Tchsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Email;
-            ucinfoteacher.code.Text = Convert.ToString(sign_in.Tchsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).OrgCode);
+            ucinfoteacher.name.Text = sign_in.Tchsign(username,password).Name;
+            ucinfoteacher.familyname.Text = sign_in.Tchsign(username,password).LastName;
+            ucinfoteacher.melli.Text = Convert.ToString(sign_in.Tchsign(username,password).MeliCode);
+            ucinfoteacher.birth.Text = Convert.ToString(sign_in.Tchsign(username,password).BirthDate);
+            ucinfoteacher.phone.Text = Convert.ToString(sign_in.Tchsign(username,password).Phone);
+            ucinfoteacher.email.Text = sign_in.Tchsign(username,password).Email;
+            ucinfoteacher.code.Text = Convert.ToString(sign_in.Tchsign(username,password).OrgCode);
         }
 
 
 
         private void info_teacher_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+
             delet_prev();
-            set_info();
+            set_info(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password);
 
             ucinfoteacher.MaxHeight = 313;
             ucinfoteacher.MaxWidth = 800;

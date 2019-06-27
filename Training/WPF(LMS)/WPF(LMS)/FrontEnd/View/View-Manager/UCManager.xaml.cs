@@ -42,25 +42,26 @@ namespace WPF_LMS_.FrontEnd.View
         }
 
 
-        public void set_info()
+        public void set_info(int username , string password)
         {
-            MainWindow win = (MainWindow)Window.GetWindow(this);
 
-            ucinfomanager.name.Text = sign_in.Mgsign( Convert.ToInt32(win.ucsign.usernametxt.Text) , win.ucsign.passwordtxt.Password ).Name;
-            ucinfomanager.familyname.Text = sign_in.Mgsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).LastName;
-            ucinfomanager.melli.Text = Convert.ToString(sign_in.Mgsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).MeliCode);
-            ucinfomanager.birth.Text = Convert.ToString(sign_in.Mgsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).BirthDate);
-            ucinfomanager.phone.Text = Convert.ToString(sign_in.Mgsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Phone);
-            ucinfomanager.email.Text = sign_in.Mgsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Email;
-            ucinfomanager.code.Text =  Convert.ToString(sign_in.Mgsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).OrgCode);
+            ucinfomanager.name.Text = sign_in.Mgsign( username , password ).Name;
+            ucinfomanager.familyname.Text = sign_in.Mgsign(username, password).LastName;
+            ucinfomanager.melli.Text = Convert.ToString(sign_in.Mgsign(username, password).MeliCode);
+            ucinfomanager.birth.Text = Convert.ToString(sign_in.Mgsign(username, password).BirthDate);
+            ucinfomanager.phone.Text = Convert.ToString(sign_in.Mgsign(username, password).Phone);
+            ucinfomanager.email.Text = sign_in.Mgsign(username, password).Email;
+            ucinfomanager.code.Text =  Convert.ToString(sign_in.Mgsign(username, password).OrgCode);
         }
 
 
 
         private void info_manager_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+
             delet_prev();
-            set_info();
+            set_info( Convert.ToInt32(win.ucsign.usernametxt.Text) , win.ucsign.passwordtxt.Password);
 
             ucinfomanager.MaxHeight = 315;
             ucinfomanager.MaxWidth = 800;

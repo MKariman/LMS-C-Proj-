@@ -35,27 +35,29 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
             student_stack.Children.Clear();
         }
 
-        public void set_info()
+        public void set_info(int username, string password , UCinfostudent ucs)
         {
-            MainWindow win = (MainWindow)Window.GetWindow(this);
 
-            ucinfostudent.name.Text = sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Name;
-            ucinfostudent.familyname.Text = sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).LastName;
-            ucinfostudent.melli.Text = Convert.ToString(sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).MeliCode);
-            ucinfostudent.birth.Text = Convert.ToString(sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Birthdate);
-            ucinfostudent.phone.Text = Convert.ToString(sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Phone);
-            ucinfostudent.email.Text = sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Email;
-            ucinfostudent.code.Text = Convert.ToString(sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).UniCode);
-            ucinfostudent.year.Text = Convert.ToString(sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).UniLog);
-            ucinfostudent.unit.Text = Convert.ToString(sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Vahedha);
-            ucinfostudent.reshteh.Text = sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Major;
+            ucs.name.Text = sign_in.STsign(username, password).Name;
+            ucs.familyname.Text = sign_in.STsign(username, password).LastName;
+            ucs.melli.Text = Convert.ToString(sign_in.STsign(username, password).MeliCode);
+            ucs.birth.Text = Convert.ToString(sign_in.STsign(username, password).Birthdate);
+            ucs.phone.Text = Convert.ToString(sign_in.STsign(username, password).Phone);
+            ucs.email.Text = sign_in.STsign(username, password).Email;
+            ucs.code.Text = Convert.ToString(sign_in.STsign(username, password).UniCode);
+            ucs.year.Text = Convert.ToString(sign_in.STsign(username, password).UniLog);
+            ucs.unit.Text = Convert.ToString(sign_in.STsign(username, password).Vahedha);
+            ucs.reshteh.Text = sign_in.STsign(username, password).Major;
         }
 
 
         private void info_student_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+
             delet_prev();
-            set_info();
+            set_info(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password , ucinfostudent );
+
             ucinfostudent.MaxHeight = 315;
             ucinfostudent.MaxWidth = 800;
             student_stack.Children.Add(ucinfostudent);
