@@ -23,6 +23,7 @@ namespace WPF_LMS_.FrontEnd.View
     /// </summary>
     public partial class UCManager : UserControl
     {
+        UCmajorlessons ucmajorlessons = new UCmajorlessons();
         UCinfomanager ucinfomanager = new UCinfomanager();
         UCinfo_Allstudent ucinfo_allstudent = new UCinfo_Allstudent(); 
         Sign_In sign_in = new Sign_In();
@@ -80,6 +81,7 @@ namespace WPF_LMS_.FrontEnd.View
         private void list_major_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
+            manager_stack.Children.Add(ucmajorlessons);
         }
 
         private void see_marks_Click(object sender, RoutedEventArgs e)

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.ComponentModel;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -23,15 +24,26 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
     public partial class UCinfo_Allstudent : UserControl
     {
         Search search = new Search();
-        static List<string> student_listshow = new List<string>();
+        static List<Students> student_listshow = new List<Students>();
         UCinfostudent uinfostudent = new UCinfostudent();
         UCStudent ucstudent = new UCStudent();
+
+        public class Students
+        {
+            public int UniCode { get; set; }
+
+            public string Name { get; set; }
+
+            public string LastName { get; set; }
+        }
 
         public UCinfo_Allstudent()
         {
             InitializeComponent();
             information.Visibility = Visibility.Hidden;
         }
+
+        
 
         private void Search_Click(object sender, RoutedEventArgs e)
         {
@@ -45,13 +57,17 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
         
             foreach (var view in search.STFilter(search_studenttxt.Text))
             {
-                string s =  view.UniCode+"\t" + view.Name + " " + view.LastName ; 
-                student_listshow.Add( Convert.ToString(s) );
+                student_listshow.Add(new Students() { UniCode = view.UniCode , Name = view.Name , LastName = view.LastName }  );
             }
 
-            student_listshow.Sort();
+            
 
             list_students.ItemsSource = student_listshow;
+
+
+           // CollectionView student_listshow_sort = (CollectionView)CollectionViewSource.GetDefaultView(list_students.ItemsSource);
+          //  student_listshow_sort.SortDescriptions.Add(new SortDescription("UniCode", ListSortDirection.Ascending));
+
 
         }
 
@@ -60,7 +76,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
             if (list_students.SelectedItem != null )
             {
-                int selected = Int32.Parse(student_listshow[list_students.Items.IndexOf(list_students.SelectedItem)].Substring(0, 4));
+                int selected = student_listshow[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode;
 
                 information.Visibility = Visibility.Visible;
                 show_btn.Visibility = Visibility.Hidden;
@@ -72,7 +88,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
                 uinfostudent.Margin =new Thickness(-25,-25,0,0);
                 uinfostudent.MaxHeight = 320;
                 uinfostudent.MaxWidth = 820;
-                infostudents_stack.Children.Add(uinfostudent);
+                
 
             }
             else
