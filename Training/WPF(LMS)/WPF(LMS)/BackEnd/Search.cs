@@ -60,14 +60,56 @@ namespace WPF_LMS_.BackEnd
             }
         }
 
-        public IQueryable<MajorsLessons> AuChart(string RMajor)
+        public List<MajorsLessons> AuChart(string RMajor)
         {
             using(DB_Proj db=new DB_Proj())
             {
-                var Chart = db.Lessons.Where(i => i.Major == RMajor);
-               
+                var EkhChart = db.Lessons.Where(i => i.Major == RMajor);
+                var OmChart = db.Lessons.Where(i => i.Major == "Omumi");
+                var PaChart = db.Lessons.Where(i => i.Major == "Paye");
+                List<MajorsLessons> MLPer = new List<MajorsLessons>();
+
+               foreach(var item in EkhChart)
+                {
+                    MLPer.Add(new MajorsLessons
+                    {
+                        Lesson = item.Lesson,
+                        Type = item.Type,
+                        Unit = item.Unit
+
+                    });
+
+                }
+               foreach(var item in OmChart)
+                {
+                    MLPer.Add(new MajorsLessons
+                    {
+                        Lesson = item.Lesson,
+                        Type = item.Type,
+                        Unit = item.Unit
+
+                    });
+
+                }
+                if ((RMajor == "Computer")||(RMajor=="Barq")||(RMajor=="Omran")||(RMajor=="Mechanic")||(RMajor=="Shimi"))
+                {
+                    foreach (var item in PaChart)
+                    {
+                        MLPer.Add(new MajorsLessons
+                        {
+                            Lesson = item.Lesson,
+                            Type = item.Type,
+                            Unit = item.Unit
+
+                        });
+
+                    }
+
+                }
                 
-                return Chart;
+                
+
+                return MLPer;
             }
             
         }

@@ -27,6 +27,7 @@ namespace WPF_LMS_.FrontEnd.View
     {
 
         Sign_In sign_in = new Sign_In();
+        
        
 
         public UCSign()
@@ -65,6 +66,7 @@ namespace WPF_LMS_.FrontEnd.View
                             MessageBox.Show("نام کاربری یا رمز عبور اشتباه است", "خطا", MessageBoxButton.OK, MessageBoxImage.Error);
                             usernametxt.Text = "";
                             passwordtxt.Password = "";
+                            
                         }
                     }
                 }
