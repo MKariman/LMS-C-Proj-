@@ -77,6 +77,7 @@ namespace WPF_LMS_.FrontEnd.View
 
             ucinfomanager.MaxHeight = 315;
             ucinfomanager.MaxWidth = 800;
+            
             manager_stack.Children.Add(ucinfo_allstudent);
         }
 

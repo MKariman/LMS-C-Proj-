@@ -5,50 +5,55 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_LMS_.FrontEnd.View.View_Manager"
              mc:Ignorable="d" 
-             d:DesignHeight="313" d:DesignWidth="800">
+             d:DesignHeight="315" d:DesignWidth="800">
     <Grid>
-        <StackPanel Margin="0,0,0,0.333" RenderTransformOrigin="0.5,0.5">
-            <StackPanel.Background>
-                <ImageBrush ImageSource="/WPF(LMS);component/FrontEnd/img/abstract-geometric-hexagonal-medical-or-science-background-conce-vector.jpg">
-                    <ImageBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleY="1" ScaleX="1"/>
-                            <SkewTransform AngleY="0" AngleX="0" CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform Angle="0" CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </ImageBrush.RelativeTransform>
-                </ImageBrush>
-            </StackPanel.Background>
-
-            <TextBlock Text=":    نام" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="700,45,50,0" Foreground="#FF020E25" />
-            <TextBlock Text=":نام خانوادگی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="680,45,50,0" Foreground="#FF020E25" />
-            <TextBlock Text=":    تاریخ تولد" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="680,45,50,0" Foreground="#FF020E25" />
-            <TextBlock Text=":    کد ملی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="692,45,50,0" Foreground="#FF020E25" />
-            <TextBlock Text=":    تلفن تماس" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="350,-410,350,0" Foreground="#FF020E25" />
-            <TextBlock Text=":   ایمیل" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="350,-280,350,0" Foreground="#FF020E25" />
-            <TextBlock Text=":    کد پرسنلی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="350,-155,350,0" Foreground="#FF020E25" />
-            <TextBlock Text=":    سمت" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="350,-20,350,0" Foreground="#FF020E25" />
-            <TextBlock Text=":    تحصیلات" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="50,-155,610,0" Foreground="#FF020E25" />
-
-
-            <TextBlock x:Name="name" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-405,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
-            <TextBlock x:Name="familyname" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-280,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
-            <TextBlock x:Name="birth" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-150,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
-            <TextBlock x:Name="melli" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-20,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
-            <TextBlock x:Name="semat" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-20,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
-            <TextBlock x:Name="phone" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-410,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
-            <TextBlock x:Name="email" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-280,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
-            <TextBlock x:Name="code" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-150,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
-            <TextBlock x:Name="teach" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="10,-150,670,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
-
-
-            <StackPanel Height="100" Width="100" Margin="0,-240,550,650">
+        <GroupBox Header="information" Foreground="White" >
+            <StackPanel Margin="0,0,0,0.333" RenderTransformOrigin="0.5,0.5">
                 <StackPanel.Background>
-                    <ImageBrush ImageSource="/WPF(LMS);component/FrontEnd/img/user.png"/>
+                    <ImageBrush ImageSource="/WPF(LMS);component/FrontEnd/img/abstract-geometric-hexagonal-medical-or-science-background-conce-vector.jpg">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleY="1" ScaleX="1"/>
+                                <SkewTransform AngleY="0" AngleX="0" CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="0" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
                 </StackPanel.Background>
-            </StackPanel>
 
-        </StackPanel>
+                <TextBlock Text=":    نام" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="700,45,50,0" Foreground="#FF020E25" />
+                <TextBlock Text=":نام خانوادگی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="673,45,50,0" Foreground="#FF020E25" />
+                <TextBlock Text=":    تاریخ تولد" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="680,45,50,0" Foreground="#FF020E25" />
+                <TextBlock Text=":    کد ملی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="692,45,50,0" Foreground="#FF020E25" />
+                <TextBlock Text=":    تلفن تماس" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="350,-410,350,0" Foreground="#FF020E25" />
+                <TextBlock Text=":   ایمیل" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="350,-280,350,0" Foreground="#FF020E25" />
+                <TextBlock Text=":    کد پرسنلی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="350,-155,350,0" Foreground="#FF020E25" />
+                <TextBlock Text=":    سمت" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="350,-20,350,0" Foreground="#FF020E25" />
+                <TextBlock Text=":    تحصیلات" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="50,-155,610,0" Foreground="#FF020E25" />
+
+
+                <TextBox x:Name="name" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-405,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False" ></TextBox>
+                <TextBox x:Name="familyname" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-280,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False"  ></TextBox>
+                <TextBox x:Name="birth" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-150,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False"  ></TextBox>
+                <TextBox x:Name="melli" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-20,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False"  ></TextBox>
+                <TextBox x:Name="semat" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-20,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  BorderBrush="{x:Null}" IsEnabled="False"  ></TextBox>
+                <TextBox x:Name="phone" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-410,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False"  ></TextBox>
+                <TextBox x:Name="email" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-280,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False"  ></TextBox>
+                <TextBox x:Name="code" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-150,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  BorderBrush="{x:Null}" IsEnabled="False"  ></TextBox>
+                <TextBox x:Name="teach" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="10,-150,670,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  BorderBrush="{x:Null}" IsEnabled="False"  ></TextBox>
+
+
+                <StackPanel Height="100" Width="100" Margin="0,-240,550,650">
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="/WPF(LMS);component/FrontEnd/img/user.png"/>
+                    </StackPanel.Background>
+                </StackPanel>
+
+                <Button x:Name="edit" Content="ویرایش" Width="50" Height="20" Background="#FFE08A8A" FontWeight="Bold" FontSize="11" Margin="0,-550,550,550" Click="Edit_Click"/>
+                <Button x:Name="ok" Content="تایید"  Width="50" Height="20" Background="#FF97E08A" FontWeight="Bold" FontSize="11" Margin="0,-550,550,550"  Click="Ok_Click" Visibility="Hidden"  />
+
+            </StackPanel>
+        </GroupBox>
     </Grid>
 </UserControl>
