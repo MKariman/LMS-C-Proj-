@@ -10,26 +10,23 @@
         <StackPanel>
             <GroupBox Header="LESSONS" Height="315" Width="650" HorizontalAlignment="Right" Foreground="White">
                 
-                <DataGrid x:Name="list_lessons_view">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Lesson" Width="150" Binding="{Binding Name}" ></DataGridTextColumn>
-                        <DataGridTextColumn Header="Unit" Width="150"  Binding="{Binding Unit}" ></DataGridTextColumn>
-                        <DataGridTextColumn Header="Type" Width="150" Binding="{Binding type}"  ></DataGridTextColumn>
-                        <DataGridTextColumn Header="Teacher" Width="150"  Binding="{Binding Teacher}" ></DataGridTextColumn>
-
-
-                    </DataGrid.Columns>
-                    
-                </DataGrid>
+                <ListView x:Name="list_lessons_view">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Lesson" Width="150"  DisplayMemberBinding="{Binding Lesson}" ></GridViewColumn>
+                            <GridViewColumn Header="Unit" Width="150"  DisplayMemberBinding="{Binding Type}" ></GridViewColumn>
+                            <GridViewColumn Header="Type" Width="150" DisplayMemberBinding="{Binding Unit}"  ></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
             </GroupBox>
         <DockPanel Height="315" Width="150" HorizontalAlignment="Left" Margin="0,-315,0,0">
-            <Button x:Name="AllMarks" Width="150" Height="45" Content="دروس عمومی" DockPanel.Dock="Bottom" Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="AllMarks_Click" ></Button>
-            <Button x:Name="Shimi" Width="150" Height="45" Content="شیمی" DockPanel.Dock="Bottom"   Background="#FFB7BEDF"  BorderBrush="#FF38356D" FontWeight="Bold" Click="Shimi_Click"></Button>
-            <Button x:Name="Mem" Width="150" Height="45" Content="مهدسی معماری" DockPanel.Dock="Bottom"   Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Mem_Click"></Button>
-            <Button x:Name="Mech" Width="150" Height="45" Content="مهدسی مکانیک" DockPanel.Dock="Bottom"  Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Mech_Click" ></Button>
-            <Button x:Name="Barq" Width="150" Height="45" Content="مهندسی برق" DockPanel.Dock="Bottom"  Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Barq_Click"></Button>
-            <Button x:Name="Omran" Width="150" Height="45" Content="مهندسی عمران" DockPanel.Dock="Bottom"  Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Omran_Click" ></Button>
-            <Button x:Name="Comp" Width="150" Height="45" Content="مهندسی کامپیوتر" DockPanel.Dock="Bottom"  Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Comp_Click" ></Button>
+                <Button x:Name="Shimi" Width="150" Height="52.5" Content="شیمی" DockPanel.Dock="Bottom"   Background="#FFB7BEDF"  BorderBrush="#FF38356D" FontWeight="Bold" Click="Shimi_Click"></Button>
+                <Button x:Name="Mem" Width="150" Height="52.5" Content="مهدسی معماری" DockPanel.Dock="Bottom"   Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Mem_Click"></Button>
+                <Button x:Name="Mech" Width="150" Height="52.5" Content="مهدسی مکانیک" DockPanel.Dock="Bottom"  Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Mech_Click" ></Button>
+                <Button x:Name="Barq" Width="150" Height="52.5" Content="مهندسی برق" DockPanel.Dock="Bottom"  Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Barq_Click"></Button>
+                <Button x:Name="Omran" Width="150" Height="52.5" Content="مهندسی عمران" DockPanel.Dock="Bottom"  Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Omran_Click" ></Button>
+                <Button x:Name="Comp" Width="150" Height="52.5" Content="مهندسی کامپیوتر" DockPanel.Dock="Bottom"  Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Comp_Click" ></Button>
 
 
 

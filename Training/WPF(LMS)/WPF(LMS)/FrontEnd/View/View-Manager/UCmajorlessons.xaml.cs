@@ -42,58 +42,40 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
 
 
-        private void AllMarks_Click(object sender, RoutedEventArgs e)
-        {
-
-           
-        }
-
-
-    
-
         private void Shimi_Click(object sender, RoutedEventArgs e)
         {
-
+            list_lessons_view.ItemsSource = search.AuChart("Shimi");
+            list_lessons_view.IsEnabled = false;
         }
 
         private void Mem_Click(object sender, RoutedEventArgs e)
         {
-
+            list_lessons_view.ItemsSource = search.AuChart("Memari");
+            list_lessons_view.IsEnabled = false;
         }
 
         private void Mech_Click(object sender, RoutedEventArgs e)
         {
-
+            list_lessons_view.ItemsSource = search.AuChart("Mechanic");
+            list_lessons_view.IsEnabled = false;
         }
 
         private void Barq_Click(object sender, RoutedEventArgs e)
         {
-
+            list_lessons_view.ItemsSource = search.AuChart("Barq");
+            list_lessons_view.IsEnabled = false;
         }
 
         private void Omran_Click(object sender, RoutedEventArgs e)
         {
-
+            list_lessons_view.ItemsSource = search.AuChart("Omran");
+            list_lessons_view.IsEnabled = false;
         }
 
         private void Comp_Click(object sender, RoutedEventArgs e)
         {
-            var T = search.AuChart("Computer");
-
-            foreach ( var view in T )
-            {
-
-                list_lesson.Add(new Lesson()
-                {
-                    Name = view.Lesson,
-                    Unit = view.Unit,
-                    type = view.Type,
-                    Teacher = "?"
-                });
-
-                list_lessons_view.ItemsSource = list_lesson;
-                
-            }
+            list_lessons_view.ItemsSource=search.AuChart("Computer");
+            list_lessons_view.IsEnabled =false;
         }
     }
 }

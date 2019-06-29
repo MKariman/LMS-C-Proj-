@@ -154,11 +154,23 @@
       <SubType>Designer</SubType>
       <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
+    <Page Include="FrontEnd\View\View-Manager\UCaddUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrontEnd\View\View-Manager\UCchangeMarks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FrontEnd\View\View-Manager\UCinfomanager.xaml">
       <SubType>Designer</SubType>
       <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
     <Page Include="FrontEnd\View\View-Manager\UCinfo_Allstudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrontEnd\View\View-Manager\UClistStudentsMark.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -169,6 +181,14 @@
     <Page Include="FrontEnd\View\View-Manager\UCManager.xaml">
       <SubType>Designer</SubType>
       <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="FrontEnd\View\View-Manager\UCseeMarks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrontEnd\View\View-Stuedent\UCchart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FrontEnd\View\View-Stuedent\UCinfostudent.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -211,17 +231,32 @@
     <Compile Include="FrontEnd\View\UCSign.xaml.cs">
       <DependentUpon>UCSign.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FrontEnd\View\View-Manager\UCaddUser.xaml.cs">
+      <DependentUpon>UCaddUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\View\View-Manager\UCchangeMarks.xaml.cs">
+      <DependentUpon>UCchangeMarks.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\View\View-Manager\UCinfomanager.xaml.cs">
       <DependentUpon>UCinfomanager.xaml</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\View\View-Manager\UCinfo_Allstudent.xaml.cs">
       <DependentUpon>UCinfo_Allstudent.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FrontEnd\View\View-Manager\UClistStudentsMark.xaml.cs">
+      <DependentUpon>UClistStudentsMark.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\View\View-Manager\UCmajorlessons.xaml.cs">
       <DependentUpon>UCmajorlessons.xaml</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\View\View-Manager\UCManager.xaml.cs">
       <DependentUpon>UCManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\View\View-Manager\UCseeMarks.xaml.cs">
+      <DependentUpon>UCseeMarks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\View\View-Stuedent\UCchart.xaml.cs">
+      <DependentUpon>UCchart.xaml</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\View\View-Stuedent\UCinfostudent.xaml.cs">
       <DependentUpon>UCinfostudent.xaml</DependentUpon>

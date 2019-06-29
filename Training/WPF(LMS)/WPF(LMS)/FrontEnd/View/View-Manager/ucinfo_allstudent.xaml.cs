@@ -24,18 +24,10 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
     public partial class UCinfo_Allstudent : UserControl
     {
         Search search = new Search();
-        static List<Students> student_listshow = new List<Students>();
         UCinfostudent uinfostudent = new UCinfostudent();
         UCStudent ucstudent = new UCStudent();
 
-        public class Students
-        {
-            public int UniCode { get; set; }
-
-            public string Name { get; set; }
-
-            public string LastName { get; set; }
-        }
+    
 
         public UCinfo_Allstudent()
         {
@@ -48,25 +40,18 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
         private void Search_Click(object sender, RoutedEventArgs e)
         {
             list_students.ItemsSource = null;
-            student_listshow.Clear();
 
 
             students.Visibility = Visibility.Visible;
             show_btn.Visibility = Visibility.Visible;
             information.Visibility = Visibility.Hidden;
-        
-            foreach (var view in search.STFilter(search_studenttxt.Text))
-            {
-                student_listshow.Add(new Students() { UniCode = view.UniCode , Name = view.Name , LastName = view.LastName }  );
-            }
+  
 
-            
-
-            list_students.ItemsSource = student_listshow;
+            list_students.ItemsSource = search.STFilter(search_studenttxt.Text);
 
 
-           // CollectionView student_listshow_sort = (CollectionView)CollectionViewSource.GetDefaultView(list_students.ItemsSource);
-          //  student_listshow_sort.SortDescriptions.Add(new SortDescription("UniCode", ListSortDirection.Ascending));
+            //CollectionView student_listshow_sort = (CollectionView)CollectionViewSource.GetDefaultView(list_students.ItemsSource);
+            //student_listshow_sort.SortDescriptions.Add(new SortDescription("UniCode", ListSortDirection.Ascending));
 
 
         }
@@ -76,20 +61,19 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
             if (list_students.SelectedItem != null )
             {
-                int selected = student_listshow[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode;
 
                 information.Visibility = Visibility.Visible;
                 show_btn.Visibility = Visibility.Hidden;
                 students.Visibility = Visibility.Hidden;
                 infostudents_stack.Children.Clear();
 
-                ucstudent.set_info(selected , search.STFilter(Convert.ToString(selected))[0].Password , uinfostudent);
+                ucstudent.set_info(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode  ,  search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].Password , uinfostudent);
 
                 uinfostudent.Margin =new Thickness(-25,-25,0,0);
                 uinfostudent.MaxHeight = 320;
                 uinfostudent.MaxWidth = 820;
-                
 
+                infostudents_stack.Children.Add(uinfostudent);
             }
             else
             {

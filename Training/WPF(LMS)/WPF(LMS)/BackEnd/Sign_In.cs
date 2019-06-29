@@ -72,7 +72,7 @@ namespace WPF_LMS_.BackEnd
                                 UniCode = ((62 + i) * 100 + i + j),
                                 Email = "@gmail.com",
                                 Birthdate = 1398 - (62 + i),
-                                Major = "?",
+                                Major = "Computer",
                                 Phone = 021,
 
                                 MeliCode = 0022,
@@ -105,7 +105,7 @@ namespace WPF_LMS_.BackEnd
                                 UniCode = ((62 + i) * 100 + i + j),
                                 Email = "@gmail.com",
                                 Birthdate = 1398 - (62 + i),
-                                Major = "?",
+                                Major = "Omran",
                                 Phone = 021,
 
                                 MeliCode = 0022,
@@ -138,7 +138,7 @@ namespace WPF_LMS_.BackEnd
                                 UniCode = ((62 + i) * 100 + i + j),
                                 Email = "@gmail.com",
                                 Birthdate = 1398 - (62 + i),
-                                Major = "?",
+                                Major = "Barq",
                                 Phone = 021,
 
                                 MeliCode = 0022,
@@ -171,7 +171,7 @@ namespace WPF_LMS_.BackEnd
                                 UniCode = ((62 + i) * 100 + i + j),
                                 Email = "@gmail.com",
                                 Birthdate = 1398 - (62 + i),
-                                Major = "?",
+                                Major = "Memari",
                                 Phone = 021,
 
                                 MeliCode = 0022,
@@ -205,7 +205,7 @@ namespace WPF_LMS_.BackEnd
                                 UniCode = ((62 + i) * 100 + i + j),
                                 Email = "@gmail.com",
                                 Birthdate = 1398 - (62 + i),
-                                Major = "?",
+                                Major = "Shimi",
                                 Phone = 021,
 
                                 MeliCode = 0022,
@@ -238,7 +238,7 @@ namespace WPF_LMS_.BackEnd
                                 UniCode = ((62 + i) * 100 + i + j),
                                 Email = "@gmail.com",
                                 Birthdate = 1398 - (62 + i),
-                                Major = "?",
+                                Major = "Mechanic",
                                 Phone = 021,
 
                                 MeliCode = 0022,

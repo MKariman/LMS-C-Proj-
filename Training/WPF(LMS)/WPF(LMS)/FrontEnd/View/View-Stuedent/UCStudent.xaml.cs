@@ -22,6 +22,8 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
     public partial class UCStudent : UserControl
     {
         UCinfostudent ucinfostudent = new UCinfostudent();
+        Search search = new Search();
+        UCchart ucchart = new UCchart();
         Sign_In sign_in = new Sign_In();
 
 
@@ -76,7 +78,17 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
 
         private void chart_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow win = (MainWindow)Window.GetWindow(this);
             delet_prev();
+
+            ucchart.MaxHeight = 315;
+            ucchart.MaxWidth = 800;
+            ucchart.list_lessons_view.ItemsSource = search.AuChart(search.STFilter(win.ucsign.usernametxt.Text)[0].Major);
+            ucchart.list_lessons_view.IsEnabled = false;
+            student_stack.Children.Add(ucchart);
+
+            
+
         }
 
         private void select_unit_Click(object sender, RoutedEventArgs e)

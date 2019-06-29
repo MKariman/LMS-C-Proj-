@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="WPF_LMS_.FrontEnd.View.View_Manager.UCseeMarks"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_LMS_.FrontEnd.View.View_Manager"
+             mc:Ignorable="d" 
+             d:DesignHeight="315" d:DesignWidth="800">
+    <Grid>
+        <StackPanel>
+            <TextBox x:Name="search_studenttxt" Height="20" HorizontalAlignment="Left" Width="164" Margin="60,10,0,0"/>
+            <Button Height="20" Content="search" FontStyle="Italic" FontWeight="Bold" Opacity="0.707" Margin="10,-20,740,0" Click="search_Click"/>
+            <GroupBox x:Name="students" Height="270" Margin="10,5,576,0" BorderBrush="#FF2B5D7C" Header="Students" Foreground="White" >
+                <ListView x:Name="list_students" BorderBrush="#FF214468" Background="#FFE9E9E9" Margin="0,0,-2,22">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="UniCode" Width="60" DisplayMemberBinding="{Binding UniCode}"/>
+                            <GridViewColumn Header="Name" Width="60" DisplayMemberBinding="{Binding Name}"/>
+                            <GridViewColumn Header="Last Name" Width="80"  DisplayMemberBinding="{Binding LastName}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </GroupBox>
+            <Button x:Name="show_btn" Height="23" Margin="16,-46,580,0" BorderBrush="#FF214468" Content="SHOW" Background="#FFA7B8D4" Foreground="#FF214468" FontWeight="Bold" Click="show_Click"/>
+            <GroupBox x:Name="Marks" Width="570" HorizontalAlignment="Right" Margin="0,-305,0,0" Header="Marks" Height="301" Foreground="White">
+                <ListView x:Name="list_mark" Background="#FFE9E9E9">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Width="200" Header="نام درس"></GridViewColumn>
+                            <GridViewColumn Width="200" Header="نمره"></GridViewColumn>
+                            <GridViewColumn Width="100" Header="واحد"></GridViewColumn>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </GroupBox>
+
+        </StackPanel>
+            
+    </Grid>
+</UserControl>

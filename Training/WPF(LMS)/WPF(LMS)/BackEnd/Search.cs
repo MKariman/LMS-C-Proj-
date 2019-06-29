@@ -60,6 +60,8 @@ namespace WPF_LMS_.BackEnd
             }
         }
 
+       
+
         public List<MajorsLessons> AuChart(string RMajor)
         {
             using(DB_Proj db=new DB_Proj())
@@ -69,7 +71,8 @@ namespace WPF_LMS_.BackEnd
                 var PaChart = db.Lessons.Where(i => i.Major == "Paye");
                 List<MajorsLessons> MLPer = new List<MajorsLessons>();
 
-               foreach(var item in EkhChart)
+
+                foreach (var item in EkhChart)
                 {
                     MLPer.Add(new MajorsLessons
                     {
@@ -80,7 +83,8 @@ namespace WPF_LMS_.BackEnd
                     });
 
                 }
-               foreach(var item in OmChart)
+
+                foreach (var item in OmChart)
                 {
                     MLPer.Add(new MajorsLessons
                     {
@@ -91,7 +95,7 @@ namespace WPF_LMS_.BackEnd
                     });
 
                 }
-                if ((RMajor == "Computer")||(RMajor=="Barq")||(RMajor=="Omran")||(RMajor=="Mechanic")||(RMajor=="Shimi"))
+                if ((RMajor == "Computer")||(RMajor=="Barq")||(RMajor=="Omran")||(RMajor=="Mechanic")||(RMajor=="Shimi")||(RMajor== "Memari"))
                 {
                     foreach (var item in PaChart)
                     {

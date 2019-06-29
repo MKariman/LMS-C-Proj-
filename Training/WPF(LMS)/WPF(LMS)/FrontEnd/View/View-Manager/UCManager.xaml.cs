@@ -23,6 +23,8 @@ namespace WPF_LMS_.FrontEnd.View
     /// </summary>
     public partial class UCManager : UserControl
     {
+        UCseeMarks ucseemarks = new UCseeMarks();
+        UCchangeMarks ucchangemarks = new UCchangeMarks();
         UCmajorlessons ucmajorlessons = new UCmajorlessons();
         UCinfomanager ucinfomanager = new UCinfomanager();
         UCinfo_Allstudent ucinfo_allstudent = new UCinfo_Allstudent(); 
@@ -81,17 +83,28 @@ namespace WPF_LMS_.FrontEnd.View
         private void list_major_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
+
+            ucmajorlessons.MaxHeight = 315;
+            ucmajorlessons.MaxWidth = 800;
             manager_stack.Children.Add(ucmajorlessons);
         }
 
         private void see_marks_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
+
+            ucseemarks.MaxHeight = 315;
+            ucseemarks.MaxWidth = 800;
+            manager_stack.Children.Add(ucseemarks);
         }
 
         private void change_marks_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
+
+            ucchangemarks.MaxHeight = 315;
+            ucchangemarks.MaxWidth = 800;
+            manager_stack.Children.Add(ucchangemarks);
         }
 
         private void list_marks_student_Click(object sender, RoutedEventArgs e)
