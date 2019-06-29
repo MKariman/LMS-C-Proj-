@@ -23,6 +23,7 @@ namespace WPF_LMS_.BackEnd
             }
                 
         }
+
         public St_Models STsign(int usern, string pass)
         {
             using (var Db = new DB_Proj())
@@ -43,6 +44,39 @@ namespace WPF_LMS_.BackEnd
                 return login;
             }
         }
+
+
+        public void RegST(List<St_Models> UReg)
+        {
+            using (DB_Proj db = new DB_Proj())
+            {
+                db.St_InfM.AddRange(UReg);
+                db.SaveChanges();
+
+            }
+        }
+        public void RegTch(List<Tch_Models> UReg)
+        {
+            using (DB_Proj db = new DB_Proj())
+            {
+                db.Tch_InfM.AddRange(UReg);
+                db.SaveChanges();
+
+            }
+        }
+        public void RegMg(List<Mg_Models> UReg)
+        {
+            using (DB_Proj db = new DB_Proj())
+            {
+                db.Mg_InfM.AddRange(UReg);
+                db.SaveChanges();
+
+            }
+        }
+
+
+
+
         public void AddUser()
         {
             using (var Db = new DB_Proj())

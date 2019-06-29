@@ -10,10 +10,10 @@ namespace WPF_LMS_.BackEnd.Marks
     {
 
         public int MechMId { get; set; }
-        public int MFizik { get; set; }
-        public int MTermo { get; set; }
-        public int MSayalat { get; set; }
-        public int MControl { get; set; }
-        public int MMashin { get; set; }
+        public int? MFizik { get; set; }
+        public int? MTermo { get; set; }
+        public int? MSayalat { get; set; }
+        public int? MControl { get; set; }
+        public int? MMashin { get; set; }
     }
 }
