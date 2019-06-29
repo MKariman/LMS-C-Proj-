@@ -27,7 +27,7 @@ namespace WPF_LMS_.FrontEnd.View
     {
 
         Sign_In sign_in = new Sign_In();
-        
+
        
 
         public UCSign()
@@ -50,7 +50,7 @@ namespace WPF_LMS_.FrontEnd.View
                         win.main_stack.Children.Remove(win.ucsign);
                         win.main_stack.Children.Add(win.ucstudent);
                         win.ucstudent.titr.Text = "  دانشجو  " + sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).Name + " " + sign_in.STsign(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password).LastName;
-
+                       
                     }
                     else
                     {

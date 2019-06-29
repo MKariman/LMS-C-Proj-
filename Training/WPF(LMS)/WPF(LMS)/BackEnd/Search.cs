@@ -60,6 +60,8 @@ namespace WPF_LMS_.BackEnd
             }
         }
 
+
+
        
 
         public List<MajorsLessons> AuChart(string RMajor)
@@ -117,144 +119,145 @@ namespace WPF_LMS_.BackEnd
             }
             
         }
-        public void SMark(int STID)
+   
+
+        public List<Marks.CompM> CompMark(int STID)
         {
             using(DB_Proj db=new DB_Proj())
             {
-                var STRow = db.St_InfM.Where(i=> i.UniCode==STID).FirstOrDefault();
-                if (STRow.Major == "Computer")
+                var STRow = db.St_InfM.Where(i => i.UniCode == STID).FirstOrDefault();
+                var MRow = db.CompD.Where(i => i.St_ModelsId == STRow.St_ModelsId).FirstOrDefault();
+                List<Marks.CompM> ComMark = new List<Marks.CompM>();
+                ComMark.Add(new Marks.CompM
                 {
-                    var MRow = db.CompD.Where(i => i.St_ModelsId == STRow.St_ModelsId).FirstOrDefault();
-                    CompAdd(MRow);
-                }
-                else if (STRow.Major == "Barq")
-                {
-                    var MRow = db.BarqD.Where(i => i.St_ModelsId == STRow.St_ModelsId).FirstOrDefault();
-                    BarqAdd(MRow);
-                }
-                else if (STRow.Major == "Omran")
-                {
-                    var MRow = db.OmranD.Where(i => i.St_ModelsId == STRow.St_ModelsId).FirstOrDefault();
-                    OmrAdd(MRow);
-                }
-                else if (STRow.Major == "Shimi")
-                {
-                    var MRow = db.ShimiD.Where(i => i.St_ModelsId == STRow.St_ModelsId).FirstOrDefault();
-                    ShiAdd(MRow);
-                }
-                else if (STRow.Major == "Mechanic")
-                {
-                    var MRow = db.MechD.Where(i => i.St_ModelsId == STRow.St_ModelsId).FirstOrDefault();
-                    MechAdd(MRow);
-                }
-                else if (STRow.Major == "Memari")
-                {
-                    var MRow = db.MemD.Where(i => i.St_ModelsId == STRow.St_ModelsId).FirstOrDefault();
-                    MeAdd(MRow);
-                }
-                
+                    CManteqi = MRow.CManteqi,
+                    CDatabase = MRow.CDatabase,
+                    CGosaste = MRow.CGosaste,
+                    CInteligence = MRow.CInteligence,
+                    CProgramming = MRow.CProgramming,
+                    Riazi1 = MRow.Riazi1,
+                    Adabiat = MRow.Adabiat,
+                    Andishe = MRow.Andishe,
+                    Moadelat = MRow.Moadelat
+                });
+                return ComMark;
             }
+            
+            
         }
+        public List<Marks.BarqM> BarqMark(int STID)
+        {
+            using(DB_Proj db=new DB_Proj())
+            {
+                var STRow = db.St_InfM.Where(i => i.UniCode == STID).FirstOrDefault();
+                var MRow = db.BarqD.Where(i => i.St_ModelsId == STRow.St_ModelsId).FirstOrDefault();
+                List<Marks.BarqM> BarqMark = new List<Marks.BarqM>();
+                BarqMark.Add(new Marks.BarqM
+                {
+                    BCmos = MRow.BCmos,
+                    BElectro = MRow.BElectro,
+                    BVLSI = MRow.BVLSI,
+                    BQodrat = MRow.BQodrat,
+                    BMadar = MRow.BMadar,
+                    Riazi1 = MRow.Riazi1,
+                    Adabiat = MRow.Adabiat,
+                    Andishe = MRow.Andishe,
+                    Moadelat = MRow.Moadelat
+                });
+                return BarqMark;
+            }
+           
+        }
+        public List<Marks.OmranM> OmrMark(int STID)
+        {
+            using(DB_Proj db=new DB_Proj())
+            {
+                var STRow = db.St_InfM.Where(i => i.UniCode == STID).FirstOrDefault();
+                var MRow = db.OmranD.Where(i => i.St_ModelsId == STRow.St_ModelsId).FirstOrDefault();
+                List<Marks.OmranM> OmrMark = new List<Marks.OmranM>();
+                OmrMark.Add(new Marks.OmranM
+                {
+                    OBotons = MRow.OBotons,
+                    ODinamik = MRow.ODinamik,
+                    OMasaleh = MRow.OMasaleh,
+                    ONaqshe = MRow.ONaqshe,
+                    OStatik = MRow.OStatik,
+                    Riazi1 = MRow.Riazi1,
+                    Adabiat = MRow.Adabiat,
+                    Andishe = MRow.Andishe,
+                    Moadelat = MRow.Moadelat
+                });
+                return OmrMark;
+            }
+           
+        }
+        public List<Marks.ShimiM> ShiMark(int STID)
+        {
+            using (DB_Proj db = new DB_Proj())
+            {
+                var STRow = db.St_InfM.Where(i => i.UniCode == STID).FirstOrDefault();
+                var MRow = db.ShimiD.Where(i => i.St_ModelsId == STRow.St_ModelsId).FirstOrDefault();
+                List<Marks.ShimiM> ShiMark = new List<Marks.ShimiM>();
+                ShiMark.Add(new Marks.ShimiM
+                {
+                    SHGaz = MRow.SHGaz,
+                    SHHararat = MRow.SHHararat,
+                    SHJerm = MRow.SHJerm,
+                    SHMavad = MRow.SHMavad,
+                    SHSinema = MRow.SHSinema,
+                    Riazi1 = MRow.Riazi1,
+                    Adabiat = MRow.Adabiat,
+                    Andishe = MRow.Andishe,
+                    Moadelat = MRow.Moadelat
+                });
+                return ShiMark;
 
-        public List<Marks.CompM> CompAdd(Marks.CompM MRow)
-        {
-            List<Marks.CompM> ComMark = new List<Marks.CompM>();
-            ComMark.Add(new Marks.CompM
-            {
-                CManteqi = MRow.CManteqi,
-                CDatabase = MRow.CDatabase,
-                CGosaste = MRow.CGosaste,
-                CInteligence = MRow.CInteligence,
-                CProgramming = MRow.CProgramming,
-                Riazi1 = MRow.Riazi1,
-                Adabiat = MRow.Adabiat,
-                Andishe = MRow.Andishe,
-                Moadelat = MRow.Moadelat
-            });
-            return ComMark;
+            }
+                
         }
-        public List<Marks.BarqM> BarqAdd(Marks.BarqM MRow)
+        public List<Marks.MechM> MechMark(int STID)
         {
-            List<Marks.BarqM> BarqMark = new List<Marks.BarqM>();
-            BarqMark.Add(new Marks.BarqM
+            using (DB_Proj db = new DB_Proj())
             {
-                BCmos= MRow.BCmos,
-                BElectro = MRow.BElectro,
-                BVLSI = MRow.BVLSI,
-                BQodrat = MRow.BQodrat,
-                BMadar = MRow.BMadar,
-                Riazi1 = MRow.Riazi1,
-                Adabiat = MRow.Adabiat,
-                Andishe = MRow.Andishe,
-                Moadelat = MRow.Moadelat
-            });
-            return BarqMark;
+                var STRow = db.St_InfM.Where(i => i.UniCode == STID).FirstOrDefault();
+                var MRow = db.MechD.Where(i => i.St_ModelsId == STRow.St_ModelsId).FirstOrDefault();
+                List<Marks.MechM> MechMark = new List<Marks.MechM>();
+                MechMark.Add(new Marks.MechM
+                {
+                    MControl = MRow.MControl,
+                    MFizik = MRow.MFizik,
+                    MMashin = MRow.MMashin,
+                    MSayalat = MRow.MSayalat,
+                    MTermo = MRow.MTermo,
+                    Riazi1 = MRow.Riazi1,
+                    Adabiat = MRow.Adabiat,
+                    Andishe = MRow.Andishe,
+                    Moadelat = MRow.Moadelat
+                });
+                return MechMark;
+            }
+          
         }
-        public List<Marks.OmranM> OmrAdd(Marks.OmranM MRow)
+        public List<Marks.MemM> MeMark(int STID)
         {
-            List<Marks.OmranM> OmrMark = new List<Marks.OmranM>();
-            OmrMark.Add(new Marks.OmranM
+            using (DB_Proj db = new DB_Proj())
             {
-                OBotons = MRow.OBotons,
-                ODinamik = MRow.ODinamik,
-                OMasaleh = MRow.OMasaleh,
-                ONaqshe = MRow.ONaqshe,
-                OStatik = MRow.OStatik,
-                Riazi1 = MRow.Riazi1,
-                Adabiat = MRow.Adabiat,
-                Andishe = MRow.Andishe,
-                Moadelat = MRow.Moadelat
-            });
-            return OmrMark;
-        }
-        public List<Marks.ShimiM> ShiAdd(Marks.ShimiM MRow)
-        {
-            List<Marks.ShimiM> ShiMark = new List<Marks.ShimiM>();
-            ShiMark.Add(new Marks.ShimiM
-            {
-                SHGaz = MRow.SHGaz,
-                SHHararat = MRow.SHHararat,
-                SHJerm = MRow.SHJerm,
-                SHMavad = MRow.SHMavad,
-                SHSinema = MRow.SHSinema,
-                Riazi1 = MRow.Riazi1,
-                Adabiat = MRow.Adabiat,
-                Andishe = MRow.Andishe,
-                Moadelat = MRow.Moadelat
-            });
-            return ShiMark;
-        }
-        public List<Marks.MechM> MechAdd(Marks.MechM MRow)
-        {
-            List<Marks.MechM> MechMark = new List<Marks.MechM>();
-            MechMark.Add(new Marks.MechM
-            {
-                MControl = MRow.MControl,
-                MFizik = MRow.MFizik,
-                MMashin = MRow.MMashin,
-                MSayalat = MRow.MSayalat,
-                MTermo = MRow.MTermo,
-                Riazi1 = MRow.Riazi1,
-                Adabiat = MRow.Adabiat,
-                Andishe = MRow.Andishe,
-                Moadelat = MRow.Moadelat
-            });
-            return MechMark;
-        }
-        public List<Marks.MemM> MeAdd(Marks.MemM MRow)
-        {
-            List<Marks.MemM> MeMark = new List<Marks.MemM>();
-            MeMark.Add(new Marks.MemM
-            {
-                MeDekor = MRow.MeDekor,
-                MeFazas = MRow.MeFazas,
-                MeNama = MRow.MeNama,
-                MeNaqshe = MRow.MeNaqshe,
-                MeTarahi = MRow.MeTarahi,
-                Adabiat = MRow.Adabiat,
-                Andishe = MRow.Andishe
-            });
-            return MeMark;
+                var STRow = db.St_InfM.Where(i => i.UniCode == STID).FirstOrDefault();
+                var MRow = db.MemD.Where(i => i.St_ModelsId == STRow.St_ModelsId).FirstOrDefault();
+                List<Marks.MemM> MeMark = new List<Marks.MemM>();
+                MeMark.Add(new Marks.MemM
+                {
+                    MeDekor = MRow.MeDekor,
+                    MeFazas = MRow.MeFazas,
+                    MeNama = MRow.MeNama,
+                    MeNaqshe = MRow.MeNaqshe,
+                    MeTarahi = MRow.MeTarahi,
+                    Adabiat = MRow.Adabiat,
+                    Andishe = MRow.Andishe
+                });
+                return MeMark;
+            }
+              
         }
       
 
