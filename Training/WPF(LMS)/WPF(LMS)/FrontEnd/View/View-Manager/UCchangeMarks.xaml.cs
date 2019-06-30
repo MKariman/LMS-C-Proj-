@@ -46,6 +46,8 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
         private void show_Click(object sender, RoutedEventArgs e)
         {
+            
+
             if (list_students.SelectedItem != null)
             {
                 //information.Visibility = Visibility.Visible;

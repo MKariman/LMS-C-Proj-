@@ -23,7 +23,9 @@ namespace WPF_LMS_.BackEnd
                         UniCode = item.UniCode,
                         LastName = item.LastName,
                         Password = item.Password,
-                        Major = item.Major
+                        Major = item.Major ,
+                        
+                        
 
                     });
                 }
@@ -253,7 +255,8 @@ namespace WPF_LMS_.BackEnd
                     MeNaqshe = MRow.MeNaqshe,
                     MeTarahi = MRow.MeTarahi,
                     Adabiat = MRow.Adabiat,
-                    Andishe = MRow.Andishe
+                    Andishe = MRow.Andishe ,
+                    Riazi1 = MRow.Riazi1
                 });
                 return MeMark;
             }

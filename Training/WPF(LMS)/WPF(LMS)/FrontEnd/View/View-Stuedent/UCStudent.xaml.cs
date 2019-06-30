@@ -23,6 +23,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
     {
         UCinfostudent ucinfostudent = new UCinfostudent();
         Search search = new Search();
+        UCreport ucreport = new UCreport();
         UCchart ucchart = new UCchart();
         Sign_In sign_in = new Sign_In();
 
@@ -68,7 +69,14 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
 
         private void report_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+
             delet_prev();
+
+            ucreport.show_Reprt(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password );
+            ucreport.MaxHeight = 315;
+            ucreport.MaxWidth = 800;
+            student_stack.Children.Add(ucreport);
         }
 
         private void table_term_Click(object sender, RoutedEventArgs e)

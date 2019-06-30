@@ -35,7 +35,7 @@
                     </Custom:RibbonGroup>
 
                     <Custom:RibbonGroup FontSize="12" FontFamily="B Roya">
-                        <Custom:RibbonButton Width="174" Height="81" Label="مشخصات دانشجویان " LargeImageSource="/WPF(LMS);component/FrontEnd/img/education-png-6.png" FontWeight="Bold" Click="info_students_Click"   >
+                        <Custom:RibbonButton Width="174" Height="81" Label="مشخصات کاربران " LargeImageSource="/WPF(LMS);component/FrontEnd/img/education-png-6.png" FontWeight="Bold" Click="info_students_Click"   >
                         </Custom:RibbonButton>
                     </Custom:RibbonGroup>
 

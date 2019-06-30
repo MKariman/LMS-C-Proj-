@@ -22,8 +22,8 @@
             </GroupBox>
         <DockPanel Height="315" Width="150" HorizontalAlignment="Left" Margin="0,-315,0,0">
                 <Button x:Name="Shimi" Width="150" Height="52.5" Content="شیمی" DockPanel.Dock="Bottom"   Background="#FFB7BEDF"  BorderBrush="#FF38356D" FontWeight="Bold" Click="Shimi_Click"></Button>
-                <Button x:Name="Mem" Width="150" Height="52.5" Content="مهدسی معماری" DockPanel.Dock="Bottom"   Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Mem_Click"></Button>
-                <Button x:Name="Mech" Width="150" Height="52.5" Content="مهدسی مکانیک" DockPanel.Dock="Bottom"  Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Mech_Click" ></Button>
+                <Button x:Name="Mem" Width="150" Height="52.5" Content="مهندسی معماری" DockPanel.Dock="Bottom"   Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Mem_Click"></Button>
+                <Button x:Name="Mech" Width="150" Height="52.5" Content="مهندسی مکانیک" DockPanel.Dock="Bottom"  Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Mech_Click" ></Button>
                 <Button x:Name="Barq" Width="150" Height="52.5" Content="مهندسی برق" DockPanel.Dock="Bottom"  Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Barq_Click"></Button>
                 <Button x:Name="Omran" Width="150" Height="52.5" Content="مهندسی عمران" DockPanel.Dock="Bottom"  Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Omran_Click" ></Button>
                 <Button x:Name="Comp" Width="150" Height="52.5" Content="مهندسی کامپیوتر" DockPanel.Dock="Bottom"  Background="#FFB7BEDF" BorderBrush="#FF38356D" FontWeight="Bold" Click="Comp_Click" ></Button>

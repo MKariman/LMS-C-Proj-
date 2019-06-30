@@ -26,6 +26,9 @@
             </GroupBox>
             <Button x:Name="show_btn" Height="23" Margin="16,-46,580,0" BorderBrush="#FF214468" Content="SHOW" Background="#FFA7B8D4" Foreground="#FF214468" FontWeight="Bold" Click="Show_btn_Click"/>
 
+            <Border Margin="232,-582,494,0" CornerRadius="7" Height="30" Background="#FFBBF5FF"></Border>
+            <RadioButton x:Name="student_radio" Margin="235,-597,494,0" Height="14" Content="Students" IsChecked="True"/>
+            <RadioButton x:Name="teacher_radio" Margin="235,-569,494,0" Height="16" Content="Teachers" />
 
 
         </StackPanel>

@@ -39,19 +39,34 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
         private void Search_Click(object sender, RoutedEventArgs e)
         {
-            list_students.ItemsSource = null;
+            if(student_radio.IsChecked== true)
+            {
+
+                list_students.ItemsSource = null;
 
 
-            students.Visibility = Visibility.Visible;
-            show_btn.Visibility = Visibility.Visible;
-            information.Visibility = Visibility.Hidden;
-  
-
-            list_students.ItemsSource = search.STFilter(search_studenttxt.Text);
+                students.Visibility = Visibility.Visible;
+                show_btn.Visibility = Visibility.Visible;
+                information.Visibility = Visibility.Hidden;
 
 
-            //CollectionView student_listshow_sort = (CollectionView)CollectionViewSource.GetDefaultView(list_students.ItemsSource);
-            //student_listshow_sort.SortDescriptions.Add(new SortDescription("UniCode", ListSortDirection.Ascending));
+                list_students.ItemsSource = search.STFilter(search_studenttxt.Text);
+
+
+                //CollectionView student_listshow_sort = (CollectionView)CollectionViewSource.GetDefaultView(list_students.ItemsSource);
+                //student_listshow_sort.SortDescriptions.Add(new SortDescription("UniCode", ListSortDirection.Ascending));
+
+
+            }
+            else
+            {
+                list_students.ItemsSource = null;
+
+                students.Visibility = Visibility.Visible;
+                show_btn.Visibility = Visibility.Visible;
+                information.Visibility = Visibility.Hidden;
+            }
+
 
 
         }
@@ -69,7 +84,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
                 ucstudent.set_info(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode  ,  search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].Password , uinfostudent);
 
-                uinfostudent.Margin =new Thickness(-25,-25,0,0);
+                uinfostudent.Margin =new Thickness(-35,-35,0,0);
                 uinfostudent.MaxHeight = 320;
                 uinfostudent.MaxWidth = 820;
 
@@ -77,7 +92,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
             }
             else
             {
-                MessageBox.Show("لطفا روی  یکی از دانشجویان کلیک کنید", "ERROR", MessageBoxButton.OK , MessageBoxImage.Error );
+                MessageBox.Show("لطفا روی  یکی از کاربران کلیک کنید", "ERROR", MessageBoxButton.OK , MessageBoxImage.Error );
 
 
             }
