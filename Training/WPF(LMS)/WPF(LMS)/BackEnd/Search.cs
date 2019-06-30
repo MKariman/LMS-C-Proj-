@@ -43,6 +43,7 @@ namespace WPF_LMS_.BackEnd
             }
 
         }
+
         public St_Models STSearch(int usern)
         {
             using (var Db = new DB_Proj())
@@ -52,6 +53,7 @@ namespace WPF_LMS_.BackEnd
                 return login;
             }
         }
+
         public Tch_Models TchSearch(int usern)
         {
             using (var Db = new DB_Proj())

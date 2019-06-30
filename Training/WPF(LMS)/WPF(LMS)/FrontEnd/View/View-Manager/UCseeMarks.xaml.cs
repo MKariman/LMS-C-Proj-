@@ -33,7 +33,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
         public class marks
         {
             public string Lesson { get; set; }
-            public int Mark { get; set; }            
+            public int? Mark { get; set; }            
         }
 
         private void search_Click(object sender, RoutedEventArgs e)
