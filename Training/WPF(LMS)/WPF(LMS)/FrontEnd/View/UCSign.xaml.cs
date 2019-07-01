@@ -27,6 +27,7 @@ namespace WPF_LMS_.FrontEnd.View
     {
 
         Sign_In sign_in = new Sign_In();
+        Edit edit = new Edit();
      
        
 
@@ -124,9 +125,20 @@ namespace WPF_LMS_.FrontEnd.View
 
         private void user_click(object sender, RoutedEventArgs e)
         {
-            Thread thread = new Thread(Creat_Users);
+            //Thread thread = new Thread(Creat_Users);
 
-            thread.Start();
+            //thread.Start();
+
+
+            List<St_Models> st = new List<St_Models>();
+            st.Add(new St_Models
+            {
+                Name = "OOOO",
+                LastName = "OOOO",
+                Phone = 123,
+                UniCode=6200
+            });
+            edit.InfSt(st);
 
 
         }
