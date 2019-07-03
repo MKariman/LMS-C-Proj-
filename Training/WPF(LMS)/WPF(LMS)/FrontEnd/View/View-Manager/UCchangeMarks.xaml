@@ -23,7 +23,7 @@
             </GroupBox>
             <Button x:Name="show_btn" Height="23" Margin="16,-46,580,0" BorderBrush="#FF214468" Content="SHOW" Background="#FFA7B8D4" Foreground="#FF214468" FontWeight="Bold" Click="show_Click"/>
             <GroupBox x:Name="Marks" Width="570" HorizontalAlignment="Right" Margin="0,-305,0,0" Header="Marks" Height="301" Foreground="White">
-                <ListView x:Name="list_mark" Background="#FFE9E9E9">
+                <ListView x:Name="list_mark" Background="#FFE9E9E9" Margin="0,0,0,38">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Width="200" Header="نام درس"></GridViewColumn>
@@ -34,6 +34,11 @@
                     </ListView.View>
                 </ListView>
             </GroupBox>
+            <Border  Margin="236,-53,6,0" Height="39" Background="#FFE9E9E9" BorderBrush="#FFE9E9E9"/>
+            <TextBox Height="39" Text="معدل کل" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="236,-53,488,0" BorderBrush="#FF919195" FontWeight="Bold" IsEnabled="False" />
+            <TextBox x:Name="Mid" Height="39" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="312,-53,124,0" BorderBrush="#FF919195" FontWeight="Bold"  IsEnabled="False"/>
+            <TextBlock x:Name="major"  Margin="676,-53,6,0" Height="19"  TextAlignment="Center" FontWeight="Bold"></TextBlock>
+
 
         </StackPanel>
             

@@ -21,6 +21,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
     /// </summary>
     public partial class UCchart : UserControl
     {
+        Sign_In sign_In = new Sign_In();
         Search search = new Search();
 
         public UCchart()
@@ -28,9 +29,11 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
             InitializeComponent();
         }
 
-        private void GridViewColumn_SourceUpdated(object sender, DataTransferEventArgs e)
+        public void chart(int unicode , string pass)
         {
-
+            list_lessons_view.ItemsSource = search.AuChart(sign_In.STsign(unicode , pass).Major);
+            list_lessons_view.SelectedItem = IsSealed;
         }
+       
     }
 }

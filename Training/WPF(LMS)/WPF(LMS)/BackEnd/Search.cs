@@ -166,7 +166,10 @@ namespace WPF_LMS_.BackEnd
                     Riazi1 = MRow.Riazi1,
                     Adabiat = MRow.Adabiat,
                     Andishe = MRow.Andishe,
-                    Moadelat = MRow.Moadelat
+                    Moadelat = MRow.Moadelat ,
+                    
+
+
                 });
                 return BarqMark;
             }
@@ -236,7 +239,7 @@ namespace WPF_LMS_.BackEnd
                     Riazi1 = MRow.Riazi1,
                     Adabiat = MRow.Adabiat,
                     Andishe = MRow.Andishe,
-                    Moadelat = MRow.Moadelat
+                    Moadelat = MRow.Moadelat,
                 });
                 return MechMark;
             }

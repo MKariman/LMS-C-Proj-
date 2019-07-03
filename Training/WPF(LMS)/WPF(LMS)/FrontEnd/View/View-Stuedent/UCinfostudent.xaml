@@ -35,16 +35,16 @@
 
 
 
-                <TextBlock x:Name="name" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-405,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
-                <TextBlock x:Name="familyname" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-280,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
-                <TextBlock x:Name="birth" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-150,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
-                <TextBlock x:Name="melli" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-20,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
-                <TextBlock x:Name="reshteh" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-20,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
-                <TextBlock x:Name="phone" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-410,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
-                <TextBlock x:Name="email" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-280,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
-                <TextBlock x:Name="code" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-150,438,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" ></TextBlock>
-                <TextBlock x:Name="year" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="10,-150,670,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
-                <TextBlock x:Name="unit" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="10,-20,712,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  ></TextBlock>
+                <TextBox x:Name="name" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-405,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False" ></TextBox>
+                <TextBox x:Name="familyname" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-280,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False" ></TextBox>
+                <TextBox x:Name="birth" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-150,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False" ></TextBox>
+                <TextBox x:Name="melli" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="490,-20,120,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  BorderBrush="{x:Null}" IsEnabled="False"></TextBox>
+                <TextBox x:Name="reshteh" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-20,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False"></TextBox>
+                <TextBox x:Name="phone" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-410,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  BorderBrush="{x:Null}" IsEnabled="False"></TextBox>
+                <TextBox x:Name="email" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-280,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False" ></TextBox>
+                <TextBox x:Name="code" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-150,438,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False" ></TextBox>
+                <TextBox x:Name="year" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="32,-150,670,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False" ></TextBox>
+                <TextBox x:Name="unit" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="32,-20,712,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False" ></TextBox>
 
 
 

@@ -141,7 +141,6 @@ namespace WPF_LMS_.BackEnd
                                 Birthdate = 1398 - (62 + i),
                                 Major = "Omran",
                                 Phone = 021,
-
                                 MeliCode = 0022,
                                 Vahedha = 0,
                                 AMarks = new List<AllMarks>

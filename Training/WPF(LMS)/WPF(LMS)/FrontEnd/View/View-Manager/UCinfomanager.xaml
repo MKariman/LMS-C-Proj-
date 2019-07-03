@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="315" d:DesignWidth="800">
     <Grid>
-        <GroupBox Header="information" Foreground="White" >
+        <GroupBox Name="information" Header="information" Foreground="White" >
             <StackPanel Margin="0,0,0,0.333" RenderTransformOrigin="0.5,0.5">
                 <StackPanel.Background>
                     <ImageBrush ImageSource="/WPF(LMS);component/FrontEnd/img/abstract-geometric-hexagonal-medical-or-science-background-conce-vector.jpg">
@@ -51,9 +51,63 @@
                 </StackPanel>
 
                 <Button x:Name="edit" Content="ویرایش" Width="50" Height="20" Background="#FFE08A8A" FontWeight="Bold" FontSize="11" Margin="0,-550,550,550" Click="Edit_Click"/>
-                <Button x:Name="ok" Content="تایید"  Width="50" Height="20" Background="#FF97E08A" FontWeight="Bold" FontSize="11" Margin="0,-550,550,550"  Click="Ok_Click" Visibility="Hidden"  />
+                <Button x:Name="ok" Content="تایید"  Width="50" Height="20" Background="#FF97E08A" FontWeight="Bold" FontSize="11" Margin="0,-550,550,550"  Click="Ok_Click"  Visibility="Hidden" />
+                <Button x:Name="change_pass" Content="تغییر رمز"  Width="50" Height="20" Background="#FFDAF250" FontWeight="Bold" FontSize="11" Margin="0,-550,550,550"  Click="change_pass_Click"  Visibility="Hidden" />
+
+
+                
 
             </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="pass_change" Header="Password" Height="256" Margin="285,0,285,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="216" RenderTransformOrigin="0.5,0.5"  Visibility="Hidden" Foreground="LightSkyBlue">
+            <StackPanel>
+                <StackPanel.Background>
+                    <ImageBrush 
+                ImageSource="/WPF(LMS);component/FrontEnd/img/designe.jpg" TileMode="FlipX">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                                <SkewTransform AngleY="0" AngleX="0"/>
+                                <RotateTransform Angle="180"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </StackPanel.Background>
+                <PasswordBox x:Name="prevpass" Height="20" Width="100" Margin="55,40,0,0" BorderBrush="{x:Null}" >
+                    <PasswordBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF9F9F9" Offset="0.9"/>
+                            <GradientStop Color="#FF0D1249" Offset="1"/>
+                        </LinearGradientBrush>
+                    </PasswordBox.Background>
+                </PasswordBox>
+                <PasswordBox x:Name="pass1" Height="20" Width="100" Margin="55,20,0,0" BorderBrush="{x:Null}" >
+                    <PasswordBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF9F9F9" Offset="0.9"/>
+                            <GradientStop Color="#FF0D1249" Offset="1"/>
+                        </LinearGradientBrush>
+                    </PasswordBox.Background>
+                </PasswordBox>
+                <PasswordBox x:Name="pass2" Height="20" Width="100" Margin="55,20,0,0" BorderBrush="{x:Null}"  >
+                    <PasswordBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF9F9F9" Offset="0.9"/>
+                            <GradientStop Color="#FF0D1249" Offset="1"/>
+                        </LinearGradientBrush>
+                    </PasswordBox.Background>
+                </PasswordBox>
+
+                <TextBlock Height="20" Text="Password :" Width="60" Foreground="Black" Margin="0,-175,100,0" />
+                <TextBlock Height="20" Text="New Password :"  Width="70" Foreground="Black" Margin="0,-95,120,0" FontSize="10"  />
+                <TextBlock Height="16" Text="Repeat New Password :" Width="80" Foreground="Black"  FontSize="7.5"  Margin="3,-17,125,0" />
+
+                <Button Height="20" Width="70" Margin="0,30,0,0" Content="Ok" Background="White" BorderBrush="#FF4F5EF7" Foreground="#FF4F5EF7" FontWeight="Bold" Click="ok_pass_Click" ></Button>
+                <Button Height="20" Width="70" Margin="0,0,0,0" Content="Cancel" Background="White" BorderBrush="Red" Foreground="Red" FontWeight="Bold" Click="cancel_pass_Click" ></Button>
+
+            </StackPanel>
+
         </GroupBox>
     </Grid>
 </UserControl>

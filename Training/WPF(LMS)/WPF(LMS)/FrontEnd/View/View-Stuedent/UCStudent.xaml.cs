@@ -91,8 +91,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
 
             ucchart.MaxHeight = 315;
             ucchart.MaxWidth = 800;
-            ucchart.list_lessons_view.ItemsSource = search.AuChart(search.STFilter(win.ucsign.usernametxt.Text)[0].Major);
-            ucchart.list_lessons_view.IsEnabled = false;
+            ucchart.chart(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password);
             student_stack.Children.Add(ucchart);
 
             

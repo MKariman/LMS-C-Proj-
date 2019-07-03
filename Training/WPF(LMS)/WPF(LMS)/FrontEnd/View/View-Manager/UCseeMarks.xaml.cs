@@ -52,6 +52,8 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
         {
             list_mark.ItemsSource = null;
             mark_show.Clear();
+            int mid = 0;
+            int c = 0;
 
             if (list_students.SelectedItem != null)
             {
@@ -78,6 +80,8 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
                 if (search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].Major == "Computer")
                 {
+                   
+
                     mark_show.Add(new marks() { Lesson = "دیتابیس", Mark = search.CompMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].CDatabase });
                     mark_show.Add(new marks() { Lesson = "گسسته", Mark = search.CompMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].CGosaste });
                     mark_show.Add(new marks() { Lesson = "هوش مصنوعی", Mark = search.CompMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].CInteligence });
@@ -90,7 +94,6 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
 
                     list_mark.ItemsSource = mark_show;
-
                     Mid.Text =Convert.ToString(search.CompMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].CompMId);
                     major.Text = "مهندسی کامپیوتر";
 

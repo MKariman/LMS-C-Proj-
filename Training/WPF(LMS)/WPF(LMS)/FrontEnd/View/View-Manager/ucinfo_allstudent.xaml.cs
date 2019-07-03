@@ -24,6 +24,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
     public partial class UCinfo_Allstudent : UserControl
     {
         Search search = new Search();
+        Edit edit_st = new Edit();
         UCinfostudent uinfostudent = new UCinfostudent();
         UCStudent ucstudent = new UCStudent();
 
@@ -39,33 +40,45 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
         private void Search_Click(object sender, RoutedEventArgs e)
         {
-            if(student_radio.IsChecked== true)
-            {
+            edit.Visibility = Visibility.Hidden;
 
-                list_students.ItemsSource = null;
+            if (student_radio.IsChecked == true)
+                {
 
-
-                students.Visibility = Visibility.Visible;
-                show_btn.Visibility = Visibility.Visible;
-                information.Visibility = Visibility.Hidden;
+                    list_users.ItemsSource = null;
 
 
-                list_students.ItemsSource = search.STFilter(search_studenttxt.Text);
+                    Users.Visibility = Visibility.Visible;
+                    show_btn.Visibility = Visibility.Visible;
+                    information.Visibility = Visibility.Hidden;
 
 
-                //CollectionView student_listshow_sort = (CollectionView)CollectionViewSource.GetDefaultView(list_students.ItemsSource);
-                //student_listshow_sort.SortDescriptions.Add(new SortDescription("UniCode", ListSortDirection.Ascending));
+                    list_users.ItemsSource = search.STFilter(search_studenttxt.Text);
 
 
-            }
-            else
-            {
-                list_students.ItemsSource = null;
+                    //CollectionView student_listshow_sort = (CollectionView)CollectionViewSource.GetDefaultView(list_users.ItemsSource);
+                    //student_listshow_sort.SortDescriptions.Add(new SortDescription("UniCode", ListSortDirection.Ascending));
 
-                students.Visibility = Visibility.Visible;
-                show_btn.Visibility = Visibility.Visible;
-                information.Visibility = Visibility.Hidden;
-            }
+
+                }
+                if (teacher_radio.IsChecked == true)
+                {
+                    list_users.ItemsSource = null;
+
+                    Users.Visibility = Visibility.Visible;
+                    show_btn.Visibility = Visibility.Visible;
+                    information.Visibility = Visibility.Hidden;
+                }
+
+                if (manager_radio.IsChecked == true)
+                {
+                    list_users.ItemsSource = null;
+
+                    Users.Visibility = Visibility.Visible;
+                    show_btn.Visibility = Visibility.Visible;
+                    information.Visibility = Visibility.Hidden;
+                }
+         
 
 
 
@@ -73,18 +86,20 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
         private void Show_btn_Click(object sender, RoutedEventArgs e)
         {
+           
 
-            if (list_students.SelectedItem != null )
+            if (list_users.SelectedItem != null )
             {
+                edit.Visibility = Visibility.Visible;
 
                 information.Visibility = Visibility.Visible;
                 show_btn.Visibility = Visibility.Hidden;
-                students.Visibility = Visibility.Hidden;
+                Users.Visibility = Visibility.Hidden;
                 infostudents_stack.Children.Clear();
 
-                ucstudent.set_info(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode  ,  search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].Password , uinfostudent);
+                ucstudent.set_info(search.STFilter(search_studenttxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].UniCode  ,  search.STFilter(search_studenttxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].Password , uinfostudent);
 
-                uinfostudent.Margin =new Thickness(-35,-35,0,0);
+                uinfostudent.Margin =new Thickness(-35,-35,-35,0);
                 uinfostudent.MaxHeight = 320;
                 uinfostudent.MaxWidth = 820;
 
@@ -93,9 +108,128 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
             else
             {
                 MessageBox.Show("لطفا روی  یکی از کاربران کلیک کنید", "ERROR", MessageBoxButton.OK , MessageBoxImage.Error );
-
-
             }
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (list_users.SelectedItem != null)
+            {
+                if (student_radio.IsChecked == true)
+                {
+                    uinfostudent.name.IsEnabled = true;
+                    uinfostudent.familyname.IsEnabled = true;
+                    uinfostudent.melli.IsEnabled = true;
+                    uinfostudent.birth.IsEnabled = true;
+                    uinfostudent.reshteh.IsEnabled = true;
+                    uinfostudent.email.IsEnabled = true;
+                    uinfostudent.unit.IsEnabled = true;
+                    uinfostudent.code.IsEnabled = true;
+                    uinfostudent.phone.IsEnabled = true;
+                    uinfostudent.year.IsEnabled = true;
+
+                    uinfostudent.name.BorderBrush = Brushes.Black;
+                    uinfostudent.familyname.BorderBrush = Brushes.Black;
+                    uinfostudent.melli.BorderBrush = Brushes.Black;
+                    uinfostudent.birth.BorderBrush = Brushes.Black;
+                    uinfostudent.reshteh.BorderBrush = Brushes.Black;
+                    uinfostudent.email.BorderBrush = Brushes.Black;
+                    uinfostudent.unit.BorderBrush = Brushes.Black;
+                    uinfostudent.code.BorderBrush = Brushes.Black;
+                    uinfostudent.phone.BorderBrush = Brushes.Black;
+                    uinfostudent.year.BorderBrush = Brushes.Black;
+
+
+                }
+
+                if (teacher_radio.IsChecked == true)
+                {
+                }
+
+                if (manager_radio.IsChecked == true)
+                {
+                   
+                }
+
+
+                ok.Visibility = Visibility.Visible;
+                chang_pass.Visibility = Visibility.Visible;
+                edit.IsEnabled = false;
+            }
+            else
+            {
+                MessageBox.Show("لطفا روی  یکی از کاربران کلیک کنید", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+        }
+
+        private void Ok_Click(object sender, RoutedEventArgs e)
+        {
+            if (student_radio.IsChecked == true)
+            {
+                uinfostudent.name.IsEnabled = false;
+                uinfostudent.familyname.IsEnabled = false;
+                uinfostudent.melli.IsEnabled = false;
+                uinfostudent.birth.IsEnabled = false;
+                uinfostudent.reshteh.IsEnabled = false;
+                uinfostudent.email.IsEnabled = false;
+                uinfostudent.unit.IsEnabled = false;
+                uinfostudent.code.IsEnabled = false;
+                uinfostudent.phone.IsEnabled = false;
+                uinfostudent.year.IsEnabled = false;
+
+                uinfostudent.name.BorderBrush = null;
+                uinfostudent.familyname.BorderBrush = null;
+                uinfostudent.melli.BorderBrush = null;
+                uinfostudent.birth.BorderBrush = null;
+                uinfostudent.reshteh.BorderBrush = null;
+                uinfostudent.email.BorderBrush = null;
+                uinfostudent.unit.BorderBrush = null;
+                uinfostudent.code.BorderBrush = null;
+                uinfostudent.phone.BorderBrush = null;
+                uinfostudent.year.BorderBrush = null;
+            }
+
+            if (teacher_radio.IsChecked == true)
+            {
+            }
+
+            if (manager_radio.IsChecked == true)
+            {
+            }
+
+            ok.Visibility = Visibility.Hidden;
+            chang_pass.Visibility = Visibility.Hidden;
+            edit.IsEnabled = true;
+
+            List<St_Models> st = new List<St_Models>();
+            st.Add(new St_Models
+            {
+                Name = uinfostudent.name.Text,
+                LastName = uinfostudent.familyname.Text,
+                Phone = Int32.Parse(uinfostudent.phone.Text) ,
+                UniCode = Int32.Parse(uinfostudent.code.Text) ,
+                Email  = uinfostudent.email.Text,
+                Birthdate = Int32.Parse(uinfostudent.birth.Text),
+                MeliCode = Int32.Parse(uinfostudent.melli.Text),
+                Major = uinfostudent.reshteh.Text,
+                Vahedha = Int32.Parse(uinfostudent.unit.Text),
+                UniLog = Int32.Parse(uinfostudent.year.Text),
+                Password = search.STFilter(search_studenttxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].Password ,
+                AMarks = search.STFilter(search_studenttxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].AMarks
+
+            });
+            edit_st.InfSt(st);
+
+            MessageBox.Show("اطلاعات با موفقیت ذخیره شد", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+
+
+        }
+
+        private void chang_pass_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

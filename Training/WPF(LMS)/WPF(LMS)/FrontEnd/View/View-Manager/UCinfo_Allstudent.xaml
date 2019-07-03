@@ -10,8 +10,8 @@
         <StackPanel >
             <TextBox x:Name="search_studenttxt" Height="20" HorizontalAlignment="Left" Width="164" Margin="60,10,0,0"/>
             <Button Height="20" Content="search" FontStyle="Italic" FontWeight="Bold" Opacity="0.707" Margin="10,-20,740,0" Click="Search_Click" />
-            <GroupBox x:Name="students" Height="270" Margin="10,5,576,0" BorderBrush="#FF2B5D7C" Header="Students" Foreground="White" >
-                <ListView x:Name="list_students" BorderBrush="#FF214468" Background="#FFE9E9E9" Margin="0,0,-2,22">
+            <GroupBox x:Name="Users" Height="270" Margin="10,5,576,0" BorderBrush="#FF2B5D7C" Header="Users" Foreground="White" >
+                <ListView x:Name="list_users" BorderBrush="#FF214468" Background="#FFE9E9E9" Margin="0,0,-2,22">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Header="UniCode" Width="60" DisplayMemberBinding="{Binding UniCode}"/>
@@ -26,9 +26,14 @@
             </GroupBox>
             <Button x:Name="show_btn" Height="23" Margin="16,-46,580,0" BorderBrush="#FF214468" Content="SHOW" Background="#FFA7B8D4" Foreground="#FF214468" FontWeight="Bold" Click="Show_btn_Click"/>
 
-            <Border Margin="232,-582,494,0" CornerRadius="7" Height="30" Background="#FFBBF5FF"></Border>
-            <RadioButton x:Name="student_radio" Margin="235,-597,494,0" Height="14" Content="Students" IsChecked="True"/>
-            <RadioButton x:Name="teacher_radio" Margin="235,-569,494,0" Height="16" Content="Teachers" />
+            <Border Margin="232,-581.5,487,0" CornerRadius="7" Height="39" Background="#FFBBF5FF"></Border>
+            <RadioButton x:Name="student_radio" Margin="235,-607,494,0" Height="14" Content="Students" IsChecked="True"/>
+            <RadioButton x:Name="teacher_radio" Margin="235,-580.5,494,0" Height="16" Content="Teachers" />
+            <RadioButton x:Name="manager_radio" Margin="235,-554.5,494,0" Height="16" Content="Managers" />
+
+            <Button x:Name="edit" Content="ویرایش" Width="50" Height="20" Background="#FFE08A8A" FontWeight="Bold" FontSize="11" Margin="700,-580,0,0" Click="Edit_Click"  Visibility="Hidden"/>
+            <Button x:Name="ok" Content="تایید"  Width="50" Height="20" Background="#FF97E08A" FontWeight="Bold" FontSize="11"  Margin="500,-580,0,0"  Click="Ok_Click" Visibility="Hidden"  />
+            <Button x:Name="chang_pass" Content="تغییر رمز" Width="50" Height="20" Background="#FFE1F975"  FontWeight="Bold" FontSize="11" Margin="600,-580,0,0" Click="chang_pass_Click" Visibility="Hidden" />
 
 
         </StackPanel>
