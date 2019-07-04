@@ -78,6 +78,57 @@ namespace WPF_LMS_.BackEnd
             }
         }
 
+        public string ChangePass(int Code,string OPass,string NPass,string Who)
+        {
+            using (DB_Proj db =new DB_Proj())
+            {
+                if (Who == "Student")
+                {
+                    var ST=db.St_InfM.Where(i => i.UniCode == Code).FirstOrDefault();
+                    if (ST.Password == OPass)
+                    {
+                        ST.Password = NPass;
+                        db.SaveChanges();
+                        return "Seuccess";
+                    }
+                    else
+                    {
+                        return "PassWrong";
+                    }
+                }
+                if (Who == "Manager")
+                {
+                    var Mg = db.Mg_InfM.Where(i => i.OrgCode == Code).FirstOrDefault();
+                    if (Mg.Password == OPass)
+                    {
+                        Mg.Password = NPass;
+                        db.SaveChanges();
+                        return "Seuccess";
+                    }
+                    else
+                    {
+                        return "PassWrong";
+                    }
+                }
+                if (Who == "Teacher")
+                {
+                    var Tch = db.Tch_InfM.Where(i => i.OrgCode == Code).FirstOrDefault();
+                    if (Tch.Password == OPass)
+                    {
+                        Tch.Password = NPass;
+                        db.SaveChanges();
+                        return "Seuccess";
+                    }
+                    else
+                    {
+                        return "PassWrong";
+                    }
+                }
+                return "CodeWrong";
+
+            }
+        }
+
 
 
 
