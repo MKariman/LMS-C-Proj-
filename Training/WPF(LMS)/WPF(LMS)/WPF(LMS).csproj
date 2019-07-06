@@ -308,6 +308,10 @@
     <Compile Include="Migrations\20190706191124_helo.designer.cs">
       <DependentUpon>20190706191124_helo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190706192550_Lol.cs" />
+    <Compile Include="Migrations\20190706192550_Lol.designer.cs">
+      <DependentUpon>20190706192550_Lol.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DB_ProjModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

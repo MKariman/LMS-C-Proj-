@@ -18,5 +18,7 @@ namespace WPF_LMS_.BackEnd
         public int MeliCode { get; set; }
         public int OrgCode { get; set; }
         public int Phone { get; set; }
+        public string Education { get; set; }
+        public string TeachingLesson { get; set; }
     }
 }
