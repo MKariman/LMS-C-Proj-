@@ -18,7 +18,6 @@ namespace WPF_LMS_.BackEnd
             {
                 var login = Db.Mg_InfM.Where
                 (i => i.OrgCode == usern && i.Password == pass).FirstOrDefault();
-                Db.SaveChanges();
                 return login;
             }
                 
@@ -30,7 +29,6 @@ namespace WPF_LMS_.BackEnd
             {
                 var login = Db.St_InfM.Where
                 (i => i.UniCode == usern && i.Password == pass).FirstOrDefault();
-                Db.SaveChanges();
                 return login;
             }
         }
@@ -40,7 +38,6 @@ namespace WPF_LMS_.BackEnd
             {
                 var login = Db.Tch_InfM.Where
                 (i => i.OrgCode == usern && i.Password == pass).FirstOrDefault();
-                Db.SaveChanges();
                 return login;
             }
         }
@@ -307,7 +304,10 @@ namespace WPF_LMS_.BackEnd
                     BirthDate = 1378,
                     MeliCode = 00225,
                     Phone = 77950,
-                    Email ="@gmail.com" 
+                    Email ="@gmail.com" ,
+                    Post="Admin",
+                    Education="P.h Compuer"
+                    
                 });
 
               

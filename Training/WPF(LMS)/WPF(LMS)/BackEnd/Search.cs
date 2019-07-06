@@ -14,25 +14,32 @@ namespace WPF_LMS_.BackEnd
             using (var Db = new DB_Proj())
             {
                 var login = Db.St_InfM.Where(i => i.UniCode.ToString().StartsWith(UCS));
-                List<St_Models> SList = new List<St_Models>();
-                foreach (var item in login)
-                {
-                    SList.Add(new St_Models
-                    {
-                        Name = item.Name,
-                        UniCode = item.UniCode,
-                        LastName = item.LastName,
-                        Password = item.Password,
-                        Major = item.Major ,
-                        
-                        
-
-                    });
-                }
-
+                var SList = login.ToList();
                 return SList;
             }
         }
+
+        public List<Tch_Models> TchFilter(string TCS)
+        {
+            using(DB_Proj db=new DB_Proj())
+            {
+                var login = db.Tch_InfM.Where(i => i.OrgCode.ToString().StartsWith(TCS));
+                var list = login.ToList();
+                return list;
+            }
+        }
+
+        public List<Mg_Models> MgFilter(string TCS)
+        {
+            using (DB_Proj db = new DB_Proj())
+            {
+                var login = db.Mg_InfM.Where(i => i.OrgCode.ToString().StartsWith(TCS));
+                var list = login.ToList();
+                return list;
+            }
+        }
+
+
         public Mg_Models MgSearch(int usern)
         {
             using (var Db = new DB_Proj())

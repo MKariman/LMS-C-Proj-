@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_LMS_.BackEnd.Marks
 {
-    public class AllMarks
+    public class AllMarks 
     {
         public int AllMarksId { get; set; }
         public string Major { get; set; }
