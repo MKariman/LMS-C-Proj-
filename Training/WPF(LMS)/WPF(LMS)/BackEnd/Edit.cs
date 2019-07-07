@@ -10,13 +10,13 @@ namespace WPF_LMS_.BackEnd
     public class Edit
     {
      
-        public void InfSt(List<St_Models> EIS)
+        public void InfSt(List<St_Models> EIS, int UC)
         {
             using(DB_Proj db=new DB_Proj())
             {
                 for(int j=0;j<EIS.Count();j++)
                 {
-                    var STI = db.St_InfM.Where(i => i.UniCode == EIS[j].UniCode).ToList();
+                    var STI = db.St_InfM.Where(i => i.UniCode == UC).ToList();
                     STI[j].Name = EIS[j].Name;
                     STI[j].LastName = EIS[j].LastName;
                     STI[j].Major = EIS[j].Major;
@@ -36,13 +36,13 @@ namespace WPF_LMS_.BackEnd
             }
         }
 
-        public void InfTch(List<Tch_Models> EIS)
+        public void InfTch(List<Tch_Models> EIS, int OC)
         {
             using (DB_Proj db = new DB_Proj())
             {
                 for (int j = 0; j < EIS.Count(); j++)
                 {
-                    var STI = db.Tch_InfM.Where(i => i.OrgCode == EIS[j].OrgCode).ToList();
+                    var STI = db.Tch_InfM.Where(i => i.OrgCode == OC).ToList();
                     STI[j].Name = EIS[j].Name;
                     STI[j].LastName = EIS[j].LastName;
                     STI[j].MeliCode = EIS[j].MeliCode;
@@ -57,13 +57,13 @@ namespace WPF_LMS_.BackEnd
             }
         }
 
-        public void InfMg(List<Mg_Models> EIS)
+        public void InfMg(List<Mg_Models> EIS, int OC)
         {
             using (DB_Proj db = new DB_Proj())
             {
                 for (int j = 0; j < EIS.Count(); j++)
                 {
-                    var STI = db.Mg_InfM.Where(i => i.OrgCode == EIS[j].OrgCode).ToList();
+                    var STI = db.Mg_InfM.Where(i => i.OrgCode == OC).ToList();
                     STI[j].Name = EIS[j].Name;
                     STI[j].LastName = EIS[j].LastName;
                     STI[j].MeliCode = EIS[j].MeliCode;
