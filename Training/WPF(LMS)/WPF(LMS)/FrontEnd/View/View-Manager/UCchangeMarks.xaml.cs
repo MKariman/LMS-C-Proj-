@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF_LMS_.BackEnd;
+using WPF_LMS_.BackEnd.Marks;
+
 
 namespace WPF_LMS_.FrontEnd.View.View_Manager
 {
@@ -23,6 +25,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
     {
         Search search = new Search();
         List<marks> mark_show = new List<marks>();
+        Edit edit_class = new Edit();
 
 
         public UCchangeMarks()
@@ -185,6 +188,181 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
 
             }
+        }
+
+        private void change_mark_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (list_mark.SelectedItem != null)
+            {
+                search_studenttxt.IsEnabled = false;
+                students.IsEnabled = false;
+                show_btn.IsEnabled = false;
+                new_mark_txt.Text = "";
+                name_lesson_txt.Text = mark_show[list_mark.Items.IndexOf(list_mark.SelectedItem)].Lesson;
+                mark_prev_txt.Text = Convert.ToString(mark_show[list_mark.Items.IndexOf(list_mark.SelectedItem)].Mark);
+                list_mark.Visibility = Visibility.Hidden;
+                change_mark_stack.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                MessageBox.Show("لطفا روی  یکی از دروس  کلیک کنید", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void ok_mark_Click(object sender, RoutedEventArgs e)
+        {
+            if(major.Text == "مهندسی مکانیک")
+            {
+                mark_show[list_mark.Items.IndexOf(list_mark.SelectedItem)].Mark = Int32.Parse(new_mark_txt.Text);
+
+
+                List<BackEnd.Marks.MechM> MarkList = new List<BackEnd.Marks.MechM>();
+                MarkList.Add(new BackEnd.Marks.MechM {
+
+                    Adabiat = mark_show[6].Mark ,
+                    Andishe = mark_show[7].Mark,
+                    MControl = mark_show[0].Mark,
+                    MFizik = mark_show[8].Mark, 
+                    MMashin = mark_show[1].Mark,
+                    Moadelat = mark_show[5].Mark,
+                    MSayalat = mark_show[2].Mark,
+                    MTermo  = mark_show[3].Mark,
+                    Riazi1 = mark_show[4].Mark
+            });
+                     
+
+                edit_class.CMMech(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode , MarkList);
+            }
+            if (major.Text == "مهندسی کامپیوتر")
+            {
+                mark_show[list_mark.Items.IndexOf(list_mark.SelectedItem)].Mark = Int32.Parse(new_mark_txt.Text);
+
+
+                List<CompM> MarkList = new List<CompM>() ;
+                MarkList.Add(new CompM
+                {
+
+                    Adabiat = mark_show[6].Mark,
+                    Andishe = mark_show[7].Mark,
+                    CDatabase = mark_show[0].Mark,
+                    CGosaste = mark_show[8].Mark,
+                    CInteligence = mark_show[1].Mark,
+                    Moadelat = mark_show[5].Mark,
+                    CManteqi = mark_show[2].Mark,
+                    CProgramming = mark_show[3].Mark,
+                    Riazi1 = mark_show[4].Mark
+                });
+
+
+                edit_class.CMComp(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode, MarkList);
+
+            }
+            if (major.Text == "مهندسی برق")
+            {
+                mark_show[list_mark.Items.IndexOf(list_mark.SelectedItem)].Mark = Int32.Parse(new_mark_txt.Text);
+
+
+                List<BarqM> MarkList = new List<BarqM>();
+                MarkList.Add(new BarqM
+                {
+
+                    Adabiat = mark_show[6].Mark,
+                    Andishe = mark_show[7].Mark,
+                    BCmos = mark_show[0].Mark,
+                    BMadar = mark_show[8].Mark,
+                    BVLSI = mark_show[1].Mark,
+                    Moadelat = mark_show[5].Mark,
+                    BElectro = mark_show[2].Mark,
+                    BQodrat = mark_show[3].Mark,
+                    Riazi1 = mark_show[4].Mark
+                });
+
+
+                edit_class.CMBarq(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode, MarkList);
+            }
+            if (major.Text == "مهندسی عمران")
+            {
+                mark_show[list_mark.Items.IndexOf(list_mark.SelectedItem)].Mark = Int32.Parse(new_mark_txt.Text);
+
+
+                List<BackEnd.Marks.MechM> MarkList = new List<BackEnd.Marks.MechM>();
+                MarkList.Add(new BackEnd.Marks.MechM
+                {
+
+                    Adabiat = mark_show[6].Mark,
+                    Andishe = mark_show[7].Mark,
+                    MControl = mark_show[0].Mark,
+                    MFizik = mark_show[8].Mark,
+                    MMashin = mark_show[1].Mark,
+                    Moadelat = mark_show[5].Mark,
+                    MSayalat = mark_show[2].Mark,
+                    MTermo = mark_show[3].Mark,
+                    Riazi1 = mark_show[4].Mark
+                });
+
+
+                edit_class.CMMech(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode, MarkList);
+            }
+            if (major.Text == "مهندسی معماری")
+            {
+                mark_show[list_mark.Items.IndexOf(list_mark.SelectedItem)].Mark = Int32.Parse(new_mark_txt.Text);
+
+
+                List<MemM> MarkList = new List<MemM>();
+                MarkList.Add(new MemM
+                {
+
+                    Adabiat = mark_show[6].Mark,
+                    Andishe = mark_show[7].Mark,
+                    MeDekor = mark_show[0].Mark,
+                    MeNama = mark_show[8].Mark,
+                    MeFazas = mark_show[1].Mark,
+                    Moadelat = mark_show[5].Mark,
+                    MeNaqshe = mark_show[2].Mark,
+                    MeTarahi = mark_show[3].Mark,
+                    Riazi1 = mark_show[4].Mark
+                });
+
+
+                edit_class.CMMemari(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode, MarkList);
+            }
+            if (major.Text == "شیمی")
+            {
+                mark_show[list_mark.Items.IndexOf(list_mark.SelectedItem)].Mark = Int32.Parse(new_mark_txt.Text);
+
+
+                List<ShimiM> MarkList = new List<ShimiM>();
+                MarkList.Add(new ShimiM
+                {
+
+                    Adabiat = mark_show[6].Mark,
+                    Andishe = mark_show[7].Mark,
+                    SHGaz = mark_show[0].Mark,
+                    SHHararat = mark_show[8].Mark,
+                    SHJerm = mark_show[1].Mark,
+                    Moadelat = mark_show[5].Mark,
+                    SHMavad = mark_show[2].Mark,
+                    SHSinema = mark_show[3].Mark,
+                    Riazi1 = mark_show[4].Mark
+                });
+
+
+                edit_class.CMShimi(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode, MarkList);
+            }
+
+            search_studenttxt.IsEnabled = true;
+            students.IsEnabled = true;
+            show_btn.IsEnabled = true;
+            show_Click( true , e);
+            list_mark.Visibility = Visibility.Visible;
+            change_mark_stack.Visibility = Visibility.Hidden;
+        }
+
+        private void cancel_mark_Click(object sender, RoutedEventArgs e)
+        {
+            list_mark.Visibility = Visibility.Visible;
+            change_mark_stack.Visibility = Visibility.Hidden;
         }
     }
 }

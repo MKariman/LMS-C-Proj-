@@ -8,7 +8,7 @@
          d:DesignHeight="313" d:DesignWidth="800">
     <Grid>
         <StackPanel >
-            <TextBox x:Name="search_studenttxt" Height="20" HorizontalAlignment="Left" Width="164" Margin="60,10,0,0"/>
+            <TextBox x:Name="search_userstxt" Height="20" HorizontalAlignment="Left" Width="164" Margin="60,10,0,0"/>
             <Button Height="20" Content="search" FontStyle="Italic" FontWeight="Bold" Opacity="0.707" Margin="10,-20,740,0" Click="Search_Click" />
             <GroupBox x:Name="Users" Height="270" Margin="10,5,576,0" BorderBrush="#FF2B5D7C" Header="Users" Foreground="White" >
                 <ListView x:Name="list_users" BorderBrush="#FF214468" Background="#FFE9E9E9" Margin="0,0,-2,22">
@@ -22,7 +22,7 @@
                 </ListView>
             </GroupBox>
             <GroupBox x:Name="information" Height="280" Width="780" Header="information" HorizontalAlignment="Right" Margin="0,-275,10,0" BorderBrush="#FF265F82" Foreground="White" >
-                <StackPanel x:Name="infostudents_stack"></StackPanel>
+                <StackPanel x:Name="infousers_stack"></StackPanel>
             </GroupBox>
             <Button x:Name="show_btn" Height="23" Margin="16,-46,580,0" BorderBrush="#FF214468" Content="SHOW" Background="#FFA7B8D4" Foreground="#FF214468" FontWeight="Bold" Click="Show_btn_Click"/>
 

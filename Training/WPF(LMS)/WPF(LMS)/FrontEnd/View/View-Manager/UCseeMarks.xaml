@@ -23,7 +23,7 @@
             </GroupBox>
             <Button x:Name="show_btn" Height="23" Margin="16,-46,580,0" BorderBrush="#FF214468" Content="SHOW" Background="#FFA7B8D4" Foreground="#FF214468" FontWeight="Bold" Click="show_Click"/>
             <GroupBox x:Name="Marks" Width="570" HorizontalAlignment="Right" Margin="0,-305,0,0" Header="Marks" Height="301" Foreground="White" Background="Black">
-                <ListView x:Name="list_mark" Background="#FFE9E9E9"  Margin="0,0,0,38" IsEnabled="False">
+                <ListView x:Name="list_mark" Background="#FFE9E9E9"  Margin="0,0,0,38" >
 
                     <ListView.View>
                         <GridView>

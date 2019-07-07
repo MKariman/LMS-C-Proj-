@@ -35,16 +35,16 @@ namespace WPF_LMS_.FrontEnd.View.View_Teacher
             teacher_stack.Children.Clear();
         }
 
-        public void set_info(int username, string password)
+        public void set_info(int username, string password , UCinfoteacher uct)
         {
 
-            ucinfoteacher.name.Text = sign_in.Tchsign(username,password).Name;
-            ucinfoteacher.familyname.Text = sign_in.Tchsign(username,password).LastName;
-            ucinfoteacher.melli.Text = Convert.ToString(sign_in.Tchsign(username,password).MeliCode);
-            ucinfoteacher.birth.Text = Convert.ToString(sign_in.Tchsign(username,password).BirthDate);
-            ucinfoteacher.phone.Text = Convert.ToString(sign_in.Tchsign(username,password).Phone);
-            ucinfoteacher.email.Text = sign_in.Tchsign(username,password).Email;
-            ucinfoteacher.code.Text = Convert.ToString(sign_in.Tchsign(username,password).OrgCode);
+            uct.name.Text = sign_in.Tchsign(username,password).Name;
+            uct.familyname.Text = sign_in.Tchsign(username,password).LastName;
+            uct.melli.Text = Convert.ToString(sign_in.Tchsign(username,password).MeliCode);
+            uct.birth.Text = Convert.ToString(sign_in.Tchsign(username,password).BirthDate);
+            uct.phone.Text = Convert.ToString(sign_in.Tchsign(username,password).Phone);
+            uct.email.Text = sign_in.Tchsign(username,password).Email;
+            uct.code.Text = Convert.ToString(sign_in.Tchsign(username,password).OrgCode);
         }
 
 
@@ -54,7 +54,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Teacher
             MainWindow win = (MainWindow)Window.GetWindow(this);
 
             delet_prev();
-            set_info(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password);
+            set_info(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password , ucinfoteacher);
 
             ucinfoteacher.MaxHeight = 313;
             ucinfoteacher.MaxWidth = 800;

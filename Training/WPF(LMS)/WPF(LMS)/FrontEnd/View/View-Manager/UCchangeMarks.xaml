@@ -26,9 +26,8 @@
                 <ListView x:Name="list_mark" Background="#FFE9E9E9" Margin="0,0,0,38">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Width="200" Header="نام درس"></GridViewColumn>
-                            <GridViewColumn Width="200" Header="نمره"></GridViewColumn>
-                            <GridViewColumn Width="100" Header="واحد"></GridViewColumn>
+                            <GridViewColumn Width="200" Header="نام درس" DisplayMemberBinding="{Binding Lesson}"></GridViewColumn>
+                            <GridViewColumn Width="200" Header="نمره" DisplayMemberBinding="{Binding Mark}"></GridViewColumn>
 
                         </GridView>
                     </ListView.View>
@@ -36,11 +35,27 @@
             </GroupBox>
             <Border  Margin="236,-53,6,0" Height="39" Background="#FFE9E9E9" BorderBrush="#FFE9E9E9"/>
             <TextBox Height="39" Text="معدل کل" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="236,-53,488,0" BorderBrush="#FF919195" FontWeight="Bold" IsEnabled="False" />
-            <TextBox x:Name="Mid" Height="39" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="312,-53,124,0" BorderBrush="#FF919195" FontWeight="Bold"  IsEnabled="False"/>
-            <TextBlock x:Name="major"  Margin="676,-53,6,0" Height="19"  TextAlignment="Center" FontWeight="Bold"></TextBlock>
+            <TextBox x:Name="Mid" Height="39" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="312,-53,163,0" BorderBrush="#FF919195" FontWeight="Bold"  IsEnabled="False"/>
+            <TextBlock x:Name="major"  Margin="637,-53,53,0" Height="19"  TextAlignment="Center" FontWeight="Bold"></TextBlock>
+
+            <Button  Margin="747,-54,5.5,0" Height="39" Background="#FFE7BABA" BorderBrush="#FFD64242"  Content="تغییر نمره" FontSize="10" Click="change_mark_Click"></Button>
+            <StackPanel  x:Name="change_mark_stack" Height="150" Width="150" Margin="247,-325,5.5,0" Visibility="Hidden" >
+                <Border Height="150" Background="#FFA1CECD"  CornerRadius="10"  ></Border>
+                <TextBlock  Height="20" Margin="25,-220,59,0" x:Name="name_lesson_txt" FontWeight="Bold"  />
+                <TextBox  x:Name="new_mark_txt" Height="20" Margin="75,-160,25,0"/>
+                <TextBlock  Height="20" Width="50" Margin="0,-160,50,0"  Text="نمره جدید" FontWeight="Bold" ></TextBlock>
+
+                <Button  Height="20" Width="50" Margin="50,-80,0,0" Background="#FF8FE794" Content="OK" Foreground="ForestGreen" BorderBrush="ForestGreen" Click="ok_mark_Click" ></Button>
+                <Button  Height="20" Width="50" Margin="0,-80,50,0" Background="#FFFFA6A6" Content="Cancel" Foreground="DarkRed" BorderBrush="DarkRed" Click="cancel_mark_Click"></Button>
+                <TextBlock  Height="20" Margin="105,-220,25,0" x:Name="mark_prev_txt" FontWeight="Bold"  FontSize="10" />
+
+
+
+
+            </StackPanel>
 
 
         </StackPanel>
-            
+
     </Grid>
 </UserControl>

@@ -45,16 +45,16 @@ namespace WPF_LMS_.FrontEnd.View
         }
 
 
-        public void set_info(int username , string password)
+        public void set_info(int username , string password , UCinfomanager ucm)
         {
 
-            ucinfomanager.name.Text = sign_in.Mgsign( username , password ).Name;
-            ucinfomanager.familyname.Text = sign_in.Mgsign(username, password).LastName;
-            ucinfomanager.melli.Text = Convert.ToString(sign_in.Mgsign(username, password).MeliCode);
-            ucinfomanager.birth.Text = Convert.ToString(sign_in.Mgsign(username, password).BirthDate);
-            ucinfomanager.phone.Text = Convert.ToString(sign_in.Mgsign(username, password).Phone);
-            ucinfomanager.email.Text = sign_in.Mgsign(username, password).Email;
-            ucinfomanager.code.Text =  Convert.ToString(sign_in.Mgsign(username, password).OrgCode);
+            ucm.name.Text = sign_in.Mgsign( username , password ).Name;
+            ucm.familyname.Text = sign_in.Mgsign(username, password).LastName;
+            ucm.melli.Text = Convert.ToString(sign_in.Mgsign(username, password).MeliCode);
+            ucm.birth.Text = Convert.ToString(sign_in.Mgsign(username, password).BirthDate);
+            ucm.phone.Text = Convert.ToString(sign_in.Mgsign(username, password).Phone);
+            ucm.email.Text = sign_in.Mgsign(username, password).Email;
+            ucm.code.Text =  Convert.ToString(sign_in.Mgsign(username, password).OrgCode);
         }
 
 
@@ -64,7 +64,7 @@ namespace WPF_LMS_.FrontEnd.View
             MainWindow win = (MainWindow)Window.GetWindow(this);
 
             delet_prev();
-            set_info( Convert.ToInt32(win.ucsign.usernametxt.Text) , win.ucsign.passwordtxt.Password);
+            set_info( Convert.ToInt32(win.ucsign.usernametxt.Text) , win.ucsign.passwordtxt.Password , ucinfomanager);
 
             ucinfomanager.MaxHeight = 315;
             ucinfomanager.MaxWidth = 800;

@@ -101,7 +101,6 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
             });
 
-            edit_mg.InfMg(mg);
 
             MessageBox.Show("اطلاعات با موفقیت ذخیره شد", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
 
@@ -137,7 +136,6 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
                     });
 
-                    edit_mg.InfMg(mg);
 
                     MessageBox.Show("رمز جدید با موفقیت ذخیره شد", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
 

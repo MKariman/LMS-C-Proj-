@@ -53,7 +53,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
                     information.Visibility = Visibility.Hidden;
 
 
-                    list_users.ItemsSource = search.STFilter(search_studenttxt.Text);
+                    list_users.ItemsSource = search.STFilter(search_userstxt.Text);
 
 
                     //CollectionView student_listshow_sort = (CollectionView)CollectionViewSource.GetDefaultView(list_users.ItemsSource);
@@ -68,17 +68,23 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
                     Users.Visibility = Visibility.Visible;
                     show_btn.Visibility = Visibility.Visible;
                     information.Visibility = Visibility.Hidden;
-                }
 
-                if (manager_radio.IsChecked == true)
+                list_users.ItemsSource = search.TchFilter(search_userstxt.Text);
+
+            }
+
+            if (manager_radio.IsChecked == true)
                 {
                     list_users.ItemsSource = null;
 
                     Users.Visibility = Visibility.Visible;
                     show_btn.Visibility = Visibility.Visible;
                     information.Visibility = Visibility.Hidden;
-                }
-         
+
+                list_users.ItemsSource = search.MgFilter(search_userstxt.Text);
+
+            }
+
 
 
 
@@ -95,15 +101,27 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
                 information.Visibility = Visibility.Visible;
                 show_btn.Visibility = Visibility.Hidden;
                 Users.Visibility = Visibility.Hidden;
-                infostudents_stack.Children.Clear();
+                infousers_stack.Children.Clear();
 
-                ucstudent.set_info(search.STFilter(search_studenttxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].UniCode  ,  search.STFilter(search_studenttxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].Password , uinfostudent);
+                if(student_radio.IsChecked == true)
+                {
+                    ucstudent.set_info(search.STFilter(search_userstxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].UniCode, search.STFilter(search_userstxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].Password, uinfostudent);
 
-                uinfostudent.Margin =new Thickness(-35,-35,-35,0);
-                uinfostudent.MaxHeight = 320;
-                uinfostudent.MaxWidth = 820;
+                    uinfostudent.Margin = new Thickness(-35, -35, -35, 0);
+                    uinfostudent.MaxHeight = 320;
+                    uinfostudent.MaxWidth = 820;
+                    infousers_stack.Children.Add(uinfostudent);
+                }
+                if(teacher_radio.IsChecked == true)
+                {
 
-                infostudents_stack.Children.Add(uinfostudent);
+                }
+
+                if(manager_radio.IsChecked == true)
+                {
+
+                }
+                
             }
             else
             {
@@ -149,7 +167,6 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
                 if (manager_radio.IsChecked == true)
                 {
-                   
                 }
 
 
@@ -216,11 +233,10 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
                 Major = uinfostudent.reshteh.Text,
                 Vahedha = Int32.Parse(uinfostudent.unit.Text),
                 UniLog = Int32.Parse(uinfostudent.year.Text),
-                Password = search.STFilter(search_studenttxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].Password ,
-                AMarks = search.STFilter(search_studenttxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].AMarks
+                Password = search.STFilter(search_userstxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].Password ,
+                AMarks = search.STFilter(search_userstxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].AMarks
 
             });
-            edit_st.InfSt(st);
 
             MessageBox.Show("اطلاعات با موفقیت ذخیره شد", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
 
