@@ -24,7 +24,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
     public partial class UCinfo_Allstudent : UserControl
     {
         Search search = new Search();
-        Edit edit_st = new Edit();
+        Edit edit_user = new Edit();
         UCinfostudent uinfostudent = new UCinfostudent();
         UCStudent ucstudent = new UCStudent();
 
@@ -56,12 +56,12 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
                     list_users.ItemsSource = search.STFilter(search_userstxt.Text);
 
 
-                    //CollectionView student_listshow_sort = (CollectionView)CollectionViewSource.GetDefaultView(list_users.ItemsSource);
-                    //student_listshow_sort.SortDescriptions.Add(new SortDescription("UniCode", ListSortDirection.Ascending));
+                //CollectionView student_listshow_sort = (CollectionView)CollectionViewSource.GetDefaultView(list_users.ItemsSource);
+                //student_listshow_sort.SortDescriptions.Add(new SortDescription("UniCode", ListSortDirection.Ascending));
 
 
-                }
-                if (teacher_radio.IsChecked == true)
+            }
+            if (teacher_radio.IsChecked == true)
                 {
                     list_users.ItemsSource = null;
 
@@ -105,7 +105,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
                 if(student_radio.IsChecked == true)
                 {
-                    ucstudent.set_info(search.STFilter(search_userstxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].UniCode, search.STFilter(search_userstxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].Password, uinfostudent);
+                    uinfostudent.set_info(search.STFilter(search_userstxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].UniCode, search.STFilter(search_userstxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].Password, uinfostudent);
 
                     uinfostudent.Margin = new Thickness(-35, -35, -35, 0);
                     uinfostudent.MaxHeight = 320;
@@ -237,6 +237,8 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
                 AMarks = search.STFilter(search_userstxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].AMarks
 
             });
+
+            edit_user.InfSt( st , search.STFilter(search_userstxt.Text)[list_users.Items.IndexOf(list_users.SelectedItem)].UniCode);
 
             MessageBox.Show("اطلاعات با موفقیت ذخیره شد", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
 

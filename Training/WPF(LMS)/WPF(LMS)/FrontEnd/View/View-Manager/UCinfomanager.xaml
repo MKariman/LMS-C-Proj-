@@ -43,7 +43,6 @@
                 <TextBox x:Name="code" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-150,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  BorderBrush="{x:Null}" IsEnabled="False"  ></TextBox>
                 <TextBox x:Name="teach" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="10,-150,670,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  BorderBrush="{x:Null}" IsEnabled="False"  ></TextBox>
 
-
                 <StackPanel Height="100" Width="100" Margin="0,-240,550,650">
                     <StackPanel.Background>
                         <ImageBrush ImageSource="/WPF(LMS);component/FrontEnd/img/user.png"/>
@@ -52,14 +51,14 @@
 
                 <Button x:Name="edit" Content="ویرایش" Width="50" Height="20" Background="#FFE08A8A" FontWeight="Bold" FontSize="11" Margin="0,-550,550,550" Click="Edit_Click"/>
                 <Button x:Name="ok" Content="تایید"  Width="50" Height="20" Background="#FF97E08A" FontWeight="Bold" FontSize="11" Margin="0,-550,550,550"  Click="Ok_Click"  Visibility="Hidden" />
-                <Button x:Name="change_pass" Content="تغییر رمز"  Width="50" Height="20" Background="#FFDAF250" FontWeight="Bold" FontSize="11" Margin="0,-550,550,550"  Click="change_pass_Click"  Visibility="Hidden" />
+                <Button x:Name="change_pass" Content="تغییر رمز"  Width="50" Height="20" Background="#FFDAF250" FontWeight="Bold" FontSize="11" Margin="0,-570,550,550"  Click="change_pass_Click"   />
 
 
-                
+
 
             </StackPanel>
         </GroupBox>
-        <GroupBox x:Name="pass_change" Header="Password" Height="256" Margin="285,0,285,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="216" RenderTransformOrigin="0.5,0.5"  Visibility="Hidden" Foreground="LightSkyBlue">
+        <GroupBox x:Name="pass_change" Header="Password" Height="256" Margin="285,0,285,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="216" RenderTransformOrigin="0.5,0.5" Visibility="Hidden"  Foreground="LightSkyBlue">
             <StackPanel>
                 <StackPanel.Background>
                     <ImageBrush 
@@ -100,8 +99,8 @@
                 </PasswordBox>
 
                 <TextBlock Height="20" Text="Password :" Width="60" Foreground="Black" Margin="0,-175,100,0" />
-                <TextBlock Height="20" Text="New Password :"  Width="70" Foreground="Black" Margin="0,-95,120,0" FontSize="10"  />
-                <TextBlock Height="16" Text="Repeat New Password :" Width="80" Foreground="Black"  FontSize="7.5"  Margin="3,-17,125,0" />
+                <TextBlock Height="20" Text="New Pass :" Foreground="Black" Margin="20,-95,124,0"  />
+                <TextBlock Height="16" Text="Repeat New Pass :" Width="80" Foreground="Black"  FontSize="9.5"  Margin="3,-17,125,0" />
 
                 <Button Height="20" Width="70" Margin="0,30,0,0" Content="Ok" Background="White" BorderBrush="#FF4F5EF7" Foreground="#FF4F5EF7" FontWeight="Bold" Click="ok_pass_Click" ></Button>
                 <Button Height="20" Width="70" Margin="0,0,0,0" Content="Cancel" Background="White" BorderBrush="Red" Foreground="Red" FontWeight="Bold" Click="cancel_pass_Click" ></Button>

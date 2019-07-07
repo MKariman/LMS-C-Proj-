@@ -22,11 +22,28 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
     public partial class UCinfomanager : UserControl
     {
         Edit edit_mg = new Edit();
+        Sign_In sign_in = new Sign_In();
+
 
         public UCinfomanager()
         {
             InitializeComponent();
        
+        }
+
+
+        public void set_info(int username, string password, UCinfomanager ucm)
+        {
+
+            ucm.name.Text = sign_in.Mgsign(username, password).Name;
+            ucm.familyname.Text = sign_in.Mgsign(username, password).LastName;
+            ucm.melli.Text = Convert.ToString(sign_in.Mgsign(username, password).MeliCode);
+            ucm.birth.Text = Convert.ToString(sign_in.Mgsign(username, password).BirthDate);
+            ucm.phone.Text = Convert.ToString(sign_in.Mgsign(username, password).Phone);
+            ucm.email.Text = sign_in.Mgsign(username, password).Email;
+            ucm.code.Text = Convert.ToString(sign_in.Mgsign(username, password).OrgCode);
+            ucm.teach.Text = sign_in.Mgsign(username, password).Education;
+            ucm.semat.Text = sign_in.Mgsign(username, password).Post;
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
@@ -53,10 +70,12 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
 
             ok.Visibility = Visibility.Visible;
-            change_pass.Visibility = Visibility.Visible;
+            change_pass.Visibility = Visibility.Hidden;
+            edit.Visibility = Visibility.Hidden;
 
-            edit.IsEnabled = false;
-            
+
+
+
         }
 
         private void Ok_Click(object sender, RoutedEventArgs e)
@@ -84,8 +103,8 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
             code.BorderBrush = null;
 
             ok.Visibility = Visibility.Hidden;
-            change_pass.Visibility = Visibility.Hidden;
-            edit.IsEnabled = true;
+            change_pass.Visibility = Visibility.Visible;
+            edit.Visibility = Visibility.Visible;
 
             List<Mg_Models> mg = new List<Mg_Models>();
             mg.Add(new Mg_Models
@@ -100,6 +119,8 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
                 Password = win.ucsign.passwordtxt.Password
 
             });
+
+            edit_mg.InfMg(mg, Int32.Parse(win.ucsign.usernametxt.Text));
 
 
             MessageBox.Show("اطلاعات با موفقیت ذخیره شد", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -122,19 +143,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
                 if(pass1.Password == pass2.Password &&  pass1.Password != "" )
                 {
 
-                    List<Mg_Models> mg = new List<Mg_Models>();
-                    mg.Add(new Mg_Models
-                    {
-                        Name = name.Text,
-                        LastName = familyname.Text,
-                        Phone = Int32.Parse(phone.Text),
-                        OrgCode = Int32.Parse(code.Text),
-                        BirthDate = Int32.Parse(birth.Text),
-                        Email = email.Text,
-                        MeliCode = Int32.Parse(melli.Text),
-                        Password = pass1.Password
-
-                    });
+                    edit_mg.ChangePass(Int32.Parse(code.Text), prevpass.Password , pass1.Password , "Manager");
 
 
                     MessageBox.Show("رمز جدید با موفقیت ذخیره شد", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -214,9 +223,8 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
             pass_change.Visibility = Visibility.Hidden;
 
 
-            ok.Visibility = Visibility.Hidden;
-            change_pass.Visibility = Visibility.Hidden;
-            edit.IsEnabled = true;
+            change_pass.Visibility = Visibility.Visible;
+            edit.Visibility = Visibility.Visible;
         }
     }
 }

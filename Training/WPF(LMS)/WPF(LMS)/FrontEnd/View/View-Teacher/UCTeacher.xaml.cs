@@ -22,7 +22,6 @@ namespace WPF_LMS_.FrontEnd.View.View_Teacher
     public partial class UCTeacher : UserControl
     {
         UCinfoteacher ucinfoteacher = new UCinfoteacher();
-        Sign_In sign_in = new Sign_In();
 
 
         public UCTeacher()
@@ -35,17 +34,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Teacher
             teacher_stack.Children.Clear();
         }
 
-        public void set_info(int username, string password , UCinfoteacher uct)
-        {
-
-            uct.name.Text = sign_in.Tchsign(username,password).Name;
-            uct.familyname.Text = sign_in.Tchsign(username,password).LastName;
-            uct.melli.Text = Convert.ToString(sign_in.Tchsign(username,password).MeliCode);
-            uct.birth.Text = Convert.ToString(sign_in.Tchsign(username,password).BirthDate);
-            uct.phone.Text = Convert.ToString(sign_in.Tchsign(username,password).Phone);
-            uct.email.Text = sign_in.Tchsign(username,password).Email;
-            uct.code.Text = Convert.ToString(sign_in.Tchsign(username,password).OrgCode);
-        }
+        
 
 
 
@@ -54,7 +43,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Teacher
             MainWindow win = (MainWindow)Window.GetWindow(this);
 
             delet_prev();
-            set_info(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password , ucinfoteacher);
+            ucinfoteacher.set_info(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password , ucinfoteacher);
 
             ucinfoteacher.MaxHeight = 313;
             ucinfoteacher.MaxWidth = 800;

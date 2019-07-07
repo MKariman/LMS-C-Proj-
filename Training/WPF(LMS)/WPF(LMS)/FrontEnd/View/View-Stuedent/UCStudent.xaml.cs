@@ -25,7 +25,6 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
         Search search = new Search();
         UCreport ucreport = new UCreport();
         UCchart ucchart = new UCchart();
-        Sign_In sign_in = new Sign_In();
 
 
         public UCStudent()
@@ -38,20 +37,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
             student_stack.Children.Clear();
         }
 
-        public void set_info(int username, string password , UCinfostudent ucs)
-        {
-
-            ucs.name.Text = sign_in.STsign(username, password).Name;
-            ucs.familyname.Text = sign_in.STsign(username, password).LastName;
-            ucs.melli.Text = Convert.ToString(sign_in.STsign(username, password).MeliCode);
-            ucs.birth.Text = Convert.ToString(sign_in.STsign(username, password).Birthdate);
-            ucs.phone.Text = Convert.ToString(sign_in.STsign(username, password).Phone);
-            ucs.email.Text = sign_in.STsign(username, password).Email;
-            ucs.code.Text = Convert.ToString(sign_in.STsign(username, password).UniCode);
-            ucs.year.Text = Convert.ToString(sign_in.STsign(username, password).UniLog);
-            ucs.unit.Text = Convert.ToString(sign_in.STsign(username, password).Vahedha);
-            ucs.reshteh.Text = sign_in.STsign(username, password).Major;
-        }
+      
 
 
         private void info_student_Click(object sender, RoutedEventArgs e)
@@ -59,7 +45,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
             MainWindow win = (MainWindow)Window.GetWindow(this);
 
             delet_prev();
-            set_info(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password , ucinfostudent );
+            ucinfostudent.set_info(Convert.ToInt32(win.ucsign.usernametxt.Text), win.ucsign.passwordtxt.Password , ucinfostudent );
 
             ucinfostudent.MaxHeight = 315;
             ucinfostudent.MaxWidth = 800;
