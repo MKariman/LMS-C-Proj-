@@ -24,6 +24,8 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
         Sign_In sign_In = new Sign_In();
         Search search = new Search();
         List<marks> mark_show = new List<marks>();
+        
+
 
         public UCreport()
         {
@@ -39,6 +41,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
 
         public void show_Reprt(int unicode , string pass)
         {
+            float? mid = 0;
             list_mark.ItemsSource = null;
             mark_show.Clear();
 
@@ -55,8 +58,22 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
                 mark_show.Add(new marks() { Lesson = "فیزیک", Mark = search.MechMark(unicode)[0].MFizik });
 
 
+                int u = 0;
+
+                for (int i = 0; i < 9; i++)
+                {
+                    if (mark_show[i].Mark != null)
+                    {
+                        u += search.AuChart("Mechanic")[i].Unit;
+                        mid += (mark_show[i].Mark) * (search.AuChart("Mechanic")[i].Unit);
+                    }
+                }
+
+
+
                 list_mark.ItemsSource = mark_show;
-                Mid.Text = Convert.ToString(search.MechMark(unicode)[0].MechMId);
+                Mid.Text = Convert.ToString(mid / u);
+               
 
             }
 
@@ -73,9 +90,21 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
                 mark_show.Add(new marks() { Lesson = "مدار منطقی", Mark = search.CompMark(unicode)[0].CManteqi });
 
 
+                int u = 0;
+
+                for (int i = 0; i < 9; i++)
+                {
+                    if (mark_show[i].Mark != null)
+                    {
+                        u += search.AuChart("Computer")[i].Unit;
+                        mid += (mark_show[i].Mark) * (search.AuChart("Computer")[i].Unit);
+                    }
+                }
+
+
                 list_mark.ItemsSource = mark_show;
 
-                Mid.Text = Convert.ToString(search.CompMark(unicode)[0].CompMId);
+                Mid.Text = Convert.ToString(mid / u);
 
             }
 
@@ -92,9 +121,21 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
                 mark_show.Add(new marks() { Lesson = "اندیشه", Mark = search.BarqMark(unicode)[0].Andishe });
 
 
-                list_mark.ItemsSource = mark_show;
-                Mid.Text = Convert.ToString(search.BarqMark(unicode)[0].BarqMId);
+                int u = 0;
 
+                for (int i = 0; i < 9; i++)
+                {
+                    if (mark_show[i].Mark != null)
+                    {
+                        u += search.AuChart("Barq")[i].Unit;
+                        mid += (mark_show[i].Mark) * (search.AuChart("Barq")[i].Unit);
+                    }
+                }
+
+
+
+                list_mark.ItemsSource = mark_show;
+                Mid.Text = Convert.ToString(mid / u);
 
             }
 
@@ -112,8 +153,22 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
                 mark_show.Add(new marks() { Lesson = "بتن", Mark = search.OmrMark(unicode)[0].OBotons });
 
 
+
+                int u = 0;
+
+                for (int i = 0; i < 9; i++)
+                {
+                    if (mark_show[i].Mark != null)
+                    {
+                        u += search.AuChart("Omran")[i].Unit;
+                        mid += (mark_show[i].Mark) * (search.AuChart("Omran")[i].Unit);
+                    }
+                }
+
+
+
                 list_mark.ItemsSource = mark_show;
-                Mid.Text = Convert.ToString(search.OmrMark(unicode)[0].OmranMId);
+                Mid.Text = Convert.ToString(mid / u);
 
 
             }
@@ -131,8 +186,21 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
                 mark_show.Add(new marks() { Lesson = "اندیشه", Mark = search.MeMark(unicode)[0].Andishe });
 
 
+                int u = 0;
+
+                for (int i = 0; i < 9; i++)
+                {
+                    if (mark_show[i].Mark != null)
+                    {
+                        u += search.AuChart("Memari")[i].Unit;
+                        mid += (mark_show[i].Mark) * (search.AuChart("Memari")[i].Unit);
+                    }
+                }
+
+
+
                 list_mark.ItemsSource = mark_show;
-                Mid.Text = Convert.ToString(search.MeMark(unicode)[0].MemMId);
+                Mid.Text = Convert.ToString(mid / u);
 
             }
 
@@ -150,9 +218,22 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
                 mark_show.Add(new marks() { Lesson = "سینماتیک", Mark = search.ShiMark(unicode)[0].SHSinema });
 
 
-                list_mark.ItemsSource = mark_show;
-                Mid.Text = Convert.ToString(search.ShiMark(unicode)[0].ShimiMId);
+                int u = 0;
 
+                for (int i = 0; i < 9; i++)
+                {
+                    if (mark_show[i].Mark != null)
+                    {
+                        u += search.AuChart("Shimi")[i].Unit;
+                        mid += (mark_show[i].Mark) * (search.AuChart("Shimi")[i].Unit);
+                    }
+                }
+
+
+
+
+                list_mark.ItemsSource = mark_show;
+                Mid.Text = Convert.ToString(mid / u);
 
             }
         }

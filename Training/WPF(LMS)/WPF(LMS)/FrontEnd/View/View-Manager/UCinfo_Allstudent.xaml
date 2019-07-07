@@ -11,18 +11,34 @@
             <TextBox x:Name="search_userstxt" Height="20" HorizontalAlignment="Left" Width="164" Margin="60,10,0,0"/>
             <Button Height="20" Content="search" FontStyle="Italic" FontWeight="Bold" Opacity="0.707" Margin="10,-20,740,0" Click="Search_Click" />
             <GroupBox x:Name="Users" Height="270" Margin="10,5,576,0" BorderBrush="#FF2B5D7C" Header="Users" Foreground="White" >
-                <ListView x:Name="list_users" BorderBrush="#FF214468" Background="#FFE9E9E9" Margin="0,0,-2,22">
+                <StackPanel>
+                    <ListView x:Name="list_students" Visibility="Hidden" BorderBrush="#FF214468" Background="#FFE9E9E9" Margin="0,0,-2,22" Height="225">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Header="UniCode" Width="60" DisplayMemberBinding="{Binding UniCode}"/>
                             <GridViewColumn Header="Name" Width="60" DisplayMemberBinding="{Binding Name}"/>
                             <GridViewColumn Header="Last Name" Width="80"  DisplayMemberBinding="{Binding LastName}"/>
-                        </GridView>
+                               <GridViewColumn Header="Major" Width="80"  DisplayMemberBinding="{Binding Major}"/>
+
+                            </GridView>
                     </ListView.View>
-                </ListView>
+                   </ListView>
+
+                    <ListView x:Name="list_users" Visibility="Hidden" BorderBrush="#FF214468" Background="#FFE9E9E9" Margin="0,-250,-2,22" Height="225">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="OrgCode" Width="60" DisplayMemberBinding="{Binding OrgCode}"/>
+                                <GridViewColumn Header="Name" Width="60" DisplayMemberBinding="{Binding Name}"/>
+                                <GridViewColumn Header="Last Name" Width="80"  DisplayMemberBinding="{Binding LastName}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </StackPanel>
             </GroupBox>
             <GroupBox x:Name="information" Height="280" Width="780" Header="information" HorizontalAlignment="Right" Margin="0,-275,10,0" BorderBrush="#FF265F82" Foreground="White" >
-                <StackPanel x:Name="infousers_stack"></StackPanel>
+                <StackPanel x:Name="infousers_stack">
+                </StackPanel>
+                
             </GroupBox>
             <Button x:Name="show_btn" Height="23" Margin="16,-46,580,0" BorderBrush="#FF214468" Content="SHOW" Background="#FFA7B8D4" Foreground="#FF214468" FontWeight="Bold" Click="Show_btn_Click"/>
 
@@ -35,8 +51,59 @@
             <Button x:Name="ok" Content="تایید"  Width="50" Height="20" Background="#FF97E08A" FontWeight="Bold" FontSize="11"  Margin="500,-580,0,0"  Click="Ok_Click" Visibility="Hidden"  />
             <Button x:Name="chang_pass" Content="تغییر رمز" Width="50" Height="20" Background="#FFE1F975"  FontWeight="Bold" FontSize="11" Margin="600,-580,0,0" Click="chang_pass_Click" Visibility="Hidden" />
 
+            <GroupBox x:Name="pass_change" Header="Password" Height="256" Visibility="Hidden" Margin="265,-280,276,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="227" RenderTransformOrigin="0.5,0.5"  Foreground="LightSkyBlue">
+                <StackPanel>
+                    <StackPanel.Background>
+                        <ImageBrush 
+                ImageSource="/WPF(LMS);component/FrontEnd/img/designe.jpg" TileMode="FlipX">
+                            <ImageBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                                    <SkewTransform AngleY="0" AngleX="0"/>
+                                    <RotateTransform Angle="180"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </ImageBrush.RelativeTransform>
+                        </ImageBrush>
+                    </StackPanel.Background>
+                    <PasswordBox x:Name="prevpass" Height="20" Width="100" Margin="55,40,0,0" BorderBrush="{x:Null}" >
+                        <PasswordBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFF9F9F9" Offset="0.9"/>
+                                <GradientStop Color="#FF0D1249" Offset="1"/>
+                            </LinearGradientBrush>
+                        </PasswordBox.Background>
+                    </PasswordBox>
+                    <PasswordBox x:Name="pass1" Height="20" Width="100" Margin="55,20,0,0" BorderBrush="{x:Null}" >
+                        <PasswordBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFF9F9F9" Offset="0.9"/>
+                                <GradientStop Color="#FF0D1249" Offset="1"/>
+                            </LinearGradientBrush>
+                        </PasswordBox.Background>
+                    </PasswordBox>
+                    <PasswordBox x:Name="pass2" Height="20" Width="100" Margin="55,20,0,0" BorderBrush="{x:Null}"  >
+                        <PasswordBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFF9F9F9" Offset="0.9"/>
+                                <GradientStop Color="#FF0D1249" Offset="1"/>
+                            </LinearGradientBrush>
+                        </PasswordBox.Background>
+                    </PasswordBox>
+
+                    <TextBlock Height="20" Text="Password :" Width="60" Foreground="Black" Margin="0,-175,100,0" />
+                    <TextBlock Height="20" Text="New Pass :" Foreground="Black" Margin="20,-95,124,0"  />
+                    <TextBlock Height="16" Text="Repeat New Pass :" Width="80" Foreground="Black"  FontSize="9.5"  Margin="3,-17,125,0" />
+
+                    <Button Height="20" Width="70" Margin="0,30,0,0" Content="Ok" Background="White" BorderBrush="#FF4F5EF7" Foreground="#FF4F5EF7" FontWeight="Bold" Click="ok_pass_Click" ></Button>
+                    <Button Height="20" Width="70" Margin="0,0,0,0" Content="Cancel" Background="White" BorderBrush="Red" Foreground="Red" FontWeight="Bold" Click="cancel_pass_Click" ></Button>
+
+                </StackPanel>
+
+            </GroupBox>
 
         </StackPanel>
+        
 
     </Grid>
 </UserControl>

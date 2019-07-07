@@ -46,7 +46,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
             ucm.semat.Text = sign_in.Mgsign(username, password).Post;
         }
 
-        private void Edit_Click(object sender, RoutedEventArgs e)
+        public void Edit_Click(object sender, RoutedEventArgs e)
         {
             name.IsEnabled = true;
             familyname.IsEnabled = true;
@@ -78,7 +78,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
         }
 
-        private void Ok_Click(object sender, RoutedEventArgs e)
+        public void Ok_Click(object sender, RoutedEventArgs e)
         {
             MainWindow win = (MainWindow)Window.GetWindow(this);
 
@@ -127,7 +127,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
         }
 
-        private void change_pass_Click(object sender, RoutedEventArgs e)
+        public void change_pass_Click(object sender, RoutedEventArgs e)
         {
             information.Visibility = Visibility.Hidden;
             pass_change.Visibility = Visibility.Visible;
@@ -135,7 +135,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
         }
 
-        private void ok_pass_Click(object sender, RoutedEventArgs e)
+        public void ok_pass_Click(object sender, RoutedEventArgs e)
         {
             MainWindow win = (MainWindow)Window.GetWindow(this);
             if (prevpass.Password== win.ucsign.passwordtxt.Password)
@@ -197,34 +197,18 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
             }
         }
 
-        private void cancel_pass_Click(object sender, RoutedEventArgs e)
+        public void cancel_pass_Click(object sender, RoutedEventArgs e)
         {
-            name.IsEnabled = false;
-            familyname.IsEnabled = false;
-            birth.IsEnabled = false;
-            melli.IsEnabled = false;
-            semat.IsEnabled = false;
-            phone.IsEnabled = false;
-            email.IsEnabled = false;
-            teach.IsEnabled = false;
-            code.IsEnabled = false;
-
-            name.BorderBrush = null;
-            familyname.BorderBrush = null;
-            birth.BorderBrush = null;
-            melli.BorderBrush = null;
-            semat.BorderBrush = null;
-            phone.BorderBrush = null;
-            email.BorderBrush = null;
-            teach.BorderBrush = null;
-            code.BorderBrush = null;
-
+           
             information.Visibility = Visibility.Visible;
             pass_change.Visibility = Visibility.Hidden;
 
-
             change_pass.Visibility = Visibility.Visible;
             edit.Visibility = Visibility.Visible;
+
+            prevpass.Password = "";
+            pass1.Password = "";
+            pass2.Password = "";
         }
     }
 }

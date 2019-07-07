@@ -41,7 +41,7 @@
                 <TextBox x:Name="phone" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-410,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False"  ></TextBox>
                 <TextBox x:Name="email" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-280,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold" BorderBrush="{x:Null}" IsEnabled="False"  ></TextBox>
                 <TextBox x:Name="code" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="200,-150,430,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  BorderBrush="{x:Null}" IsEnabled="False"  ></TextBox>
-                <TextBox x:Name="teach" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="10,-150,670,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  BorderBrush="{x:Null}" IsEnabled="False"  ></TextBox>
+                <TextBox x:Name="teach" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="26,-150,670,0" Foreground="#FF020E25" Background="{x:Null}" FontWeight="Bold"  BorderBrush="{x:Null}" IsEnabled="False"  ></TextBox>
 
                 <StackPanel Height="100" Width="100" Margin="0,-240,550,650">
                     <StackPanel.Background>

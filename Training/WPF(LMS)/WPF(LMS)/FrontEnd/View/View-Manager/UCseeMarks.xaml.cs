@@ -56,12 +56,12 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
             if (list_students.SelectedItem != null)
             {
-                
+
 
                 if (search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].Major == "Mechanic")
                 {
                     mark_show.Add(new marks() { Lesson = "فیزیک", Mark = search.MechMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].MFizik });
-                    mark_show.Add(new marks() { Lesson = "کنترل" , Mark = search.MechMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].MControl });
+                    mark_show.Add(new marks() { Lesson = "کنترل", Mark = search.MechMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].MControl });
                     mark_show.Add(new marks() { Lesson = "ماشین", Mark = search.MechMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].MMashin });
                     mark_show.Add(new marks() { Lesson = "سیالات", Mark = search.MechMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].MSayalat });
                     mark_show.Add(new marks() { Lesson = "ترمو", Mark = search.MechMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].MTermo });
@@ -72,7 +72,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
                     int u = 0;
 
-                    for (int i = 0; i < mark_show.Count(); i++)
+                    for (int i = 0; i < 9; i++)
                     {
                         if (mark_show[i].Mark != null)
                         {
@@ -91,7 +91,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
                 if (search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].Major == "Computer")
                 {
-                   
+
 
                     mark_show.Add(new marks() { Lesson = "دیتابیس", Mark = search.CompMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].CDatabase });
                     mark_show.Add(new marks() { Lesson = "مدار منطقی", Mark = search.CompMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].CManteqi });
@@ -106,12 +106,12 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
                     int u = 0;
 
-                    for (int i = 0; i < mark_show.Count(); i++)
+                    for (int i = 0; i < 9; i++)
                     {
                         if (mark_show[i].Mark != null)
                         {
-                            u += search.AuChart("Mechanic")[i].Unit;
-                            mid += (mark_show[i].Mark) * (search.AuChart("Mechanic")[i].Unit);
+                            u += search.AuChart("Computer")[i].Unit;
+                            mid += (mark_show[i].Mark) * (search.AuChart("Computer")[i].Unit);
                         }
                     }
 
@@ -137,12 +137,12 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
                     int u = 0;
 
-                    for (int i = 0; i < mark_show.Count(); i++)
+                    for (int i = 0; i < 9; i++)
                     {
                         if (mark_show[i].Mark != null)
                         {
-                            u += search.AuChart("Mechanic")[i].Unit;
-                            mid += (mark_show[i].Mark) * (search.AuChart("Mechanic")[i].Unit);
+                            u += search.AuChart("Barq")[i].Unit;
+                            mid += (mark_show[i].Mark) * (search.AuChart("Barq")[i].Unit);
                         }
                     }
 
@@ -170,12 +170,12 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
                     int u = 0;
 
-                    for (int i = 0; i < mark_show.Count(); i++)
+                    for (int i = 0; i < 9; i++)
                     {
                         if (mark_show[i].Mark != null)
                         {
-                            u += search.AuChart("Mechanic")[i].Unit;
-                            mid += (mark_show[i].Mark) * (search.AuChart("Mechanic")[i].Unit);
+                            u += search.AuChart("Omran")[i].Unit;
+                            mid += (mark_show[i].Mark) * (search.AuChart("Omran")[i].Unit);
                         }
                     }
 
@@ -203,12 +203,12 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
                     int u = 0;
 
-                    for (int i = 0; i < mark_show.Count(); i++)
+                    for (int i = 0; i < 9; i++)
                     {
                         if (mark_show[i].Mark != null)
                         {
-                            u += search.AuChart("Mechanic")[i].Unit;
-                            mid += (mark_show[i].Mark) * (search.AuChart("Mechanic")[i].Unit);
+                            u += search.AuChart("Memari")[i].Unit;
+                            mid += (mark_show[i].Mark) * (search.AuChart("Memari")[i].Unit);
                         }
                     }
 
@@ -237,12 +237,12 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
                     int u = 0;
 
-                    for (int i = 0; i < mark_show.Count(); i++)
+                    for (int i = 0; i < 9; i++)
                     {
                         if (mark_show[i].Mark != null)
                         {
-                            u += search.AuChart("Mechanic")[i].Unit;
-                            mid += (mark_show[i].Mark) * (search.AuChart("Mechanic")[i].Unit);
+                            u += search.AuChart("Shimi")[i].Unit;
+                            mid += (mark_show[i].Mark) * (search.AuChart("Shimi")[i].Unit);
                         }
                     }
 
