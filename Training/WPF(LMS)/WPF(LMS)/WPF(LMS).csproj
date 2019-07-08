@@ -220,6 +220,7 @@
     </Compile>
     <Compile Include="BackEnd\DB_Proj.cs" />
     <Compile Include="BackEnd\Edit.cs" />
+    <Compile Include="BackEnd\EnteKhabVahed.cs" />
     <Compile Include="BackEnd\MajorsLessons.cs" />
     <Compile Include="BackEnd\Marks\AllMarks.cs" />
     <Compile Include="BackEnd\Marks\BarqM.cs" />

@@ -23,7 +23,7 @@ namespace WPF_LMS_.BackEnd
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=FS;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=NEwFS;Trusted_Connection=True;");
         }
     }
 }

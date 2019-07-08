@@ -10,10 +10,14 @@ namespace WPF_LMS_.BackEnd
 {
        public class Sign_In
     {
-        string[] Lessons = new string[] {"Database","Gosaste","Inteligence","Manteqi","Programming",
-                "Madar","VLSI","Cmos","Electronic","Qodrat","Fizik","Control","Mashin","Sayalat","Termo",
-                "Dekor","Fazasazi","Tarahi","Nama","Naqshe","BotonSazi","Dinamik","Masaleh","Statik","NaqsheBardari",
-                "Gaz","Hararat","Jerm","Mavad","Sinematik","Andishe","Adabiat","Riazi","Moadelat" };
+        string[] Lessons = new string[] {
+            "Database","Gosaste","Inteligence","Manteqi","Programming",
+            "Madar","VLSI","Cmos","Electronic","Qodrat",
+            "BotonSazi","Dinamik","Masaleh","Statik","NaqsheBardari",
+            "Fizik","Control","Mashin","Sayalat","Termo",
+            "Gaz","Jerm","Mavad","Sinematik","Hararat",
+            "Dekor","Fazasazi","Tarahi","Nama","Naqshe",
+            "Andishe","Adabiat","Riazi","Moadelat" };
 
         public Mg_Models Mgsign (int usern,string pass)
         {
