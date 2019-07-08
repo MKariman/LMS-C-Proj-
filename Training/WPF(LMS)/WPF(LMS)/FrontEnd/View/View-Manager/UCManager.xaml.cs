@@ -27,7 +27,8 @@ namespace WPF_LMS_.FrontEnd.View
         UCchangeMarks ucchangemarks = new UCchangeMarks();
         UCmajorlessons ucmajorlessons = new UCmajorlessons();
         UCinfomanager ucinfomanager = new UCinfomanager();
-        UCinfo_Allstudent ucinfo_allstudent = new UCinfo_Allstudent(); 
+        UCinfo_Allstudent ucinfo_allstudent = new UCinfo_Allstudent();
+        UCaddUser ucaddUser = new UCaddUser();
 
 
         public UCManager()
@@ -114,6 +115,10 @@ namespace WPF_LMS_.FrontEnd.View
         private void add_user_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
+
+            ucaddUser.MaxHeight = 315;
+            ucaddUser.MaxWidth = 800;
+            manager_stack.Children.Add(ucaddUser);
         }
 
 

@@ -40,42 +40,68 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
             public string Teacher { get; set; }
         }
 
+        public void  Enabled()
+        {
+            Shimi.IsEnabled = true;
+            Mem.IsEnabled = true;
+            Mech.IsEnabled = true;
+            Barq.IsEnabled = true;
+            Omran.IsEnabled = true;
+            Comp.IsEnabled = true;
 
+        }
 
         private void Shimi_Click(object sender, RoutedEventArgs e)
         {
+            Enabled();
             list_lessons_view.ItemsSource = search.AuChart("Shimi");
             list_lessons_view.IsEnabled = false;
+            Shimi.IsEnabled = false;
         }
 
         private void Mem_Click(object sender, RoutedEventArgs e)
         {
+            Enabled();
+
             list_lessons_view.ItemsSource = search.AuChart("Memari");
             list_lessons_view.IsEnabled = false;
+            Mem.IsEnabled = false;
         }
 
         private void Mech_Click(object sender, RoutedEventArgs e)
         {
+            Enabled();
+
             list_lessons_view.ItemsSource = search.AuChart("Mechanic");
             list_lessons_view.IsEnabled = false;
+            Mech.IsEnabled = false;
         }
 
         private void Barq_Click(object sender, RoutedEventArgs e)
         {
+            Enabled();
+
             list_lessons_view.ItemsSource = search.AuChart("Barq");
             list_lessons_view.IsEnabled = false;
+            Barq.IsEnabled = false;
         }
 
         private void Omran_Click(object sender, RoutedEventArgs e)
         {
+            Enabled();
+
             list_lessons_view.ItemsSource = search.AuChart("Omran");
             list_lessons_view.IsEnabled = false;
+            Omran.IsEnabled = false;
         }
 
         private void Comp_Click(object sender, RoutedEventArgs e)
         {
+            Enabled();
+
             list_lessons_view.ItemsSource=search.AuChart("Computer");
             list_lessons_view.IsEnabled =false;
+            Comp.IsEnabled = false;
         }
     }
 }

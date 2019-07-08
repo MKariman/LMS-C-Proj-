@@ -5,8 +5,194 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_LMS_.FrontEnd.View.View_Manager"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="315" d:DesignWidth="800" >
     <Grid>
-            
+        <StackPanel >
+            <Border Height="315" Width="800"  >
+                <Border  Height="215" Width="600"  CornerRadius="25" Background="#FF65858F"/>
+                <Border.Background>
+                    <SolidColorBrush Color="#FF6FA3AE" Opacity="0.3"/>
+                </Border.Background>
+            </Border>
+            <GroupBox Header="AddUser" Margin="107,-300,106,0" Height="179"  >
+                <StackPanel>
+                    <StackPanel x:Name="Add_manager_stack" Visibility="Hidden">
+                        <TextBlock Text=":    نام" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="533,10,9.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":نام خانوادگی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="504,15,9.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    تاریخ تولد" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="504,15,9.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    کد ملی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="515,15,9.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    تلفن تماس" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="316,-230,199.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":   ایمیل" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="332,-160,199.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    کد پرسنلی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="312,-90,199.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    سمت" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="332,-20,199.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    رمز عبور" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="124,-20,399.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    تحصیلات" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="124,-90,399.667,0" Foreground="#FF020E25" />
+                        <Button x:Name="ok_manager_btn" Height="34" Background="{x:Null}" BorderBrush="Black" Content="ADD" Margin="10,-180,459.667,0" FontSize="10" TextOptions.TextHintingMode="Animated" Click="Ok_manager_btn_Click_1"/>
+
+
+
+                        <TextBox x:Name="Mname" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="398,-220,74.667,0" Foreground="#FF020E25"   ></TextBox>
+                        <ComboBox x:Name="Meducation" Height="20" HorizontalContentAlignment="Right"  FontFamily="B Nazanin"  Margin="10,-85,460,0" Foreground="#FF020E25"  >
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" > زیردیپلم</ComboBoxItem>
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >دیپلم</ComboBoxItem>
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >لیسانس</ComboBoxItem>
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >فوق لیسانس</ComboBoxItem>
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >دکتری</ComboBoxItem>
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >فوق دکتری</ComboBoxItem>
+                        </ComboBox>
+                        <TextBox x:Name="Mpass" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Foreground="#FF020E25" Margin="10,-20,460,0"  ></TextBox>
+                        <TextBox x:Name="Mfamilyname" Height="20" TextAlignment="Right" FontFamily="B Nazanin"  Foreground="#FF020E25" Margin="398,-155,74.667,0"  ></TextBox>
+                        <TextBox x:Name="Mdate" Height="20" FontFamily="B Nazanin" Foreground="#FF020E25" Margin="398,-85,74.667,0"   ></TextBox>
+                        <TextBox x:Name="Mmelli" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Foreground="#FF020E25" Margin="398,-20,74.667,0"   ></TextBox>
+                        <TextBox x:Name="Mphone" Height="20" TextAlignment="Right" FontFamily="B Nazanin"  Foreground="#FF020E25" Margin="200,-225,265,0"  ></TextBox>
+                        <TextBox x:Name="Memail" Height="20" TextAlignment="Right" FontFamily="B Nazanin"  Foreground="#FF020E25" Margin="200,-155,265,0"   ></TextBox>
+                        <TextBox x:Name="Mcode" Height="20" TextAlignment="Right" FontFamily="B Nazanin"  Foreground="#FF020E25" Margin="200,-85,265,0"  ></TextBox>
+                        <TextBox x:Name="Mpost" Height="20" TextAlignment="Right" FontFamily="B Nazanin"  Foreground="#FF020E25" Margin="200,-20,265,0"  ></TextBox>
+
+
+                    </StackPanel>
+
+                    <StackPanel  x:Name="Add_student_stack" Margin="0,-134,-0.333,0" Height="156" Visibility="Hidden">
+                        <TextBlock Text=":    نام" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="533,10,9.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":نام خانوادگی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="504,15,9.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    تاریخ تولد" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="504,15,9.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    کد ملی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="515,15,9.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    تلفن تماس" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="316,-230,199.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":   ایمیل" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="332,-160,199.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    کد دانشجویی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="301,-90,199.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    سال ورود" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="316,-20,199.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    رمز عبور" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="124,-20,399.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    رشته" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="124,-90,399.667,0" Foreground="#FF020E25" />
+                        <Button x:Name="ok_student_btn" Height="34" Background="{x:Null}" BorderBrush="Black" Content="ADD" Margin="10,-180,459.667,0"  FontSize="10" TextOptions.TextHintingMode="Animated" Click="Ok_student_btn_Click_1"/>
+
+
+
+                        <TextBox x:Name="Sname" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="398,-220,74.667,0" Foreground="#FF020E25"   ></TextBox>
+                        <ComboBox x:Name="Smajor" HorizontalContentAlignment="Right" Height="20"  FontFamily="B Nazanin"  Margin="10,-85,460,0" Foreground="#FF020E25"  >
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >Computer</ComboBoxItem>
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >Omran</ComboBoxItem>
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >Memari</ComboBoxItem>
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >Mechanic</ComboBoxItem>
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >Shimi</ComboBoxItem>
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >Barq</ComboBoxItem>
+                        </ComboBox>
+                        <TextBox x:Name="Spass" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Foreground="#FF020E25" Margin="10,-20,460,0"  ></TextBox>
+                        <TextBox x:Name="Sfamilyname" Height="20" TextAlignment="Right" FontFamily="B Nazanin"  Foreground="#FF020E25" Margin="398,-155,74.667,0"  ></TextBox>
+                        <TextBox x:Name="Sdate" Height="20"  FontFamily="B Nazanin" Foreground="#FF020E25" Margin="398,-85,74.667,0"   ></TextBox>
+                        <TextBox x:Name="Smelli" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Foreground="#FF020E25" Margin="398,-20,74.667,0"   ></TextBox>
+                        <TextBox x:Name="Sphone" Height="20" TextAlignment="Right" FontFamily="B Nazanin"  Foreground="#FF020E25" Margin="190,-225,275,0"  ></TextBox>
+                        <TextBox x:Name="Semail" Height="20" TextAlignment="Right" FontFamily="B Nazanin"  Foreground="#FF020E25" Margin="190,-155,275,0"   ></TextBox>
+                        <TextBox x:Name="Scode" Height="20" TextAlignment="Right" FontFamily="B Nazanin"  Foreground="#FF020E25" Margin="190,-85,275,0"  ></TextBox>
+                        <TextBox x:Name="Syear" Height="20" TextAlignment="Right" FontFamily="B Nazanin"  Foreground="#FF020E25" Margin="190,-20,275,0"  ></TextBox>
+
+
+                    </StackPanel>
+
+                    <StackPanel x:Name="Add_teacher_stack" Margin="0,-156,-0.333,0" Height="156" Visibility="Hidden">
+                        <TextBlock Text=":    نام" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="533,10,9.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":نام خانوادگی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="504,15,9.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    تاریخ تولد" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="504,15,9.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    کد ملی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="515,15,9.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=": درس تخصصی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="305,-230,199.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":   ایمیل" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="332,-160,199.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    کد هیئت علمی" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="301,-90,198.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":تلفن تماس " Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="305,-20,199.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    رمز عبور" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="124,-20,399.667,0" Foreground="#FF020E25" />
+                        <TextBlock Text=":    تحصیلات" Height="20" TextAlignment="Right" FontFamily="B Titr" Margin="124,-90,399.667,0" Foreground="#FF020E25" />
+                        <Button x:Name="ok_teacher_btn" Height="34" Background="{x:Null}" BorderBrush="Black" Content="ADD" Margin="10,-180,459.667,0" FontSize="10" TextOptions.TextHintingMode="Animated" Click="Ok_teacher_btn_Click"/>
+
+
+
+                        <TextBox x:Name="Tname" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Margin="398,-220,74.667,0" Foreground="#FF020E25"   ></TextBox>
+                        <ComboBox HorizontalContentAlignment="Right" x:Name="Teducation" Height="20"  FontFamily="B Nazanin"  Margin="10,-85,460,0" Foreground="#FF020E25"  >
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >زیردیپلم</ComboBoxItem>
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >دیپلم</ComboBoxItem>
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >لیسانس</ComboBoxItem>
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >فوق لیسانس</ComboBoxItem>
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >دکتری</ComboBoxItem>
+                            <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >فوق دکتری</ComboBoxItem>
+                        </ComboBox>
+                        <TextBox x:Name="Tpass" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Foreground="#FF020E25" Margin="10,-20,460,0"  ></TextBox>
+                        <TextBox x:Name="Tfamilyname" Height="20" TextAlignment="Right" FontFamily="B Nazanin"  Foreground="#FF020E25" Margin="398,-155,74.667,0"  ></TextBox>
+                        <TextBox x:Name="Tdate" Height="20"  FontFamily="B Nazanin" Foreground="#FF020E25" Margin="398,-85,74.667,0"   ></TextBox>
+                        <TextBox x:Name="Tmelli" Height="20" TextAlignment="Right" FontFamily="B Nazanin" Foreground="#FF020E25" Margin="398,-20,74.667,0"   ></TextBox>
+                        <ComboBox x:Name="Tlesson" Height="20" HorizontalContentAlignment="Right" FontFamily="B Nazanin"  Foreground="#FF020E25" Margin="190,-225,275,0"  >
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >ریاضی 1</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >معادلات</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >ادبیات</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >اندیشه</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >مدار الکتریکی</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >vlsi</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >الکترونیک</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >قدرت</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >کنترل</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >سیستم دیجیتال</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >گسسته</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >برنامه نویسی</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >دیتابیس</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >مدار منطقی</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >هوش مصنوعی</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >فیزیک</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >ترمودینامیک</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >سیالات</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >ماشین</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >طراحی</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >نقشه کشی</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >دکور</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >نماسازی</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >فضاسازی</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >نقشه برداری</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >استاتیک</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >دینامیک</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >بتن </ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >مصالح</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >گاز</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >جرم</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >سینماتیک</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >مواد</ComboBoxItem>
+                                <ComboBoxItem Height="17" HorizontalContentAlignment="Center" FontSize="10" >حرارت</ComboBoxItem>
+
+
+
+
+                        </ComboBox>
+                        <TextBox x:Name="Temail" Height="20" TextAlignment="Right" FontFamily="B Nazanin"  Foreground="#FF020E25" Margin="190,-155,275,0"   ></TextBox>
+                        <TextBox x:Name="Tcode" Height="20" TextAlignment="Right" FontFamily="B Nazanin"  Foreground="#FF020E25" Margin="190,-85,275,0"  ></TextBox>
+                        <TextBox x:Name="Tphone" Height="20" TextAlignment="Right" FontFamily="B Nazanin"  Foreground="#FF020E25" Margin="190,-20,275,0"  ></TextBox>
+
+
+                    </StackPanel>
+
+
+                </StackPanel>
+            </GroupBox>
+            <Button x:Name="manager_btn" Height="31" Width="100" Margin="350,-495,350,0" BorderBrush="#FF192B4B" Foreground="#FF192B4B" Content="Manager" FontStyle="Italic" FontWeight="Bold" Click="Manager_btn_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF495E82" Offset="0.5"/>
+                        <GradientStop Color="#FF61769B" Offset="0.997"/>
+                        <GradientStop Color="#FF61769B"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="teacher_btn" Height="31" Width="100" Margin="450,-495,150,0" BorderBrush="#FF192B4B" Foreground="#FF192B4B" Content="Teacher" FontStyle="Italic" FontWeight="Bold" Click="Teacher_btn_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF495E82" Offset="0.5"/>
+                        <GradientStop Color="#FF61769B" Offset="0.997"/>
+                        <GradientStop Color="#FF61769B"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="student_btn" Height="31" Width="100" Margin="0,-495,300,0" BorderBrush="#FF192B4B" Foreground="#FF192B4B" Content="Student" FontStyle="Italic" FontWeight="Bold" Click="Student_btn_Click" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF495E82" Offset="0.5"/>
+                        <GradientStop Color="#FF61769B" Offset="0.997"/>
+                        <GradientStop Color="#FF61769B"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
     </Grid>
 </UserControl>
