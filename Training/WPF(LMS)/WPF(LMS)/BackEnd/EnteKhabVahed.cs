@@ -15,6 +15,13 @@ namespace WPF_LMS_.BackEnd
             using (DB_Proj db=new DB_Proj())
             {
                 var StInfo= db.St_InfM.Where(a => a.UniCode == UC).FirstOrDefault();
+                var Omumi = db.Marks.Where(i => i.St_ModelsId == StInfo.St_ModelsId).FirstOrDefault();
+                var OLN = Omumi.GetType().GetProperties().Where(a => a.GetValue(Omumi) == null).Select(b => b.Name).ToList();
+                for (int i = 0; i < OLN.Count(); i++)
+                {
+                    NuLLess.Add(OLN[i]);
+                }
+
 
                 if (Maj == "Computer")
                 {
