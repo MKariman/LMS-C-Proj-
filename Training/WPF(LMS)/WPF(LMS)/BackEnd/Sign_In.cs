@@ -10,7 +10,10 @@ namespace WPF_LMS_.BackEnd
 {
        public class Sign_In
     {
-  
+        string[] Lessons = new string[] {"Database","Gosaste","Inteligence","Manteqi","Programming",
+                "Madar","VLSI","Cmos","Electronic","Qodrat","Fizik","Control","Mashin","Sayalat","Termo",
+                "Dekor","Fazasazi","Tarahi","Nama","Naqshe","BotonSazi","Dinamik","Masaleh","Statik","NaqsheBardari",
+                "Gaz","Hararat","Jerm","Mavad","Sinematik","Andishe","Adabiat","Riazi","Moadelat" };
 
         public Mg_Models Mgsign (int usern,string pass)
         {
@@ -310,25 +313,29 @@ namespace WPF_LMS_.BackEnd
                     
                 });
 
-              
+                
 
-                for (int i = 0; i < 3; i++)
-                {
-                    for (int j = 0; j < 3; j++)
+                
+                    for (int j = 0; j < 34; j++)
                     {
                         Db.Tch_InfM.Add(new Tch_Models
                         {
-                            Name = Users[i],
-                            Password = (Users[i] + "1234"),
-                            LastName = Users[j] + "i",
-                            OrgCode = ((62 + i) * 100 + i + j),
-                            BirthDate = 1398 - (62 + i) ,
+                            Name = Users[j],
+                            Password = (Users[j] + "1234"),
+                            LastName = Users[(j+2)%34] + "i",
+                            OrgCode = ((62 + j) * 100  + j),
+                            BirthDate = 1398 - (42 + j) ,
+                            Age=98-42-j,
                             MeliCode =0022 ,
                             Phone = 021 ,
-                            Email ="@gmail.com"
+                            Email ="@gmail.com",
+                            TeachingLesson=Lessons[j],
+                            Education="dr."+Major[j%6]
+                            
+                            
                         });
                     }
-                }
+                
 
                 Db.SaveChanges();
             }
@@ -457,10 +464,7 @@ namespace WPF_LMS_.BackEnd
             using (DB_Proj db = new DB_Proj())
             {
                 string[] RMajor = new string[] { "Computer", "Barq", "Omran", "Mechanic", "Shimi", "Memari" };
-                string[] Lessons = new string[] {"Database","Gosaste","Inteligence","Manteqi","Programming",
-                "Madar","VLSI","Cmos","Electronic","Qodrat","Fizik","Control","Mashin","Sayalat","Termo",
-                "Dekor","Fazasazi","Tarahi","Nama","Naqshe","BotonSazi","Dinamik","Masaleh","Statik","NaqsheBardari",
-                "Gaz","Hararat","Jerm","Mavad","Sinematik","Andishe","Adabiat","Riazi","Moadelat" };
+                
                 int d = 0;
                 for (int i=0;i<6;i++)
                 {
