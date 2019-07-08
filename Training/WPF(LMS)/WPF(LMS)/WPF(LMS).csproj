@@ -234,6 +234,7 @@
     <Compile Include="BackEnd\Sign_In.cs" />
     <Compile Include="BackEnd\St_Models.cs" />
     <Compile Include="BackEnd\Tch_Models.cs" />
+    <Compile Include="BackEnd\Terms\Term2\T2Marks.cs" />
     <Compile Include="ett.cs" />
     <Compile Include="FrontEnd\View\UCSign.xaml.cs">
       <DependentUpon>UCSign.xaml</DependentUpon>
@@ -313,6 +314,10 @@
     <Compile Include="Migrations\20190706192550_Lol.cs" />
     <Compile Include="Migrations\20190706192550_Lol.designer.cs">
       <DependentUpon>20190706192550_Lol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190708223554_n123.cs" />
+    <Compile Include="Migrations\20190708223554_n123.designer.cs">
+      <DependentUpon>20190708223554_n123.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DB_ProjModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

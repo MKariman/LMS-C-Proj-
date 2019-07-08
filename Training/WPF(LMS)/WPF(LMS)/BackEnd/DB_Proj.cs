@@ -20,6 +20,7 @@ namespace WPF_LMS_.BackEnd
         public DbSet<Marks.CompM> CompD { get; set; }
         public DbSet<Marks.OmranM> OmranD { get; set; }
         public DbSet<Marks.BarqM> BarqD { get; set; }
+        public DbSet<Terms.Term2.T2Marks> Term2M { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
