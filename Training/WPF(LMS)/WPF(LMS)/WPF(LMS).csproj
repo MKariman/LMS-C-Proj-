@@ -233,6 +233,7 @@
     <Compile Include="BackEnd\Sign_In.cs" />
     <Compile Include="BackEnd\St_Models.cs" />
     <Compile Include="BackEnd\Tch_Models.cs" />
+    <Compile Include="ett.cs" />
     <Compile Include="FrontEnd\View\UCSign.xaml.cs">
       <DependentUpon>UCSign.xaml</DependentUpon>
     </Compile>

@@ -246,10 +246,6 @@ namespace WPF_LMS_.BackEnd
             }
         }
 
-
-
-
-
     }
 
 }

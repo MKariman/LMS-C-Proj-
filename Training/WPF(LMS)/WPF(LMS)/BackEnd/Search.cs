@@ -8,6 +8,7 @@ namespace WPF_LMS_.BackEnd
 {
     public class Search
     {
+        
 
         public List<St_Models> STFilter(string UCS)
         {
@@ -277,7 +278,177 @@ namespace WPF_LMS_.BackEnd
 
         // search dar list asatid
 
-        
+
+        public List<ett> Ent(string Less, string Maj)
+        {
+
+            List<ett> Test = new List<ett>();
+
+            using (DB_Proj db = new DB_Proj())
+            {
+                if (Maj == "Barq")
+                {
+                    var f = db.BarqD.ToList();
+                    for (int i = 0; i < db.BarqD.Count() - 1; i++)
+                    {
+                        
+                        var s = f[i].GetType().GetProperties().Where(a => a.Name == Less && a.GetValue(f[i]) != null).FirstOrDefault();
+                        if (s != null)
+                        {
+                            var y = db.St_InfM.Where(a => a.St_ModelsId == f[i].St_ModelsId).FirstOrDefault();
+                            Test.Add(new ett
+                            {
+                                Mark = Convert.ToInt16(s.GetValue(f[i])),
+                                Lesson = Less,
+                                Name = y.Name,
+                                LastName = y.LastName,
+                                Major = y.Major,
+                                UniCode = y.UniCode,
+                                Unilog = y.UniLog
+
+                            });
+                        }
+                    }
+
+                    return Test;
+                }
+                if (Maj == "Computer")
+                {
+                    var f = db.CompD.ToList();
+                    for (int i = 0; i < db.CompD.Count() - 1; i++)
+                    {
+
+                        var s = f[i].GetType().GetProperties().Where(a => a.Name == Less && a.GetValue(f[i]) != null).FirstOrDefault();
+                        if (s != null)
+                        {
+                            var y = db.St_InfM.Where(a => a.St_ModelsId == f[i].St_ModelsId).FirstOrDefault();
+                            Test.Add(new ett
+                            {
+                                Mark = Convert.ToInt16(s.GetValue(f[i])),
+                                Lesson = Less,
+                                Name = y.Name,
+                                LastName = y.LastName,
+                                Major = y.Major,
+                                UniCode = y.UniCode,
+                                Unilog = y.UniLog
+
+                            });
+                        }
+                    }
+
+                    return Test;
+                }
+                if (Maj == "Shimi")
+                {
+                    var f = db.ShimiD.ToList();
+                    for (int i = 0; i < db.ShimiD.Count() - 1; i++)
+                    {
+
+                        var s = f[i].GetType().GetProperties().Where(a => a.Name == Less && a.GetValue(f[i]) != null).FirstOrDefault();
+                        if (s != null)
+                        {
+                            var y = db.St_InfM.Where(a => a.St_ModelsId == f[i].St_ModelsId).FirstOrDefault();
+                            Test.Add(new ett
+                            {
+                                Mark = Convert.ToInt16(s.GetValue(f[i])),
+                                Lesson = Less,
+                                Name = y.Name,
+                                LastName = y.LastName,
+                                Major = y.Major,
+                                UniCode = y.UniCode,
+                                Unilog = y.UniLog
+
+                            });
+                        }
+                    }
+
+                    return Test;
+                }
+                if (Maj == "Mechanic")
+                {
+                    var f = db.MechD.ToList();
+                    for (int i = 0; i < db.MechD.Count() - 1; i++)
+                    {
+
+                        var s = f[i].GetType().GetProperties().Where(a => a.Name == Less && a.GetValue(f[i]) != null).FirstOrDefault();
+                        if (s != null)
+                        {
+                            var y = db.St_InfM.Where(a => a.St_ModelsId == f[i].St_ModelsId).FirstOrDefault();
+                            Test.Add(new ett
+                            {
+                                Mark = Convert.ToInt16(s.GetValue(f[i])),
+                                Lesson = Less,
+                                Name = y.Name,
+                                LastName = y.LastName,
+                                Major = y.Major,
+                                UniCode = y.UniCode,
+                                Unilog = y.UniLog
+
+                            });
+                        }
+                    }
+
+                    return Test;
+                }
+                if (Maj == "Omran")
+                {
+                    var f = db.OmranD.ToList();
+                    for (int i = 0; i < db.OmranD.Count() - 1; i++)
+                    {
+
+                        var s = f[i].GetType().GetProperties().Where(a => a.Name == Less && a.GetValue(f[i]) != null).FirstOrDefault();
+                        if (s != null)
+                        {
+                            var y = db.St_InfM.Where(a => a.St_ModelsId == f[i].St_ModelsId).FirstOrDefault();
+                            Test.Add(new ett
+                            {
+                                Mark = Convert.ToInt16(s.GetValue(f[i])),
+                                Lesson = Less,
+                                Name = y.Name,
+                                LastName = y.LastName,
+                                Major = y.Major,
+                                UniCode = y.UniCode,
+                                Unilog = y.UniLog
+
+                            });
+                        }
+                    }
+
+                    return Test;
+                }
+                if (Maj == "Memari")
+                {
+                    var f = db.MemD.ToList();
+                    for (int i = 0; i < db.BarqD.Count() - 1; i++)
+                    {
+
+                        var s = f[i].GetType().GetProperties().Where(a => a.Name == Less && a.GetValue(f[i]) != null).FirstOrDefault();
+                        if (s != null)
+                        {
+                            var y = db.St_InfM.Where(a => a.St_ModelsId == f[i].St_ModelsId).FirstOrDefault();
+                            Test.Add(new ett
+                            {
+                                Mark = Convert.ToInt16(s.GetValue(f[i])),
+                                Lesson = Less,
+                                Name = y.Name,
+                                LastName = y.LastName,
+                                Major = y.Major,
+                                UniCode = y.UniCode,
+                                Unilog = y.UniLog
+
+                            });
+                        }
+                    }
+
+                    return Test;
+                }
+
+                return Test;
+            }
+        }
+
+
+
 
 
 
