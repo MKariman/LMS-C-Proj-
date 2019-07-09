@@ -23,6 +23,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Teacher
     {
         UCinfoteacher ucinfoteacher = new UCinfoteacher();
         UClistmarkstudent uclistmarkstudent = new UClistmarkstudent();
+        UClistchangestudent uclistchangestudent = new UClistchangestudent();
 
 
         public UCTeacher()
@@ -71,6 +72,14 @@ namespace WPF_LMS_.FrontEnd.View.View_Teacher
         private void change_mark_Click(object sender, RoutedEventArgs e)
         {
             delet_prev();
+
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+            delet_prev();
+
+            uclistchangestudent.MaxHeight = 313;
+            uclistchangestudent.MaxWidth = 800;
+            uclistchangestudent.list_show(Convert.ToInt32(win.ucsign.usernametxt.Text));
+            teacher_stack.Children.Add(uclistchangestudent);
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)

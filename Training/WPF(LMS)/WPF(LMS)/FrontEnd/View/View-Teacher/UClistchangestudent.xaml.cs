@@ -16,16 +16,15 @@ using WPF_LMS_.BackEnd;
 
 namespace WPF_LMS_.FrontEnd.View.View_Teacher
 {
-   
     /// <summary>
-    /// Interaction logic for UClistmarkstudent.xaml
+    /// Interaction logic for UClistchangestudent.xaml
     /// </summary>
-    public partial class UClistmarkstudent : UserControl
+    public partial class UClistchangestudent : UserControl
     {
         Search search = new Search();
         string lesson_OM;
 
-        public UClistmarkstudent()
+        public UClistchangestudent()
         {
             InitializeComponent();
         }
@@ -36,7 +35,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Teacher
 
             if (lesson == "Database" || lesson == "Gosaste" || lesson == "Inteligence" || lesson == "Manteqi" || lesson == "Programming")
             {
-                list_mark_student_view.ItemsSource = search.Ent("C"+lesson , "Computer");
+                list_mark_student_view.ItemsSource = search.Ent("C" + lesson, "Computer");
             }
 
 
@@ -101,13 +100,36 @@ namespace WPF_LMS_.FrontEnd.View.View_Teacher
                     list_mark_student_view.ItemsSource = search.Ent("Me" + lesson, "Memari");
                 }
             }
-            if (lesson == "Andishe" || lesson == "Adabiat" || lesson == "Riazi" || lesson == "Moadelat" )
+            if (lesson == "Andishe" || lesson == "Adabiat" || lesson == "Riazi" || lesson == "Moadelat")
             {
                 major_txt.Visibility = Visibility.Visible;
                 major_btn.Visibility = Visibility.Visible;
                 lesson_OM = lesson;
             }
 
+        }
+        private void change_mark_Click(object sender, RoutedEventArgs e)
+        {
+            list_mark_student_view.Visibility = Visibility.Hidden;
+            change_mark_stack.Visibility = Visibility.Visible;
+               new_mark_txt.Text = "";
+               
+        }
+
+        private void ok_mark_Click(object sender, RoutedEventArgs e)
+        {
+
+            list_mark_student_view.Visibility = Visibility.Visible;
+            change_mark_stack.Visibility = Visibility.Hidden;
+    
+        }
+
+        private void cancel_mark_Click(object sender, RoutedEventArgs e)
+        {
+
+            list_mark_student_view.Visibility = Visibility.Visible;
+            change_mark_stack.Visibility = Visibility.Hidden;
+            
         }
 
         private void Major_btn_Click(object sender, RoutedEventArgs e)

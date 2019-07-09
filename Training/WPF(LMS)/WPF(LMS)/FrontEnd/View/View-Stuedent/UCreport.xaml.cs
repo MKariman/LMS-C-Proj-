@@ -176,19 +176,20 @@ namespace WPF_LMS_.FrontEnd.View.View_Stuedent
 
             if (sign_In.STsign(unicode, pass).Major == "Memari")
             {
-                mark_show.Add(new marks() { Lesson = "کنترل", Mark = search.MeMark(unicode)[0].MeDekor });
-                mark_show.Add(new marks() { Lesson = "ماشین", Mark = search.MeMark(unicode)[0].MeFazas });
-                mark_show.Add(new marks() { Lesson = "سیالات", Mark = search.MeMark(unicode)[0].MeNama });
-                mark_show.Add(new marks() { Lesson = "ترمو", Mark = search.MeMark(unicode)[0].MeTarahi });
+                mark_show.Add(new marks() { Lesson = "دکور", Mark = search.MeMark(unicode)[0].MeDekor });
+                mark_show.Add(new marks() { Lesson = "فضاسازی", Mark = search.MeMark(unicode)[0].MeFazas });
+                mark_show.Add(new marks() { Lesson = "نماسازی", Mark = search.MeMark(unicode)[0].MeNama });
+                mark_show.Add(new marks() { Lesson = "نقشه کشی", Mark = search.MeMark(unicode)[0].MeNaqshe });
+                mark_show.Add(new marks() { Lesson = "طراحی", Mark = search.MeMark(unicode)[0].MeTarahi });
+                mark_show.Add(new marks() { Lesson = "اندیشه", Mark = search.MeMark(unicode)[0].Andishe });
+                mark_show.Add(new marks() { Lesson = "ادبیات", Mark = search.MeMark(unicode)[0].Adabiat });
                 mark_show.Add(new marks() { Lesson = "ریاضی 1", Mark = search.MeMark(unicode)[0].Riazi1 });
                 mark_show.Add(new marks() { Lesson = "معادلات", Mark = search.MeMark(unicode)[0].Moadelat });
-                mark_show.Add(new marks() { Lesson = "ادبیات", Mark = search.MeMark(unicode)[0].Adabiat });
-                mark_show.Add(new marks() { Lesson = "اندیشه", Mark = search.MeMark(unicode)[0].Andishe });
 
-
+               
                 int u = 0;
 
-                for (int i = 0; i < 9; i++)
+                for (int i = 0; i < 7; i++)
                 {
                     if (mark_show[i].Mark != null)
                     {

@@ -206,6 +206,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="FrontEnd\View\View-Teacher\UClistchangestudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FrontEnd\View\View-Teacher\UClistmarkstudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -281,6 +285,9 @@
     </Compile>
     <Compile Include="FrontEnd\View\View-Teacher\UCinfoteacher.xaml.cs">
       <DependentUpon>UCinfoteacher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\View\View-Teacher\UClistchangestudent.xaml.cs">
+      <DependentUpon>UClistchangestudent.xaml</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\View\View-Teacher\UClistmarkstudent.xaml.cs">
       <DependentUpon>UClistmarkstudent.xaml</DependentUpon>
