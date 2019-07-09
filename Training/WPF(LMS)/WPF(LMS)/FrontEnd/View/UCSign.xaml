@@ -49,7 +49,7 @@
             <RadioButton Content="Manager" Width="67" x:Name="RBManager" Margin="0,-15,100,120" />
 
             <Button  Height="20" Width="60" Margin="0,-150,0,0" BorderBrush="#FF4F5EF7" Background="White" Content="Sign in" Foreground="#FF4F5EF7" Click="Sign_Click"/>
-            <Button Height="20"  Margin="0,-15,0,0" Content="Simple add User" Click="user_click"/>
+            <Button x:Name="simple_add_btn"  Height="20"  Margin="0,-15,0,0" Content="Simple add User" Click="user_click"/>
 
             <TextBlock Text="Password  :" Height="20" Width="70" Margin="0,-350,120,0"  />
             <TextBlock Text="UserName : " Height="20" Width="70" Margin="0,-500,120,0"/>
