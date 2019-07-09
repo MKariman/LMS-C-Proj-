@@ -170,10 +170,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FrontEnd\View\View-Manager\UClistStudentsMark.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="FrontEnd\View\View-Manager\UClist_marks_student.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -209,6 +205,10 @@
     <Page Include="FrontEnd\View\View-Teacher\UCinfoteacher.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FrontEnd\View\View-Teacher\UClistmarkstudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FrontEnd\View\View-Teacher\UCTeacher.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -255,9 +255,6 @@
     <Compile Include="FrontEnd\View\View-Manager\UCinfo_Allstudent.xaml.cs">
       <DependentUpon>UCinfo_Allstudent.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\View\View-Manager\UClistStudentsMark.xaml.cs">
-      <DependentUpon>UClistStudentsMark.xaml</DependentUpon>
-    </Compile>
     <Compile Include="FrontEnd\View\View-Manager\UClist_marks_student.xaml.cs">
       <DependentUpon>UClist_marks_student.xaml</DependentUpon>
     </Compile>
@@ -284,6 +281,9 @@
     </Compile>
     <Compile Include="FrontEnd\View\View-Teacher\UCinfoteacher.xaml.cs">
       <DependentUpon>UCinfoteacher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\View\View-Teacher\UClistmarkstudent.xaml.cs">
+      <DependentUpon>UClistmarkstudent.xaml</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\View\View-Teacher\UCTeacher.xaml.cs">
       <DependentUpon>UCTeacher.xaml</DependentUpon>

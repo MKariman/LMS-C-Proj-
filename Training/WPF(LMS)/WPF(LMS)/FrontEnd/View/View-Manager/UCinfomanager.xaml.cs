@@ -173,7 +173,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
 
                     ok.Visibility = Visibility.Hidden;
-                    change_pass.Visibility = Visibility.Hidden;
+                    change_pass.Visibility = Visibility.Visible;
                     edit.IsEnabled = true;
 
                 }

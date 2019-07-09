@@ -26,23 +26,44 @@
                 </ListView>
             </GroupBox>
             <Button x:Name="show_btn" Height="30" Width="150"  Margin="152,-40,498,0"   BorderBrush="#FF214468" Content="SHOW" Background="#FFA7B8D4" Foreground="#FF214468" FontWeight="Bold" Click="Show_btn_Click" ></Button>
+            <Button x:Name="change_btn" Height="30"  Margin="312,-40,8,0"   BorderBrush="#FFB43B3B" Content="تغییر نمره" Background="#FFD4A7AE" Foreground="#FFB83737" FontWeight="Bold" Click="change_mark_Click" />
 
-            <GroupBox Height="310" Width="480"  Margin="252,-323,-52,0" Header="Stuents" BorderBrush="#FFD5DEE4" Foreground="White">
+            <GroupBox Height="279" Width="480"  Margin="312,-353,8,0" Header="Stuents" BorderBrush="#FFD5DEE4" Foreground="White">
                 <ListView x:Name="list_mark_student_view" Background="#FFE9E9E9">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Name" Width="60" DisplayMemberBinding="{Binding OrgCode}"/>
-                            <GridViewColumn Header="LastName" Width="60" DisplayMemberBinding="{Binding OrgCode}"/>
-                            <GridViewColumn Header="UniCode" Width="60" DisplayMemberBinding="{Binding OrgCode}"/>
-                            <GridViewColumn Header="Major" Width="60" DisplayMemberBinding="{Binding OrgCode}"/>
-                            <GridViewColumn Header="mark" Width="60" DisplayMemberBinding="{Binding OrgCode}"/>
+                            <GridViewColumn Header="Name" Width="80" DisplayMemberBinding="{Binding Name}"/>
+                            <GridViewColumn Header="LastName" Width="80" DisplayMemberBinding="{Binding LastName}"/>
+                            <GridViewColumn Header="UniCode" Width="80" DisplayMemberBinding="{Binding UniCode}"/>
+                            <GridViewColumn Header="lesson" Width="80" DisplayMemberBinding="{Binding Lesson}"/>
+                            <GridViewColumn Header="Unilog" Width="60" DisplayMemberBinding="{Binding Unilog}"/>
+                            <GridViewColumn Header="Mark" Width="80" DisplayMemberBinding="{Binding Mark}"/>
+                            <GridViewColumn Header="Major" Width="60" DisplayMemberBinding="{Binding Major}"/>
+
 
 
                         </GridView>
                     </ListView.View>
                 </ListView>
             </GroupBox>
+
+            <StackPanel  x:Name="change_mark_stack" Height="150" Width="150" Margin="280,-325,5.5,0" Visibility="Hidden" >
+                <Border Height="150" Background="#FFA1CECD"  CornerRadius="10"  ></Border>
+                <TextBlock  Height="20" Margin="25,-220,59,0" x:Name="lastname_txt" FontWeight="Bold"  />
+                <TextBox  x:Name="new_mark_txt" Height="20" Margin="75,-160,25,0"/>
+                <TextBlock  Height="20" Width="50" Margin="0,-160,50,0"  Text="نمره جدید" FontWeight="Bold" ></TextBlock>
+
+                <Button  Height="20" Width="50" Margin="50,-80,0,0" Background="#FF8FE794" Content="OK" Foreground="ForestGreen" BorderBrush="ForestGreen" Click="ok_mark_Click" ></Button>
+                <Button  Height="20" Width="50" Margin="0,-80,50,0" Background="#FFFFA6A6" Content="Cancel" Foreground="DarkRed" BorderBrush="DarkRed" Click="cancel_mark_Click"></Button>
+                <TextBlock  Height="20" Margin="105,-220,25,0" x:Name="mark_prev_txt" FontWeight="Bold"  FontSize="10" />
+
+
+
+
+            </StackPanel>
         </StackPanel>
+
+
 
     </Grid>
 </UserControl>

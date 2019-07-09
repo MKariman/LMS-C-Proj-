@@ -194,19 +194,19 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
 
                 if (search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].Major == "Memari")
                 {
-                    mark_show.Add(new marks() { Lesson = "کنترل", Mark = search.MeMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].MeDekor });
-                    mark_show.Add(new marks() { Lesson = "ماشین", Mark = search.MeMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].MeFazas });
-                    mark_show.Add(new marks() { Lesson = "سیالات", Mark = search.MeMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].MeNama });
+                    mark_show.Add(new marks() { Lesson = "دکور", Mark = search.MeMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].MeDekor });
+                    mark_show.Add(new marks() { Lesson = "فضاسازی", Mark = search.MeMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].MeFazas });
+                    mark_show.Add(new marks() { Lesson = "نماسازی", Mark = search.MeMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].MeNama });
                     mark_show.Add(new marks() { Lesson = "نقشه برداری ", Mark = search.MeMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].MeNaqshe });
-                    mark_show.Add(new marks() { Lesson = "ترمو", Mark = search.MeMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].MeTarahi });
+                    mark_show.Add(new marks() { Lesson = "طراحی", Mark = search.MeMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].MeTarahi });
                     mark_show.Add(new marks() { Lesson = "اندیشه ", Mark = search.MeMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].Andishe });
-                    mark_show.Add(new marks() { Lesson = "ریاضی 1", Mark = search.MeMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].Riazi1 });
                     mark_show.Add(new marks() { Lesson = "ادبیات", Mark = search.MeMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].Adabiat });
+                    mark_show.Add(new marks() { Lesson = "ریاضی 1", Mark = search.MeMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].Riazi1 });
                     mark_show.Add(new marks() { Lesson = "معادلات", Mark = search.MeMark(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode)[0].Moadelat });
 
                     int u = 0;
 
-                    for (int i = 0; i < 9; i++)
+                    for (int i = 0; i < 7; i++)
                     {
                         if (mark_show[i].Mark != null)
                         {
@@ -317,6 +317,7 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
                         Moadelat = mark_show[8].Mark,
 
                     });
+
                     edit_class.CMMech(search.STFilter(search_studenttxt.Text)[list_students.Items.IndexOf(list_students.SelectedItem)].UniCode, MarkList);
                 
                 
@@ -414,8 +415,8 @@ namespace WPF_LMS_.FrontEnd.View.View_Manager
                     MeNaqshe = mark_show[3].Mark,
                     MeTarahi = mark_show[4].Mark,
                     Andishe = mark_show[5].Mark,
-                    Riazi1 = mark_show[6].Mark ,
-                    Adabiat = mark_show[7].Mark,
+                    Adabiat = mark_show[6].Mark,
+                    Riazi1 = mark_show[7].Mark,
                     Moadelat = mark_show[8].Mark,
 
 
